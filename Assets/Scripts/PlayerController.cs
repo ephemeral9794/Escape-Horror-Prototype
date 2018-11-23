@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 		// 歩き状態ならプレイヤーを移動
 		if(walking){
             transform.Translate(new Vector3(x, y, 0) * Time.deltaTime * speed);
-            transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.y / 1000f);
+            transform.position = new Vector3(transform.position.x,transform.position.y,0.0f);//transform.position.y / 1000f);
         }
 	}
 }
