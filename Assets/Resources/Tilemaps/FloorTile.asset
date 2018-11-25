@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03ae8e0ddd219914192d126cd0156d71, type: 3}
-  m_Name: New RPGMaker AutoTile
+  m_Name: FloorTile
   m_EditorClassIdentifier: 
   m_RawTilesSprites:
-  - {fileID: 21300000, guid: d0fa3069c8f8ede44a320a78081e502b, type: 3}
-  - {fileID: 21300002, guid: d0fa3069c8f8ede44a320a78081e502b, type: 3}
-  - {fileID: 21300004, guid: d0fa3069c8f8ede44a320a78081e502b, type: 3}
-  - {fileID: 21300006, guid: d0fa3069c8f8ede44a320a78081e502b, type: 3}
-  - {fileID: 21300008, guid: d0fa3069c8f8ede44a320a78081e502b, type: 3}
-  - {fileID: 21300010, guid: d0fa3069c8f8ede44a320a78081e502b, type: 3}
+  - {fileID: 21300016, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
+  - {fileID: 21300018, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
+  - {fileID: 21300048, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
+  - {fileID: 21300050, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
+  - {fileID: 21300080, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
+  - {fileID: 21300082, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

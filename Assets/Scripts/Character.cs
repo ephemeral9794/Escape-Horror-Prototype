@@ -90,6 +90,18 @@ public class Character : MonoBehaviour
 			new Vector2(1, -1),
 			new Vector2(-1, -1),
 		};
+
+		// スプライトの切り出し
+		for (int y=0; y<stateCount; y++) {
+ 			for (int x=0; x<frameCount; x++) {
+				//指定された幅高さでテスクチャからスプライトを切り出す
+				var rect = new Rect(x * this.m_cropWidth, y * this.m_cropHeight, this.m_cropWidth, this.m_cropHeight);
+				var sprite = Sprite.Create(this.m_image, rect, new Vector2(0.5f,0.5f), 1.0f);
+				sprite.name = this.m_image.name +"_" + y + x;
+				sprite.texture.filterMode = FilterMode.Point; 
+				sprites[y,x] = sprite;
+			}
+		}
 		 
 		// アニメータコントローラの作成
 		AnimatorController animatorController = new AnimatorController ();
@@ -101,80 +113,8 @@ public class Character : MonoBehaviour
 		animatorController.AddParameter ("Walking", AnimatorControllerParameterType.Bool);
 		 
 		// アニメータコントローラにベースレイヤを追加
-		animatorController.AddLayer ("Base");
-		// 歩き状態を追加する
-		BlendTree walkBlendTree;
-		AnimatorState walkState =  animatorController.CreateBlendTreeInController("Walk", out walkBlendTree);
-		walkBlendTree.name = "Blend Tree";
-		 
-		// 歩き状態は歩く方向によってアニメーションが変化する
-		walkBlendTree.blendType = BlendTreeType.SimpleDirectional2D;
-		walkBlendTree.blendParameter = "DirectionX";
-		walkBlendTree.blendParameterY = "DirectionY";
-		 
-		// 状態の数だけループ
-		for (int y=0; y<stateCount; y++) {
-			//キーフレーム配列を作成
-			// 右足、止まり、左足、止まり、右足とアニメーションする
-			// ループするので、最後に右足を入れないと左足の後の止まりが短く不自然になる
-			ObjectReferenceKeyframe[] keyFrames = new ObjectReferenceKeyframe[frameCount + 2];
-			// 8方向拡張対応
-			int offsetX = 0, offsetY = 0;
-			if(extendedCharaChipSet && y >= (stateCount>>1)) {
-				offsetX = frameCount;
-				offsetY = -(stateCount>>1);
-			}
-			// スプライトの切り出しと普通のアニメーションの作成
- 			for (int x=0; x<frameCount; x++) {
-				//指定された幅高さでテスクチャからスプライトを切り出す
-				var rect = new Rect((x + offsetX) * this.m_cropWidth, (y + offsetY) * this.m_cropHeight, this.m_cropWidth, this.m_cropHeight);
-				var sprite = Sprite.Create(this.m_image, rect, new Vector2(0.5f,0.5f), 1.0f);
-				sprite.name = this.m_image.name +"_" + y + x;
-				sprite.texture.filterMode = FilterMode.Point; 
-				sprites[y,x] = sprite;
-				// キーフレームの追加
-				keyFrames[x] = new ObjectReferenceKeyframe{time=x*frameLength, value=sprite};
-			}
-			// 2枚目->1枚目とアニメーションする
-			for (int x=1; x>=0; x--) {
-				int index = frameCount + 1 - x;
-				keyFrames[index] = new ObjectReferenceKeyframe{ time=index*frameLength, value=sprites[y,x] };
-			}
+		animatorController.AddLayer("Base");
 
-			// アニメーションクリップの作成
-			AnimationClip clip = new AnimationClip
-			{
-				// 名前は状態のインデックスにする
-				name = y.ToString(),
-				// はみ出た部分は消す
-				wrapMode = WrapMode.Clamp
-			};
-			// カーブの作成
-			EditorCurveBinding curveBinding = new EditorCurveBinding
-			{
-				// ファイルは存在しない
-				path = string.Empty,
-				// スプライトをアニメーションするのでtypeにSpriteRenderer
-				// propertyNameにはm_Spriteを指定
-				type = typeof(SpriteRenderer),
-				propertyName = "m_Sprite"
-			};
-			// クリップとカーブにキーフレームをバインド
-			AnimationUtility.SetObjectReferenceCurve (clip, curveBinding, keyFrames);
-			// LoopTimeが直接設定出来ないので一旦シリアライズする
-			SerializedObject serializedClip = new SerializedObject (clip);
-			// アニメーションクリップ設定の取り出し
-			AnimationClipSettings animationClipSettings = new AnimationClipSettings(serializedClip.FindProperty("m_AnimationClipSettings"))
-			{
-				// LoopTimeを有効にする
-				LoopTime = true
-			};
-			// 設定を書き戻す
-			serializedClip.ApplyModifiedProperties ();
-			// 状態を歩き状態のブレンドツリーに追加
-			walkBlendTree.AddChild (clip, positions[y]);
-		}
-		 
 		// 止まり状態を追加する
 		BlendTree waitBlendTree;
 		AnimatorState waitState =  animatorController.CreateBlendTreeInController("Wait", out waitBlendTree);
@@ -217,6 +157,74 @@ public class Character : MonoBehaviour
 			//状態を止まり状態のブレンドツリーに追加 
 			waitBlendTree.AddChild(clip, positions[i]); 
 		}
+
+		// 歩き状態を追加する
+		BlendTree walkBlendTree;
+		AnimatorState walkState =  animatorController.CreateBlendTreeInController("Walk", out walkBlendTree);
+		walkBlendTree.name = "Blend Tree";
+		 
+		// 歩き状態は歩く方向によってアニメーションが変化する
+		walkBlendTree.blendType = BlendTreeType.SimpleDirectional2D;
+		walkBlendTree.blendParameter = "DirectionX";
+		walkBlendTree.blendParameterY = "DirectionY";
+		 
+		// 状態の数だけループ
+		for (int y=0; y<stateCount; y++) {
+			//キーフレーム配列を作成
+			// 右足、止まり、左足、止まり、右足とアニメーションする
+			// ループするので、最後に右足を入れないと左足の後の止まりが短く不自然になる
+			ObjectReferenceKeyframe[] keyFrames = new ObjectReferenceKeyframe[frameCount + 2];
+			// 8方向拡張対応
+			int offsetX = 0, offsetY = 0;
+			if(extendedCharaChipSet && y >= (stateCount>>1)) {
+				offsetX = frameCount;
+				offsetY = -(stateCount>>1);
+			}
+			// 普通のアニメーションの作成
+ 			for (int x=0; x<frameCount; x++) {
+				// キーフレームの追加
+				keyFrames[x] = new ObjectReferenceKeyframe{time=x*frameLength, value=sprites[y,x]};
+			}
+			// 2枚目->1枚目とアニメーションする
+			for (int x=1; x>=0; x--) {
+				int index = frameCount + 1 - x;
+				keyFrames[index] = new ObjectReferenceKeyframe{ time=index*frameLength, value=sprites[y,x] };
+			}
+
+			// アニメーションクリップの作成
+			AnimationClip clip = new AnimationClip
+			{
+				// 名前は状態のインデックスにする
+				name = $"Walk_{y.ToString()}",
+				// はみ出た部分は消す
+				wrapMode = WrapMode.Clamp
+			};
+			// カーブの作成
+			EditorCurveBinding curveBinding = new EditorCurveBinding
+			{
+				// ファイルは存在しない
+				path = string.Empty,
+				// スプライトをアニメーションするのでtypeにSpriteRenderer
+				// propertyNameにはm_Spriteを指定
+				type = typeof(SpriteRenderer),
+				propertyName = "m_Sprite"
+			};
+			// クリップとカーブにキーフレームをバインド
+			AnimationUtility.SetObjectReferenceCurve (clip, curveBinding, keyFrames);
+			// LoopTimeが直接設定出来ないので一旦シリアライズする
+			SerializedObject serializedClip = new SerializedObject (clip);
+			// アニメーションクリップ設定の取り出し
+			AnimationClipSettings animationClipSettings = new AnimationClipSettings(serializedClip.FindProperty("m_AnimationClipSettings"))
+			{
+				// LoopTimeを有効にする
+				LoopTime = true
+			};
+			// 設定を書き戻す
+			serializedClip.ApplyModifiedProperties ();
+			// 状態を歩き状態のブレンドツリーに追加
+			walkBlendTree.AddChild (clip, positions[y]);
+		}
+		
 		// 止まり->歩きのトランジションを作成
 		AnimatorStateTransition waitToWalk = waitState.AddTransition(walkState);
 		// Walkingフラグがtrueの時
@@ -226,10 +234,10 @@ public class Character : MonoBehaviour
 		AnimatorStateTransition walkToWait = walkState.AddTransition(waitState);
 		// Walkingフラグがfalseの時
 		walkToWait.AddCondition(AnimatorConditionMode.IfNot,0,"Walking");
-				 
+
 		// アニメータコントローラに設定
 		animator.runtimeAnimatorController = (animatorController as RuntimeAnimatorController);
-		 
+				 
 		// とりあえず0,0のスプライトをデフォルトにセット
 		spriteRenderer.sprite = sprites[0,0];
 	}

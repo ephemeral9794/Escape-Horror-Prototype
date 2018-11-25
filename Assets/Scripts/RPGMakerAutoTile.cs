@@ -23,8 +23,9 @@ namespace UnityEngine.Tilemaps {
 			for (int y = -1; y <= 1; y++) {
 				for (int x = -1; x <= 1; x++) {
 					var location = new Vector3Int(position.x + x, position.y + y, position.z);
-					if (TileValue(tilemap, position))
+					if (TileValue(tilemap, position)) {
 						tilemap.RefreshTile(position);
+					}
 				}
 			}
 		}
@@ -229,26 +230,26 @@ namespace UnityEngine.Tilemaps {
             }
             WolfRawSprites = new Sprite[5];
             WolfRawSprites[0] = CombineTextures(new Sprite[] { 
-                parts[0, 0], parts[0, 1], parts[0, 2], parts[0, 3]
+                parts[0, 2], parts[0, 3], parts[0, 0], parts[0, 1], 
             });
             WolfRawSprites[1] = CombineTextures(new Sprite[] {
-                parts[4, 2], parts[5, 3], parts[2, 0], parts[3, 1]
+                parts[2, 0], parts[3, 1], parts[4, 2], parts[5, 3]
             });
             WolfRawSprites[2] = CombineTextures(new Sprite[] {
-                parts[4, 1], parts[5, 0], parts[2, 3], parts[3, 2]
+                parts[2, 3], parts[3, 2], parts[4, 1], parts[5, 0]
             });
             WolfRawSprites[3] = CombineTextures(new Sprite[] {
-                parts[1, 0], parts[1, 1], parts[1, 2], parts[1, 3]
+                parts[1, 2], parts[1, 3], parts[1, 0], parts[1, 1]
             });
             WolfRawSprites[4] = CombineTextures(new Sprite[] {
-                parts[4, 3], parts[5, 2], parts[2, 1], parts[3, 0]
+                parts[2, 1], parts[3, 0], parts[4, 3], parts[5, 2]
             });
 
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
             for(int i = 0; i < WolfRawSprites.Length; i++) { 
                 File.WriteAllBytes(string.Format("Assets/output_{0:00}.png", i), WolfRawSprites[i].texture.EncodeToPNG());
             }
-#endif
+#endif*/
         }
         public void GeneratePatterns()
         {
@@ -277,8 +278,13 @@ namespace UnityEngine.Tilemaps {
         #if UNITY_EDITOR
         int count = 0;
         #endif
-        private Sprite CombineTextures(Sprite[] Parts)
+        private Sprite CombineTextures(Sprite[] Inputs)
         {
+			var Parts = new Sprite[4];
+			Parts[0] = Inputs[2];
+			Parts[1] = Inputs[3];
+			Parts[2] = Inputs[0];
+			Parts[3] = Inputs[1];
             Color[][] texs = new Color[4][];
             for (int i = 0; i < 4; i++)
             {
@@ -375,7 +381,7 @@ namespace UnityEngine.Tilemaps {
         public static void CreateTerrainTile()
         {
             string path = EditorUtility.SaveFilePanelInProject("Save RPGMaker AutoTile", "New RPGMaker AutoTile", "asset", "Save RPGMaker AutoTile", "Assets");
-            Debug.Log(path);
+            //Debug.Log(path);
             if (path == "")
                 return;
 
