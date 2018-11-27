@@ -96,9 +96,10 @@ public class Character : MonoBehaviour
  			for (int x=0; x<frameCount; x++) {
 				//指定された幅高さでテスクチャからスプライトを切り出す
 				var rect = new Rect(x * this.m_cropWidth, y * this.m_cropHeight, this.m_cropWidth, this.m_cropHeight);
-				var sprite = Sprite.Create(this.m_image, rect, new Vector2(0.5f,0.5f), 1.0f);
+				var sprite = Sprite.Create(this.m_image, rect, new Vector2(0.5f, 0.5f), 1.0f);
 				sprite.name = this.m_image.name +"_" + y + x;
 				sprite.texture.filterMode = FilterMode.Point; 
+				
 				sprites[y,x] = sprite;
 			}
 		}

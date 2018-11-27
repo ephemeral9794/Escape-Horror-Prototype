@@ -5,15 +5,17 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 	[SerializeField]
 	private Transform target;
-	private Vector3 offset;
+	private float z_offset;
 
 	// Use this for initialization
 	void Start () {
-		offset = transform.position - target.position;
+		z_offset = transform.position.z - target.position.z;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = target.position + offset;
+		var pos = target.position;
+		pos.z += z_offset;
+		transform.position = pos;
 	}
 }
