@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4298363702860774}
   - component: {fileID: 2569400266579633144}
   m_Layer: 31
-  m_Name: New Palette
+  m_Name: FloorPalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

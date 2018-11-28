@@ -24,9 +24,7 @@ public class PlayerController : MonoBehaviour {
 		walking = false;
 		animator.SetBool("Walking", walking);
 		grid_size = grid.CellToWorld(new Vector3Int(1, 1, 0));
-		transform.position += (grid_size / 2);
-		start_pos = transform.position;
-		end_pos = start_pos + grid_size;
+		//transform.position += (grid_size / 2);
 		timeElapsed = 0;
 	}
 

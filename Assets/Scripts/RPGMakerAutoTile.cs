@@ -9,6 +9,7 @@ using UnityEditor;
 
 namespace UnityEngine.Tilemaps {
 	[Serializable]
+	[CreateAssetMenu(fileName = "New RPGMaker AutoTile", menuName = "Tiles/RPGMaker AutoTile")]
 	public class RPGMakerAutoTile : TileBase {
 		// RPGツクール仕様のオートタイル画像（タイル分割済み）を設定
 		[SerializeField]
@@ -72,7 +73,7 @@ namespace UnityEngine.Tilemaps {
                 tileData.sprite = m_PatternedSprites[index];
                 tileData.color = Color.white;
                 tileData.flags = (TileFlags.LockTransform | TileFlags.LockColor);
-                tileData.colliderType = Tile.ColliderType.Sprite;
+                tileData.colliderType = Tile.ColliderType.Grid;
             }
         }
 
@@ -128,7 +129,7 @@ namespace UnityEngine.Tilemaps {
                 "x1x0x0x0",
                 "x0x0x0x0"
             };
-            int index = -1;
+            int index = 0;
             for (int j = 0; j < patternTexts.Length; j++)
             {
                 bool flag = true;
@@ -146,7 +147,7 @@ namespace UnityEngine.Tilemaps {
                 }
                 if (flag)
                 {
-                    index = j;
+                    index = j + 1;
                     break;
                 }
             }
@@ -269,15 +270,14 @@ namespace UnityEngine.Tilemaps {
                 Segments[i, 2] = Sprite.Create(tex, new Rect(x, y + height_half, width_half, height_half), Vector2.zero);
                 Segments[i, 3] = Sprite.Create(tex, new Rect(x + width_half, y + height_half, width_half, height_half), Vector2.zero);
             }
-            m_PatternedSprites = new Sprite[47];
-            for (int i = 0; i < 47; i++)
+            m_PatternedSprites = new Sprite[48];
+			m_PatternedSprites[0] = m_RawTilesSprites[0];
+            for (int i = 1; i < m_PatternedSprites.Length; i++)
             {
-                m_PatternedSprites[i] = CombineTextures(Patterns[i]);
+                m_PatternedSprites[i] = CombineTextures(Patterns[i - 1]);
             }
+			
         }
-        #if UNITY_EDITOR
-        int count = 0;
-        #endif
         private Sprite CombineTextures(Sprite[] Inputs)
         {
 			var Parts = new Sprite[4];
@@ -376,7 +376,7 @@ namespace UnityEngine.Tilemaps {
             return Sprite.Create(ret, new Rect(0, 0, width, height), new Vector2(0.5f, 0.5f), width);
         }
 
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
         [MenuItem("Assets/Create/RPGMaker AutoTile")]
         public static void CreateTerrainTile()
         {
@@ -388,7 +388,7 @@ namespace UnityEngine.Tilemaps {
             AssetDatabase.CreateAsset(CreateInstance<RPGMakerAutoTile>(), path);
         }
 
-#endif
+#endif*/
     }
 
 #if UNITY_EDITOR

@@ -8,6 +8,7 @@ using UnityEditor;
 namespace UnityEngine.Tilemaps
 {
     [Serializable]
+	[CreateAssetMenu(fileName = "New WolfAuto Tile", menuName = "Tiles/WolfAuto Tile")]
     public class WolfAutoTile : TileBase
     {
         [SerializeField]
@@ -288,7 +289,7 @@ namespace UnityEngine.Tilemaps
 
 
 
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
         [MenuItem("Assets/Create/WolfAuto Tile")]
         public static void CreateTerrainTile()
         {
@@ -300,7 +301,7 @@ namespace UnityEngine.Tilemaps
             AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<WolfAutoTile>(), path);
         }
 
-#endif
+#endif*/
     }
 
 #if UNITY_EDITOR
