@@ -103,11 +103,13 @@ public class Character : MonoBehaviour
 				sprites[y,x] = sprite;
 			}
 		}
-		 
+
 		// アニメータコントローラの作成
-		AnimatorController animatorController = new AnimatorController ();
-		// 名前はテクスチャ名にする
-		animatorController.name = this.m_image.name;
+		AnimatorController animatorController = new AnimatorController
+		{
+			// 名前はテクスチャ名にする
+			name = this.m_image.name
+		};
 		//向きと状態指定用のパラメータを追加
 		animatorController.AddParameter ("DirectionX", AnimatorControllerParameterType.Float);
 		animatorController.AddParameter ("DirectionY", AnimatorControllerParameterType.Float);

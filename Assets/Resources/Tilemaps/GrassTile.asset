@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ae8e0ddd219914192d126cd0156d71, type: 3}
+  m_Name: GrassTile
+  m_EditorClassIdentifier: 
+  m_RawTilesSprites:
+  - {fileID: 21300000, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}
+  - {fileID: 21300002, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}
+  - {fileID: 21300024, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}
+  - {fileID: 21300026, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}
+  - {fileID: 21300048, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}
+  - {fileID: 21300050, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_PatternedSprites:
+  - {fileID: 21300000, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_DefaultSprite: {fileID: 21300000, guid: 4b263b7945625ba49b0241ddad759b60, type: 3}

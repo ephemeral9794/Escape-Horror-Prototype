@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: FloorTile
   m_EditorClassIdentifier: 
   m_RawTilesSprites:
-  - {fileID: 21300016, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
-  - {fileID: 21300018, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
-  - {fileID: 21300048, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
-  - {fileID: 21300050, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
-  - {fileID: 21300080, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
-  - {fileID: 21300082, guid: f51b4dda844332d4092ac1092a5027c2, type: 3}
+  - {fileID: 21300028, guid: fe27587ffe6970f45a62d8617e6c7455, type: 3}
+  - {fileID: 21300030, guid: fe27587ffe6970f45a62d8617e6c7455, type: 3}
+  - {fileID: 21300060, guid: fe27587ffe6970f45a62d8617e6c7455, type: 3}
+  - {fileID: 21300062, guid: fe27587ffe6970f45a62d8617e6c7455, type: 3}
+  - {fileID: 21300092, guid: fe27587ffe6970f45a62d8617e6c7455, type: 3}
+  - {fileID: 21300094, guid: fe27587ffe6970f45a62d8617e6c7455, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_PatternedSprites:
+  - {fileID: 21300028, guid: fe27587ffe6970f45a62d8617e6c7455, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -17,10 +17,10 @@ namespace UnityEngine.Tilemaps {
 
 		// タイルパターン（47種類）
 		public Sprite[] m_PatternedSprites;
+		public Sprite m_DefaultSprite;
 
 		public override void RefreshTile(Vector3Int position, ITilemap tilemap)
 		{
-			// 
 			for (int y = -1; y <= 1; y++) {
 				for (int x = -1; x <= 1; x++) {
 					var location = new Vector3Int(position.x + x, position.y + y, position.z);
@@ -33,6 +33,10 @@ namespace UnityEngine.Tilemaps {
 
 		public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
 		{
+			tileData.sprite = m_DefaultSprite;
+            tileData.color = Color.white;
+            tileData.flags = (TileFlags.LockTransform | TileFlags.LockColor);
+            tileData.colliderType = Tile.ColliderType.Grid;
 			UpdateTile(position, tilemap, ref tileData);
 			return;
 		}
@@ -406,11 +410,11 @@ namespace UnityEngine.Tilemaps {
             }
             if (tile.m_RawTilesSprites[0] && tile.m_RawTilesSprites[1] && tile.m_RawTilesSprites[2] && tile.m_RawTilesSprites[3] && tile.m_RawTilesSprites[4] && tile.m_RawTilesSprites[5])
             {
+				tile.m_DefaultSprite = tile.m_RawTilesSprites[0];
                 tile.GeneratePatterns();
             }
         }
-
-
+		
         public override void OnInspectorGUI()
         {
             EditorGUILayout.LabelField("RPGツクール規格のオートタイルチップを上から順番にスロットしてください。（アニメーション非対応）");
@@ -430,6 +434,7 @@ namespace UnityEngine.Tilemaps {
             {
                 if (tile.m_RawTilesSprites[0] && tile.m_RawTilesSprites[1] && tile.m_RawTilesSprites[2] && tile.m_RawTilesSprites[3] && tile.m_RawTilesSprites[4] && tile.m_RawTilesSprites[5])
                 {
+					tile.m_DefaultSprite = tile.m_RawTilesSprites[0];
                     tile.GeneratePatterns();
                 }
 
