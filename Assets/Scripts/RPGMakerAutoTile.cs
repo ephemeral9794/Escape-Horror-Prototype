@@ -151,7 +151,7 @@ namespace UnityEngine.Tilemaps {
                 }
                 if (flag)
                 {
-                    index = j + 1;
+                    index = j;
                     break;
                 }
             }
@@ -274,11 +274,10 @@ namespace UnityEngine.Tilemaps {
                 Segments[i, 2] = Sprite.Create(tex, new Rect(x, y + height_half, width_half, height_half), Vector2.zero);
                 Segments[i, 3] = Sprite.Create(tex, new Rect(x + width_half, y + height_half, width_half, height_half), Vector2.zero);
             }
-            m_PatternedSprites = new Sprite[48];
-			m_PatternedSprites[0] = m_RawTilesSprites[0];
+            m_PatternedSprites = new Sprite[47];
             for (int i = 1; i < m_PatternedSprites.Length; i++)
             {
-                m_PatternedSprites[i] = CombineTextures(Patterns[i - 1]);
+                m_PatternedSprites[i] = CombineTextures(Patterns[i]);
             }
 			
         }
