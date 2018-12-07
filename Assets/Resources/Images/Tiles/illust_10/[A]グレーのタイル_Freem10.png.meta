@@ -1,21 +1,14 @@
 fileFormatVersion: 2
-guid: c0dbbf0684117614680fccc167e8ed05
-timeCreated: 1543577640
+guid: d4a8b58cf1417cb4fa959eaed64dd738
+timeCreated: 1544010202
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "!$\u67282_0"
-    21300002: "!$\u67282_1"
-    21300004: "!$\u67282_2"
-    21300006: "!$\u67282_3"
-    21300008: "!$\u67282_4"
-    21300010: "!$\u67282_5"
-    21300012: "!$\u67282_6"
-    21300014: "!$\u67282_7"
-    21300016: "!$\u67282_8"
-    21300018: "!$\u67282_9"
-    21300020: "!$\u67282_10"
-    21300022: "!$\u67282_11"
+    21300000: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_0"
+    21300002: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_1"
+    21300004: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_2"
+    21300006: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_3"
+    21300008: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_4"
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -34,7 +27,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -58,7 +51,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 32
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -112,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "!$\u67282_0"
+      name: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 1350
-        width: 300
-        height: 450
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,41 +119,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "!$\u67282_1"
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 1350
-        width: 300
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "!$\u67282_2"
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 1350
-        width: 300
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "!$\u67282_3"
+      name: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_1"
       rect:
         serializedVersion: 2
         x: 0
-        y: 900
-        width: 300
-        height: 450
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,41 +133,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "!$\u67282_4"
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 900
-        width: 300
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "!$\u67282_5"
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 900
-        width: 300
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "!$\u67282_6"
+      name: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_2"
       rect:
         serializedVersion: 2
         x: 0
-        y: 450
-        width: 300
-        height: 450
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,13 +147,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "!$\u67282_7"
+      name: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_3"
       rect:
         serializedVersion: 2
-        x: 300
-        y: 450
-        width: 300
-        height: 450
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,55 +161,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "!$\u67282_8"
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 450
-        width: 300
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "!$\u67282_9"
+      name: "[A]\u30B0\u30EC\u30FC\u306E\u30BF\u30A4\u30EB_Freem10_4"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "!$\u67282_10"
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 0
-        width: 300
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "!$\u67282_11"
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 300
-        height: 450
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
