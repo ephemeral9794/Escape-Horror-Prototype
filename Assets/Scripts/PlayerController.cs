@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using UniRx.Triggers;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
 	[SerializeField]
 	private int speed = 12;
 	[SerializeField]
-	private GridLayout grid;
+	private Grid grid;
 	
 	private Vector3 grid_size;	// 1グリッドあたりの大きさ（ワールド座標基準）
 	private Vector3Int direction;	// プレイヤーの向き
@@ -18,16 +20,22 @@ public class PlayerController : MonoBehaviour {
 	private Vector3Int next;
 	private int frames;
 	private Animator animator;
+	private new Rigidbody2D rigidbody;
+	private Tilemap[] tilemaps;
 
 	private void Start() {
 		direction = Vector3Int.zero;
-		grid_size = grid.CellToWorld(new Vector3Int(1, 1, 0));
+		grid_size = grid.cellSize;
 		prev = grid.WorldToCell(transform.position);
 		next = prev;
 		transform.position = grid.CellToWorld(prev) + new Vector3(0.5f, 0.5f, 0.0f);
-		Debug.Log(grid.CellToWorld(prev));
 		frames = 0;
 		animator = GetComponent<Animator>();
+		rigidbody = GetComponent<Rigidbody2D>();
+		tilemaps = grid.GetComponentsInChildren<Tilemap>();
+		foreach (var t in tilemaps) {
+			Debug.Log(t.name);
+		}
 	}
 
 	// Update is called once per frame
@@ -45,7 +53,9 @@ public class PlayerController : MonoBehaviour {
 			MovePoint(dir, ref next);
 			//Debug.Log($"{next} {pos}");
 		}
-		transform.position = pos + new Vector3(0.5f, 0.5f, 0.0f);
+		//transform.position = pos + new Vector3(0.5f, 0.5f, 0.0f);
+		pos += new Vector3(0.5f, 0.5f, 0.0f);
+		rigidbody.MovePosition(new Vector2(pos.x, pos.y));
 		frames++;
 	}
 
@@ -55,6 +65,7 @@ public class PlayerController : MonoBehaviour {
 		var wprev = grid.CellToWorld(prev);
 		pos.x = wprev.x + (div.x * grid_size.x) * t;
 		pos.y = wprev.y + (div.y * grid_size.y) * t;
+		//Debug.Log($"{wprev}, {prev}");
 		//Debug.Log(t);
 
 		if (frames >= speed) {
@@ -68,6 +79,7 @@ public class PlayerController : MonoBehaviour {
 
 	void MovePoint(Vector2 direct, ref Vector3Int point)
 	{
+		var save = point;
 		// 左右
 		if (direct.x > 0.0f) {
 			point.x += 1;
@@ -80,13 +92,19 @@ public class PlayerController : MonoBehaviour {
 		} else if (direct.y < 0.0f) {
 			point.y -= 1;
 		}
+
+		// 次の目標地点のタイルに当たり判定があるなら進まない（変更を戻す）
+		foreach (var tilemap in tilemaps) {
+			if (tilemap.GetColliderType(next) != Tile.ColliderType.None) {
+				point = save;
+			}
+		}
 	}
 
 	Vector2 GetInputDirection()
 	{
 		float x = Input.GetAxis("Horizontal");
 		float y = Input.GetAxis("Vertical");
-		//Debug.Log($"{x}, {y}");
 		return new Vector2(x, y);
 	}
 }

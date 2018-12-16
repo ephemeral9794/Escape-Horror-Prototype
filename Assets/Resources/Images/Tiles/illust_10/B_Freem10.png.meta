@@ -356,7 +356,17 @@ TextureImporter:
         - {x: 19, y: -15}
         - {x: 19, y: 5}
         - {x: 16, y: 12}
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: 12}
+        - {x: -15, y: 9}
+        - {x: -18, y: 6}
+        - {x: -19, y: 2}
+        - {x: -19, y: -12}
+        - {x: -14, y: -18}
+        - {x: 16, y: -18}
+        - {x: 19, y: -14}
+        - {x: 19, y: 3}
+        - {x: 14, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_1
@@ -380,7 +390,16 @@ TextureImporter:
         - {x: 20, y: -9}
         - {x: 20, y: 17}
         - {x: 12, y: 23}
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 22}
+        - {x: -12, y: 21}
+        - {x: -21, y: 10}
+        - {x: -21, y: -13}
+        - {x: -19, y: -22}
+        - {x: -1, y: -22}
+        - {x: 16, y: -13}
+        - {x: 20, y: -6}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_2
@@ -403,7 +422,15 @@ TextureImporter:
         - {x: 23, y: -23}
         - {x: 23, y: 1}
         - {x: 7, y: 22}
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 22}
+        - {x: -15, y: 16}
+        - {x: -23, y: 2}
+        - {x: -23, y: -19}
+        - {x: -22, y: -23}
+        - {x: 22, y: -23}
+        - {x: 22, y: 5}
+        - {x: 6, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_3
@@ -424,7 +451,16 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 15}
         - {x: 20, y: 21}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 20}
+        - {x: -24, y: 12}
+        - {x: -24, y: -9}
+        - {x: -23, y: -22}
+        - {x: -17, y: -24}
+        - {x: 17, y: -24}
+        - {x: 23, y: -23}
+        - {x: 23, y: 17}
+        - {x: 6, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_4
@@ -445,7 +481,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 20}
         - {x: 21, y: 21}
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 20}
+        - {x: -24, y: 13}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 17}
+        - {x: 23, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_5
@@ -470,7 +512,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: -14}
         - {x: 20, y: 5}
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 19}
+        - {x: -22, y: 17}
+        - {x: -22, y: -24}
+        - {x: 21, y: -24}
+        - {x: 21, y: 11}
+        - {x: 5, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_6
@@ -492,7 +540,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 7}
         - {x: 18, y: 12}
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 10}
+        - {x: -20, y: 8}
+        - {x: -20, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 4}
+        - {x: 14, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_7
@@ -515,7 +569,16 @@ TextureImporter:
         - {x: -5, y: -8}
         - {x: -5, y: -10}
         - {x: -9, y: -10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 12}
+        - {x: 12, y: 24}
+      - - {x: -9, y: -8}
+        - {x: -5, y: -8}
+        - {x: -5, y: -10}
+        - {x: -9, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_8
@@ -533,7 +596,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 10}
         - {x: -24, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 10}
+        - {x: -24, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_9
@@ -557,7 +624,17 @@ TextureImporter:
         - {x: 9, y: -8}
         - {x: 9, y: -10}
         - {x: 10, y: -10}
-      physicsShape: []
+      physicsShape:
+      - - {x: 11, y: 24}
+        - {x: 8, y: 20}
+        - {x: -24, y: 10}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: 10, y: -8}
+        - {x: 9, y: -8}
+        - {x: 9, y: -10}
+        - {x: 10, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_10
@@ -577,7 +654,13 @@ TextureImporter:
         - {x: -9, y: -24}
         - {x: -9, y: 21}
         - {x: -11, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -23, y: 24}
+        - {x: -24, y: 23}
+        - {x: -24, y: -24}
+        - {x: -9, y: -24}
+        - {x: -9, y: 21}
+        - {x: -11, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_11
@@ -597,7 +680,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 23}
         - {x: 23, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 13, y: 24}
+        - {x: 10, y: 23}
+        - {x: 10, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_12
@@ -620,7 +708,16 @@ TextureImporter:
         - {x: -5, y: -8}
         - {x: -5, y: -10}
         - {x: -8, y: -10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 12}
+        - {x: 12, y: 24}
+      - - {x: -8, y: -8}
+        - {x: -5, y: -8}
+        - {x: -5, y: -10}
+        - {x: -8, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_13
@@ -638,7 +735,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 10}
         - {x: -24, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 10}
+        - {x: -24, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_14
@@ -657,7 +758,12 @@ TextureImporter:
         - {x: 24, y: 24}
         - {x: -11, y: 24}
         - {x: -24, y: 19}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+        - {x: -11, y: 24}
+        - {x: -24, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_15
@@ -675,7 +781,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: -24, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: -24, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_16
@@ -693,7 +803,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: -24, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: -24, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_17
@@ -711,7 +825,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: -24, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: -24, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_18
@@ -731,7 +849,13 @@ TextureImporter:
         - {x: 23, y: -24}
         - {x: 23, y: 2}
         - {x: 12, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 15}
+        - {x: -23, y: 2}
+        - {x: -23, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: 2}
+        - {x: 12, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_19
@@ -751,7 +875,13 @@ TextureImporter:
         - {x: 23, y: -24}
         - {x: 23, y: 2}
         - {x: 12, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 15}
+        - {x: -23, y: 2}
+        - {x: -23, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: 2}
+        - {x: 12, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_20
@@ -771,7 +901,16 @@ TextureImporter:
         - {x: -21, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -15}
+        - {x: -19, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+        - {x: -24, y: 24}
+      - - {x: 4, y: 14}
+        - {x: 0, y: 14}
+        - {x: -2, y: 12}
+        - {x: 7, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_21
@@ -791,7 +930,13 @@ TextureImporter:
         - {x: -17, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -22, y: 24}
+        - {x: -22, y: -12}
+        - {x: -21, y: -24}
+        - {x: 18, y: -24}
+        - {x: 24, y: -12}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_22
@@ -809,7 +954,11 @@ TextureImporter:
         - {x: -9, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: -24}
+        - {x: -9, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_23
@@ -827,7 +976,11 @@ TextureImporter:
         - {x: 9, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 11, y: 24}
+        - {x: 11, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_24
@@ -845,7 +998,11 @@ TextureImporter:
         - {x: -9, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: -24}
+        - {x: -9, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_25
@@ -863,7 +1020,11 @@ TextureImporter:
         - {x: 9, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 24}
+        - {x: 9, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_26
@@ -881,7 +1042,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_27
@@ -899,7 +1064,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_28
@@ -917,7 +1086,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_29
@@ -935,7 +1108,11 @@ TextureImporter:
         - {x: 23, y: 24}
         - {x: -23, y: 24}
         - {x: -23, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 23, y: -24}
+        - {x: 23, y: 24}
+        - {x: -23, y: 24}
+        - {x: -23, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_30
@@ -953,7 +1130,11 @@ TextureImporter:
         - {x: 23, y: 24}
         - {x: -23, y: 24}
         - {x: -23, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 23, y: -24}
+        - {x: 23, y: 24}
+        - {x: -23, y: 24}
+        - {x: -23, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_31
@@ -974,7 +1155,14 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 1}
         - {x: 22, y: 1}
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: -1}
+        - {x: 12, y: -8}
+        - {x: 6, y: -15}
+        - {x: 6, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 1}
+        - {x: 22, y: 1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_32
@@ -994,7 +1182,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: -4}
         - {x: 22, y: -1}
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: 2}
+        - {x: -24, y: 2}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -4}
+        - {x: 22, y: -1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_33
@@ -1015,7 +1209,14 @@ TextureImporter:
         - {x: -11, y: -23}
         - {x: -11, y: -16}
         - {x: -18, y: -8}
-      physicsShape: []
+      physicsShape:
+      - - {x: -22, y: -5}
+        - {x: -24, y: -5}
+        - {x: -24, y: -24}
+        - {x: -13, y: -24}
+        - {x: -11, y: -23}
+        - {x: -11, y: -16}
+        - {x: -18, y: -8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_34
@@ -1038,7 +1239,16 @@ TextureImporter:
         - {x: -5, y: -8}
         - {x: -5, y: -10}
         - {x: -9, y: -10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 13}
+        - {x: 12, y: 24}
+      - - {x: -9, y: -8}
+        - {x: -5, y: -8}
+        - {x: -5, y: -10}
+        - {x: -9, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_35
@@ -1056,7 +1266,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 10}
         - {x: -24, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 10}
+        - {x: -24, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_36
@@ -1080,7 +1294,17 @@ TextureImporter:
         - {x: 9, y: -8}
         - {x: 9, y: -10}
         - {x: 10, y: -10}
-      physicsShape: []
+      physicsShape:
+      - - {x: 11, y: 24}
+        - {x: 8, y: 20}
+        - {x: -24, y: 10}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: 10, y: -8}
+        - {x: 9, y: -8}
+        - {x: 9, y: -10}
+        - {x: 10, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_37
@@ -1098,7 +1322,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: -9, y: -24}
         - {x: -9, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: -9, y: -24}
+        - {x: -9, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_38
@@ -1116,7 +1344,11 @@ TextureImporter:
         - {x: 9, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 24}
+        - {x: 9, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_39
@@ -1139,7 +1371,16 @@ TextureImporter:
         - {x: -5, y: -8}
         - {x: -5, y: -10}
         - {x: -9, y: -10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 10}
+        - {x: -8, y: 24}
+      - - {x: -9, y: -8}
+        - {x: -5, y: -8}
+        - {x: -5, y: -10}
+        - {x: -9, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_40
@@ -1157,7 +1398,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 10}
         - {x: -24, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 10}
+        - {x: -24, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_41
@@ -1180,7 +1425,16 @@ TextureImporter:
         - {x: 9, y: -8}
         - {x: 9, y: -10}
         - {x: 10, y: -10}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 24}
+        - {x: -24, y: 10}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: 10, y: -8}
+        - {x: 9, y: -8}
+        - {x: 9, y: -10}
+        - {x: 10, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_42
@@ -1199,7 +1453,12 @@ TextureImporter:
         - {x: -10, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 21}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 21}
+        - {x: -10, y: 1}
+        - {x: -10, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_43
@@ -1219,7 +1478,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 22}
         - {x: 16, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 24}
+        - {x: -24, y: 21}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 22}
+        - {x: 16, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_44
@@ -1238,7 +1503,12 @@ TextureImporter:
         - {x: 10, y: -24}
         - {x: 10, y: 2}
         - {x: -8, y: 21}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 21}
+        - {x: -24, y: -24}
+        - {x: 10, y: -24}
+        - {x: 10, y: 2}
+        - {x: -8, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_45
@@ -1258,7 +1528,13 @@ TextureImporter:
         - {x: 23, y: -24}
         - {x: 23, y: 2}
         - {x: 12, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 15}
+        - {x: -23, y: 2}
+        - {x: -23, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: 2}
+        - {x: 12, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_46
@@ -1280,7 +1556,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 7}
         - {x: 14, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 15}
+        - {x: -23, y: 2}
+        - {x: -23, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: 2}
+        - {x: 12, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_47
@@ -1300,7 +1582,13 @@ TextureImporter:
         - {x: -3, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 24}
+        - {x: -12, y: 10}
+        - {x: -12, y: -13}
+        - {x: -3, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_48
@@ -1318,7 +1606,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_49
@@ -1339,7 +1631,14 @@ TextureImporter:
         - {x: 8, y: -22}
         - {x: 8, y: 10}
         - {x: 5, y: 21}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 3, y: -24}
+        - {x: 8, y: -22}
+        - {x: 8, y: 10}
+        - {x: 5, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_50
@@ -1358,7 +1657,12 @@ TextureImporter:
         - {x: 11, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 24}
+        - {x: 9, y: -22}
+        - {x: 11, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_51
@@ -1378,7 +1682,15 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 2}
         - {x: -13, y: 13}
-      physicsShape: []
+      physicsShape:
+      - - {x: 24, y: -18}
+        - {x: 24, y: 0}
+        - {x: -12, y: 12}
+        - {x: -24, y: 15}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -19}
+        - {x: 21, y: -18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_52
@@ -1398,7 +1710,18 @@ TextureImporter:
         - {x: -24, y: 0}
         - {x: -24, y: -24}
         - {x: 24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -24}
+        - {x: -17, y: -21}
+        - {x: -24, y: -20}
+        - {x: -24, y: -24}
+      - - {x: -21, y: 0}
+        - {x: -24, y: 0}
+        - {x: -24, y: -18}
+        - {x: -17, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -15}
+        - {x: -16, y: -1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_53
@@ -1418,7 +1741,12 @@ TextureImporter:
         - {x: -5, y: -24}
         - {x: -5, y: -18}
         - {x: -11, y: -8}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -8}
+        - {x: -24, y: -24}
+        - {x: -6, y: -24}
+        - {x: -6, y: -10}
+        - {x: -12, y: -8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_54
@@ -1438,7 +1766,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 0}
         - {x: 16, y: 2}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 0}
+        - {x: -3, y: -17}
+        - {x: -3, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 0}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_55
@@ -1458,7 +1791,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 0}
         - {x: 17, y: 2}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -1}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_56
@@ -1478,7 +1815,14 @@ TextureImporter:
         - {x: -9, y: 2}
         - {x: -20, y: 2}
         - {x: -24, y: 1}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -1}
+        - {x: -24, y: -24}
+        - {x: 2, y: -24}
+        - {x: 2, y: -21}
+        - {x: -3, y: -7}
+        - {x: -11, y: -3}
+        - {x: -16, y: -1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_57
@@ -1496,7 +1840,11 @@ TextureImporter:
         - {x: -10, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 24}
+        - {x: -10, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_58
@@ -1514,7 +1862,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_59
@@ -1532,7 +1884,11 @@ TextureImporter:
         - {x: 10, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: -24}
+        - {x: 10, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_60
@@ -1550,7 +1906,11 @@ TextureImporter:
         - {x: 23, y: 24}
         - {x: -23, y: 24}
         - {x: -23, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 23, y: -24}
+        - {x: 23, y: 24}
+        - {x: -23, y: 24}
+        - {x: -23, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_61
@@ -1568,7 +1928,11 @@ TextureImporter:
         - {x: 23, y: 24}
         - {x: -23, y: 24}
         - {x: -23, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 23, y: -24}
+        - {x: 23, y: 24}
+        - {x: -23, y: 24}
+        - {x: -23, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_62
@@ -1595,7 +1959,14 @@ TextureImporter:
         - {x: 23, y: 5}
         - {x: 24, y: 7}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 7, y: 24}
+        - {x: 4, y: 21}
+        - {x: 4, y: 9}
+        - {x: 10, y: 5}
+        - {x: 23, y: 5}
+        - {x: 24, y: 7}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_63
@@ -1614,7 +1985,13 @@ TextureImporter:
         - {x: -21, y: -22}
         - {x: 24, y: -22}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -13}
+        - {x: -15, y: -21}
+        - {x: 22, y: -21}
+        - {x: 24, y: -19}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_64
@@ -1640,7 +2017,24 @@ TextureImporter:
         - {x: -4, y: 15}
         - {x: 2, y: 22}
         - {x: 1, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: -17}
+        - {x: -18, y: -15}
+        - {x: -18, y: -11}
+        - {x: -22, y: -3}
+        - {x: -24, y: -3}
+        - {x: -24, y: -17}
+      - - {x: -24, y: 5}
+        - {x: -24, y: -3}
+        - {x: -23, y: -4}
+        - {x: -18, y: -4}
+        - {x: -16, y: 0}
+        - {x: -16, y: 5}
+      - - {x: -24, y: 24}
+        - {x: -24, y: 15}
+        - {x: -4, y: 15}
+        - {x: 2, y: 22}
+        - {x: 1, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_65
@@ -1658,7 +2052,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_66
@@ -1676,7 +2074,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_67
@@ -1695,7 +2097,21 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 18}
         - {x: 8, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 1}
+        - {x: 24, y: -2}
+        - {x: 24, y: 16}
+        - {x: 20, y: 19}
+        - {x: 2, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -3}
+        - {x: 21, y: -2}
+      - - {x: -9, y: 8}
+        - {x: -7, y: 7}
+        - {x: -7, y: 8}
+        - {x: -9, y: 9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_68
@@ -1715,7 +2131,13 @@ TextureImporter:
         - {x: -9, y: -24}
         - {x: -9, y: 23}
         - {x: -11, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -22, y: 24}
+        - {x: -24, y: 22}
+        - {x: -24, y: -24}
+        - {x: -9, y: -24}
+        - {x: -9, y: 23}
+        - {x: -11, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_69
@@ -1734,7 +2156,14 @@ TextureImporter:
         - {x: -19, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 24}
+        - {x: -10, y: 16}
+        - {x: -18, y: -2}
+        - {x: -18, y: -21}
+        - {x: -17, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_70
@@ -1752,7 +2181,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_71
@@ -1772,7 +2205,12 @@ TextureImporter:
         - {x: 18, y: -24}
         - {x: 18, y: 2}
         - {x: 5, y: 23}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 17, y: -24}
+        - {x: 17, y: 6}
+        - {x: 5, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_72
@@ -1792,7 +2230,13 @@ TextureImporter:
         - {x: -10, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 22}
-      physicsShape: []
+      physicsShape:
+      - - {x: 14, y: 22}
+        - {x: -9, y: 7}
+        - {x: -10, y: -6}
+        - {x: -10, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_73
@@ -1811,7 +2255,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 23}
         - {x: 22, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 23}
+        - {x: 22, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_74
@@ -1830,7 +2279,12 @@ TextureImporter:
         - {x: 10, y: -24}
         - {x: 10, y: 4}
         - {x: -12, y: 22}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 22}
+        - {x: -24, y: -24}
+        - {x: 10, y: -24}
+        - {x: 10, y: 4}
+        - {x: -12, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_75
@@ -1851,7 +2305,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 13}
         - {x: 22, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 15}
+        - {x: -24, y: -9}
+        - {x: -23, y: -24}
+        - {x: 23, y: -24}
+        - {x: 24, y: -13}
+        - {x: 24, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_76
@@ -1870,7 +2330,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 15}
         - {x: -24, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 15}
+        - {x: -24, y: -24}
+        - {x: 23, y: -24}
+        - {x: 24, y: -17}
+        - {x: 24, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_77
@@ -1889,7 +2354,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 17, y: 12}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 0}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 17, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_78
@@ -1909,7 +2379,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 21, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 15}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 21, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_79
@@ -1929,7 +2405,13 @@ TextureImporter:
         - {x: -8, y: -24}
         - {x: -8, y: -1}
         - {x: -13, y: 7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 11}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: -8, y: -24}
+        - {x: -8, y: -1}
+        - {x: -13, y: 7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_80
@@ -1950,7 +2432,14 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 8}
         - {x: 23, y: 9}
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 10}
+        - {x: 13, y: 10}
+        - {x: 9, y: 6}
+        - {x: 9, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 8}
+        - {x: 23, y: 9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_81
@@ -1968,7 +2457,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_82
@@ -1986,7 +2479,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_83
@@ -2004,7 +2501,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_84
@@ -2041,7 +2542,13 @@ TextureImporter:
         - {x: 13, y: -20}
         - {x: 24, y: -20}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 24}
+        - {x: -17, y: 16}
+        - {x: 4, y: -10}
+        - {x: 22, y: -19}
+        - {x: 24, y: -19}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_86
@@ -2060,7 +2567,13 @@ TextureImporter:
         - {x: -22, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -20}
+        - {x: -18, y: -24}
+        - {x: 21, y: -24}
+        - {x: 24, y: -23}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_87
@@ -2081,7 +2594,14 @@ TextureImporter:
         - {x: -9, y: -20}
         - {x: 14, y: -2}
         - {x: 18, y: 16}
-      physicsShape: []
+      physicsShape:
+      - - {x: 16, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -21}
+        - {x: -20, y: -20}
+        - {x: -10, y: -14}
+        - {x: 11, y: 8}
+        - {x: 15, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_88
@@ -2100,7 +2620,12 @@ TextureImporter:
         - {x: -9, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 24}
+        - {x: -10, y: -23}
+        - {x: -9, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_89
@@ -2118,7 +2643,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_90
@@ -2137,7 +2666,12 @@ TextureImporter:
         - {x: 9, y: -24}
         - {x: 10, y: -23}
         - {x: 10, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 9, y: -24}
+        - {x: 10, y: -23}
+        - {x: 10, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_91
@@ -2167,7 +2701,13 @@ TextureImporter:
         - {x: -24, y: -13}
         - {x: 24, y: -13}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -23, y: 24}
+        - {x: -24, y: 15}
+        - {x: -24, y: -11}
+        - {x: 24, y: -11}
+        - {x: 24, y: 11}
+        - {x: 23, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_92
@@ -2186,7 +2726,13 @@ TextureImporter:
         - {x: 23, y: -20}
         - {x: 24, y: -18}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -23, y: 24}
+        - {x: -24, y: 12}
+        - {x: -24, y: -15}
+        - {x: -23, y: -17}
+        - {x: 24, y: -17}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_93
@@ -2204,7 +2750,11 @@ TextureImporter:
         - {x: 8, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 24}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_94
@@ -2222,7 +2772,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_95
@@ -2240,7 +2794,11 @@ TextureImporter:
         - {x: -8, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -24}
+        - {x: -8, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_96
@@ -2260,7 +2818,13 @@ TextureImporter:
         - {x: 22, y: -16}
         - {x: 24, y: -16}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -1}
+        - {x: -14, y: -9}
+        - {x: 19, y: -15}
+        - {x: 24, y: -15}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_97
@@ -2280,7 +2844,12 @@ TextureImporter:
         - {x: -4, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -16}
+        - {x: 0, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_98
@@ -2298,7 +2867,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_99
@@ -2317,7 +2890,14 @@ TextureImporter:
         - {x: -9, y: -24}
         - {x: -9, y: 13}
         - {x: -14, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 10}
+        - {x: -24, y: 8}
+        - {x: -24, y: -24}
+        - {x: -10, y: -24}
+        - {x: -9, y: -18}
+        - {x: -9, y: 7}
+        - {x: -12, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_100
@@ -2343,7 +2923,20 @@ TextureImporter:
         - {x: 13, y: -2}
         - {x: 13, y: -5}
         - {x: -13, y: -5}
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 20}
+        - {x: 16, y: 20}
+        - {x: 14, y: 18}
+        - {x: -4, y: 20}
+        - {x: -22, y: 20}
+        - {x: -23, y: 18}
+        - {x: -23, y: -24}
+        - {x: 22, y: -24}
+        - {x: 22, y: 18}
+      - - {x: -14, y: -1}
+        - {x: 13, y: -1}
+        - {x: 13, y: -5}
+        - {x: -14, y: -5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_101
@@ -2363,7 +2956,13 @@ TextureImporter:
         - {x: 21, y: -24}
         - {x: 24, y: -1}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -1}
+        - {x: -22, y: -24}
+        - {x: 21, y: -24}
+        - {x: 24, y: 10}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_102
@@ -2387,7 +2986,17 @@ TextureImporter:
         - {x: 2, y: 6}
         - {x: 4, y: 5}
         - {x: 4, y: 7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 20}
+        - {x: -14, y: -8}
+        - {x: -9, y: -24}
+        - {x: 18, y: -24}
+        - {x: 18, y: 20}
+      - - {x: 1, y: 10}
+        - {x: -1, y: 10}
+        - {x: 2, y: 6}
+        - {x: 4, y: 5}
+        - {x: 4, y: 7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_103
@@ -2412,7 +3021,13 @@ TextureImporter:
         - {x: -16, y: 9}
         - {x: -19, y: 10}
         - {x: -21, y: 8}
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 13}
+        - {x: -15, y: -9}
+        - {x: -14, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: -13, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_104
@@ -2432,7 +3047,13 @@ TextureImporter:
         - {x: 16, y: 7}
         - {x: 16, y: 13}
         - {x: 14, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: 14, y: -24}
+        - {x: 15, y: 7}
+        - {x: 15, y: 13}
+        - {x: 13, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_105
@@ -2452,7 +3073,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 16}
         - {x: -20, y: 16}
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: 15}
+        - {x: -23, y: 8}
+        - {x: -23, y: -17}
+        - {x: -18, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_106
@@ -2473,7 +3100,13 @@ TextureImporter:
         - {x: 22, y: -16}
         - {x: 23, y: -6}
         - {x: 23, y: 8}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 15}
+        - {x: -24, y: -24}
+        - {x: 17, y: -24}
+        - {x: 23, y: -22}
+        - {x: 23, y: 12}
+        - {x: 22, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_107
@@ -2493,7 +3126,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 23, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -23, y: 15}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 23, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_108
@@ -2512,7 +3151,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 17, y: 12}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 0}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 17, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_109
@@ -2532,7 +3176,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 21, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 15}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 21, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_110
@@ -2552,7 +3202,13 @@ TextureImporter:
         - {x: -8, y: -24}
         - {x: -8, y: -1}
         - {x: -13, y: 7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 11}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: -8, y: -24}
+        - {x: -8, y: -1}
+        - {x: -13, y: 7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_111
@@ -2571,7 +3227,13 @@ TextureImporter:
         - {x: -13, y: 7}
         - {x: 24, y: 7}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 15}
+        - {x: -22, y: 10}
+        - {x: 4, y: 7}
+        - {x: 24, y: 7}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_112
@@ -2590,7 +3252,12 @@ TextureImporter:
         - {x: 20, y: 16}
         - {x: 24, y: 16}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 24}
+        - {x: 9, y: 21}
+        - {x: 22, y: 17}
+        - {x: 24, y: 17}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_113
@@ -2610,7 +3277,12 @@ TextureImporter:
         - {x: 22, y: 0}
         - {x: 24, y: 0}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 16}
+        - {x: 19, y: 1}
+        - {x: 24, y: 1}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_114
@@ -2630,7 +3302,13 @@ TextureImporter:
         - {x: -12, y: 7}
         - {x: -9, y: 11}
         - {x: -9, y: 19}
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: 7}
+        - {x: -12, y: 7}
+        - {x: -9, y: 11}
+        - {x: -9, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_115
@@ -2656,7 +3334,19 @@ TextureImporter:
         - {x: 13, y: 14}
         - {x: 13, y: 11}
         - {x: -13, y: 11}
-      physicsShape: []
+      physicsShape:
+      - - {x: -23, y: 24}
+        - {x: -23, y: -24}
+        - {x: 22, y: -24}
+        - {x: 22, y: 24}
+      - - {x: -14, y: -1}
+        - {x: 13, y: -1}
+        - {x: 13, y: -5}
+        - {x: -14, y: -5}
+      - - {x: -14, y: 15}
+        - {x: 13, y: 15}
+        - {x: 13, y: 11}
+        - {x: -14, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_116
@@ -2674,7 +3364,11 @@ TextureImporter:
         - {x: 21, y: 24}
         - {x: -20, y: 24}
         - {x: -20, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 21, y: -24}
+        - {x: 21, y: 24}
+        - {x: -20, y: 24}
+        - {x: -20, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_117
@@ -2692,7 +3386,11 @@ TextureImporter:
         - {x: 4, y: 24}
         - {x: -4, y: 24}
         - {x: -4, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: -24}
+        - {x: 4, y: 24}
+        - {x: -4, y: 24}
+        - {x: -4, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_118
@@ -2712,7 +3410,13 @@ TextureImporter:
         - {x: -13, y: -15}
         - {x: 24, y: -15}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 24}
+        - {x: -15, y: -5}
+        - {x: -15, y: -11}
+        - {x: -13, y: -13}
+        - {x: 24, y: -13}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_119
@@ -2732,7 +3436,13 @@ TextureImporter:
         - {x: 16, y: -14}
         - {x: 16, y: 10}
         - {x: 15, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -13}
+        - {x: 13, y: -13}
+        - {x: 15, y: -12}
+        - {x: 15, y: 10}
+        - {x: 14, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_120
@@ -2751,7 +3461,14 @@ TextureImporter:
         - {x: 14, y: -22}
         - {x: 24, y: -19}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 24}
+        - {x: -20, y: 14}
+        - {x: -20, y: -18}
+        - {x: -17, y: -19}
+        - {x: 5, y: -19}
+        - {x: 24, y: -12}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_121
@@ -2771,7 +3488,14 @@ TextureImporter:
         - {x: 18, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -12}
+        - {x: -7, y: -19}
+        - {x: 17, y: -19}
+        - {x: 20, y: -18}
+        - {x: 20, y: 17}
+        - {x: 18, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_122
@@ -2790,7 +3514,13 @@ TextureImporter:
         - {x: 22, y: -19}
         - {x: 24, y: -16}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -13}
+        - {x: -22, y: -15}
+        - {x: 21, y: -15}
+        - {x: 24, y: -12}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_123
@@ -2808,7 +3538,11 @@ TextureImporter:
         - {x: 8, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 24}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_124
@@ -2826,7 +3560,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_125
@@ -2844,7 +3582,11 @@ TextureImporter:
         - {x: -8, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -24}
+        - {x: -8, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_126
@@ -2863,7 +3605,13 @@ TextureImporter:
         - {x: 5, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: -16}
-      physicsShape: []
+      physicsShape:
+      - - {x: 11, y: -20}
+        - {x: 6, y: -22}
+        - {x: 6, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -17}
+        - {x: 17, y: -17}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_127
@@ -2882,7 +3630,18 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 0}
         - {x: 7, y: 0}
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: -1}
+        - {x: -24, y: -16}
+        - {x: -24, y: -24}
+        - {x: 12, y: -24}
+        - {x: 24, y: -19}
+        - {x: 24, y: -1}
+      - - {x: 16, y: -22}
+        - {x: 16, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -20}
+        - {x: 21, y: -20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_128
@@ -2901,7 +3660,21 @@ TextureImporter:
         - {x: 24, y: 16}
         - {x: 20, y: 16}
         - {x: -24, y: 3}
-      physicsShape: []
+      physicsShape:
+      - - {x: 13, y: -7}
+        - {x: 24, y: -3}
+        - {x: 24, y: 15}
+        - {x: 11, y: 13}
+        - {x: -24, y: 0}
+        - {x: -24, y: -18}
+        - {x: -22, y: -18}
+        - {x: -13, y: -15}
+        - {x: -21, y: -18}
+        - {x: -24, y: -19}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -4}
+        - {x: 19, y: -5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_129
@@ -2920,7 +3693,12 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: -10, y: -24}
         - {x: -9, y: -21}
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: -10, y: -24}
+        - {x: -9, y: -21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_130
@@ -2942,7 +3720,11 @@ TextureImporter:
         - {x: 23, y: 7}
       - - {x: 13, y: 14}
         - {x: -13, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -23, y: 24}
+        - {x: -23, y: 4}
+        - {x: 22, y: 4}
+        - {x: 22, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_131
@@ -2963,7 +3745,13 @@ TextureImporter:
         - {x: 21, y: -7}
         - {x: 24, y: 3}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 4}
+        - {x: -11, y: -7}
+        - {x: 11, y: -7}
+        - {x: 24, y: 3}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_132
@@ -2984,7 +3772,15 @@ TextureImporter:
         - {x: 24, y: -21}
         - {x: 24, y: 6}
         - {x: 16, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 24}
+        - {x: -4, y: 24}
+        - {x: -18, y: -2}
+        - {x: -18, y: -17}
+        - {x: -16, y: -19}
+        - {x: 16, y: -19}
+        - {x: 18, y: -17}
+        - {x: 18, y: 1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_133
@@ -3005,7 +3801,14 @@ TextureImporter:
         - {x: 15, y: -21}
         - {x: 14, y: -13}
         - {x: 10, y: -5}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -6}
+        - {x: -13, y: -13}
+        - {x: -14, y: -21}
+        - {x: -14, y: -24}
+        - {x: 13, y: -24}
+        - {x: 13, y: -11}
+        - {x: 5, y: -6}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_134
@@ -3026,7 +3829,21 @@ TextureImporter:
         - {x: 16, y: -14}
         - {x: 16, y: 14}
         - {x: 6, y: 18}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 9}
+        - {x: -11, y: 6}
+        - {x: -11, y: -13}
+        - {x: 1, y: -17}
+        - {x: 14, y: -17}
+        - {x: 14, y: -7}
+        - {x: 13, y: 3}
+        - {x: 10, y: 4}
+        - {x: 1, y: 9}
+      - - {x: -13, y: 11}
+        - {x: -10, y: 12}
+        - {x: -10, y: 15}
+        - {x: -13, y: 16}
+        - {x: -15, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_135
@@ -3044,7 +3861,11 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 8}
         - {x: -24, y: 8}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -3}
+        - {x: -24, y: -3}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_136
@@ -3064,7 +3885,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 16}
         - {x: -20, y: 16}
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: 15}
+        - {x: -23, y: 11}
+        - {x: -23, y: -17}
+        - {x: -18, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_137
@@ -3084,7 +3911,13 @@ TextureImporter:
         - {x: 23, y: -14}
         - {x: 23, y: 10}
         - {x: 18, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 15}
+        - {x: -24, y: -24}
+        - {x: 18, y: -24}
+        - {x: 23, y: -18}
+        - {x: 23, y: 12}
+        - {x: 17, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_138
@@ -3104,7 +3937,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 17, y: 12}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 0}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 17, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_139
@@ -3124,7 +3962,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 21, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 15}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 21, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_140
@@ -3145,7 +3989,13 @@ TextureImporter:
         - {x: -6, y: -12}
         - {x: -6, y: -2}
         - {x: -7, y: 4}
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 11}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: -8, y: -24}
+        - {x: -8, y: -1}
+        - {x: -13, y: 7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_141
@@ -3164,7 +4014,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 23}
         - {x: 23, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 24}
+        - {x: 9, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 23}
+        - {x: 23, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_142
@@ -3183,7 +4038,21 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 15, y: 10}
+        - {x: 20, y: 12}
+        - {x: 24, y: 14}
+        - {x: 24, y: 24}
+        - {x: -10, y: 24}
+        - {x: -24, y: 16}
+        - {x: -24, y: -2}
+        - {x: -20, y: -1}
+        - {x: -14, y: 1}
+        - {x: -24, y: -3}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 12}
+        - {x: 21, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_143
@@ -3201,7 +4070,15 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 14}
+        - {x: -19, y: 15}
+        - {x: -13, y: 17}
+        - {x: -24, y: 13}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_144
@@ -3219,7 +4096,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_145
@@ -3245,7 +4126,15 @@ TextureImporter:
         - {x: 1, y: 9}
         - {x: 2, y: 8}
         - {x: 2, y: 9}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 20}
+        - {x: -14, y: -8}
+        - {x: -9, y: -24}
+        - {x: 18, y: -24}
+        - {x: 18, y: 20}
+      - - {x: 1, y: 9}
+        - {x: 3, y: 7}
+        - {x: 3, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_146
@@ -3271,7 +4160,19 @@ TextureImporter:
         - {x: -1, y: 10}
         - {x: -3, y: 7}
         - {x: -2, y: 7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 20}
+        - {x: -18, y: 5}
+        - {x: -18, y: -16}
+        - {x: -11, y: -24}
+        - {x: 7, y: -24}
+        - {x: 14, y: -4}
+        - {x: 14, y: 18}
+        - {x: 11, y: 20}
+      - - {x: 1, y: 10}
+        - {x: -1, y: 10}
+        - {x: -4, y: 5}
+        - {x: -2, y: 6}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_147
@@ -3297,7 +4198,19 @@ TextureImporter:
         - {x: -1, y: 10}
         - {x: -4, y: 5}
         - {x: -2, y: 6}
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 20}
+        - {x: -18, y: 5}
+        - {x: -18, y: -16}
+        - {x: -11, y: -24}
+        - {x: 7, y: -24}
+        - {x: 14, y: -4}
+        - {x: 14, y: 18}
+        - {x: 11, y: 20}
+      - - {x: 1, y: 10}
+        - {x: -1, y: 10}
+        - {x: -4, y: 5}
+        - {x: -2, y: 6}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_148
@@ -3324,7 +4237,22 @@ TextureImporter:
         - {x: 18, y: -19}
         - {x: 18, y: 8}
         - {x: 15, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 14}
+        - {x: -12, y: 14}
+        - {x: -12, y: -9}
+        - {x: -6, y: -24}
+        - {x: 8, y: -24}
+        - {x: 14, y: -14}
+        - {x: 15, y: -10}
+        - {x: 8, y: 9}
+      - - {x: -14, y: -15}
+        - {x: -14, y: -16}
+        - {x: -11, y: -19}
+        - {x: -8, y: -18}
+        - {x: -8, y: -15}
+        - {x: -10, y: -13}
+        - {x: -12, y: -13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_149
@@ -3346,7 +4274,18 @@ TextureImporter:
         - {x: 18, y: -18}
         - {x: 18, y: 8}
         - {x: 17, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: 11, y: 14}
+        - {x: -18, y: 14}
+        - {x: -18, y: -24}
+        - {x: 16, y: -24}
+        - {x: 18, y: -8}
+        - {x: 18, y: 11}
+      - - {x: -14, y: 14}
+        - {x: -11, y: 15}
+        - {x: -11, y: 18}
+        - {x: -14, y: 19}
+        - {x: -16, y: 17}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_150
@@ -3364,7 +4303,11 @@ TextureImporter:
         - {x: -24, y: -8}
         - {x: 24, y: -8}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -8}
+        - {x: 24, y: -8}
+        - {x: 24, y: 15}
+        - {x: -24, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_151
@@ -3383,7 +4326,14 @@ TextureImporter:
         - {x: -15, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 24}
+        - {x: -17, y: -17}
+        - {x: -15, y: -20}
+        - {x: -13, y: -21}
+        - {x: 22, y: -21}
+        - {x: 24, y: -19}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_152
@@ -3403,7 +4353,13 @@ TextureImporter:
         - {x: 21, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -20}
+        - {x: -23, y: -21}
+        - {x: 14, y: -21}
+        - {x: 18, y: -17}
+        - {x: 18, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_153
@@ -3421,7 +4377,11 @@ TextureImporter:
         - {x: 8, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 24}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_154
@@ -3439,7 +4399,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_155
@@ -3457,7 +4421,11 @@ TextureImporter:
         - {x: -8, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -24}
+        - {x: -8, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_156
@@ -3493,7 +4461,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_158
@@ -3511,7 +4483,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_159
@@ -3529,7 +4505,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_160
@@ -3549,7 +4529,13 @@ TextureImporter:
         - {x: -9, y: -24}
         - {x: -9, y: 6}
         - {x: -12, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 10}
+        - {x: -24, y: 8}
+        - {x: -24, y: -24}
+        - {x: -9, y: -24}
+        - {x: -9, y: 6}
+        - {x: -12, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_161
@@ -3570,7 +4556,14 @@ TextureImporter:
         - {x: 24, y: -18}
         - {x: 24, y: 0}
         - {x: -8, y: 0}
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: -5}
+        - {x: -23, y: -23}
+        - {x: -23, y: -24}
+        - {x: 23, y: -24}
+        - {x: 24, y: -18}
+        - {x: 24, y: 0}
+        - {x: -8, y: 0}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_162
@@ -3590,7 +4583,13 @@ TextureImporter:
         - {x: -14, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 9}
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 9}
+        - {x: -24, y: 0}
+        - {x: -24, y: -20}
+        - {x: -14, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_163
@@ -3609,7 +4608,12 @@ TextureImporter:
         - {x: 23, y: -24}
         - {x: 20, y: -15}
         - {x: 10, y: 0}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 0}
+        - {x: -24, y: -24}
+        - {x: 23, y: -24}
+        - {x: 20, y: -15}
+        - {x: 10, y: 0}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_164
@@ -3639,7 +4643,23 @@ TextureImporter:
         - {x: 19, y: -11}
         - {x: 19, y: -1}
         - {x: 15, y: 17}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 0}
+        - {x: 15, y: -10}
+        - {x: 18, y: -9}
+        - {x: 18, y: -5}
+        - {x: 17, y: 2}
+        - {x: 12, y: 9}
+        - {x: 11, y: 9}
+        - {x: 8, y: 8}
+      - - {x: -8, y: 24}
+        - {x: -11, y: 13}
+        - {x: -11, y: 1}
+        - {x: 1, y: -6}
+        - {x: 4, y: -7}
+        - {x: 10, y: -7}
+        - {x: 10, y: 20}
+        - {x: 8, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_165
@@ -3663,7 +4683,15 @@ TextureImporter:
         - {x: 21, y: 1}
         - {x: 21, y: 8}
         - {x: 18, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 24}
+        - {x: -20, y: -11}
+        - {x: -5, y: -24}
+        - {x: 0, y: -24}
+        - {x: 17, y: -20}
+        - {x: 18, y: -13}
+        - {x: 18, y: 15}
+        - {x: 16, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_166
@@ -3692,7 +4720,22 @@ TextureImporter:
         - {x: 19, y: -7}
         - {x: 20, y: -13}
         - {x: 20, y: -12}
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 23}
+        - {x: -8, y: 9}
+        - {x: -8, y: -2}
+        - {x: -3, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 3}
+        - {x: 3, y: 23}
+      - - {x: 6, y: -7}
+        - {x: 8, y: -12}
+        - {x: 5, y: -15}
+        - {x: 6, y: -15}
+      - - {x: 18, y: -12}
+        - {x: 19, y: -7}
+        - {x: 20, y: -14}
+        - {x: 20, y: -13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_167
@@ -3728,7 +4771,29 @@ TextureImporter:
         - {x: 19, y: -7}
         - {x: 20, y: -13}
         - {x: 20, y: -12}
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 23}
+        - {x: -24, y: 12}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 3}
+        - {x: 3, y: 23}
+      - - {x: -19, y: -7}
+        - {x: -16, y: -12}
+        - {x: -20, y: -16}
+        - {x: -19, y: -16}
+      - - {x: -6, y: -12}
+        - {x: -4, y: -7}
+        - {x: -3, y: -15}
+        - {x: -3, y: -14}
+      - - {x: 6, y: -7}
+        - {x: 8, y: -12}
+        - {x: 5, y: -15}
+        - {x: 6, y: -15}
+      - - {x: 18, y: -12}
+        - {x: 19, y: -7}
+        - {x: 20, y: -14}
+        - {x: 20, y: -13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_168
@@ -3758,7 +4823,22 @@ TextureImporter:
         - {x: -4, y: -7}
         - {x: -3, y: -14}
         - {x: -3, y: -13}
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 23}
+        - {x: -24, y: 12}
+        - {x: -24, y: -24}
+        - {x: 6, y: -24}
+        - {x: 9, y: 0}
+        - {x: 9, y: 15}
+        - {x: 2, y: 23}
+      - - {x: -19, y: -7}
+        - {x: -16, y: -12}
+        - {x: -20, y: -16}
+        - {x: -19, y: -16}
+      - - {x: -6, y: -12}
+        - {x: -4, y: -7}
+        - {x: -3, y: -15}
+        - {x: -3, y: -14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_169
@@ -3778,7 +4858,12 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 17, y: 12}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 0}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 17, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_170
@@ -3798,7 +4883,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 14}
         - {x: 21, y: 15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 15}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 21, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_171
@@ -3819,7 +4910,13 @@ TextureImporter:
         - {x: -6, y: -12}
         - {x: -6, y: -2}
         - {x: -7, y: 4}
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 11}
+        - {x: -24, y: 14}
+        - {x: -24, y: -24}
+        - {x: -8, y: -24}
+        - {x: -8, y: -1}
+        - {x: -13, y: 7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_172
@@ -3839,7 +4936,15 @@ TextureImporter:
         - {x: 10, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 10}
+        - {x: 13, y: 10}
+        - {x: 9, y: 6}
+        - {x: 9, y: -14}
+        - {x: 10, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 8}
+        - {x: 23, y: 9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_173
@@ -3857,7 +4962,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_174
@@ -3877,7 +4986,12 @@ TextureImporter:
         - {x: 17, y: -19}
         - {x: 24, y: -16}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 3, y: -24}
+        - {x: 24, y: -16}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_175
@@ -3896,7 +5010,14 @@ TextureImporter:
         - {x: -16, y: -15}
         - {x: 24, y: -1}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 24, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -15}
+        - {x: -18, y: -14}
+        - {x: -11, y: -13}
+        - {x: 13, y: -6}
+        - {x: 24, y: 1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_176
@@ -3919,7 +5040,17 @@ TextureImporter:
         - {x: -14, y: 20}
         - {x: -14, y: 12}
         - {x: -13, y: 13}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 7}
+        - {x: -13, y: -24}
+        - {x: 23, y: -24}
+        - {x: 24, y: -22}
+        - {x: 24, y: 24}
+      - - {x: -14, y: 19}
+        - {x: -14, y: 20}
+        - {x: -14, y: 12}
+        - {x: -13, y: 13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_177
@@ -3939,7 +5070,13 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 23}
         - {x: 19, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -19, y: 24}
+        - {x: -24, y: 21}
+        - {x: -24, y: -20}
+        - {x: 24, y: -20}
+        - {x: 24, y: 23}
+        - {x: 19, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_178
@@ -3961,7 +5098,19 @@ TextureImporter:
       - - {x: 14, y: 20}
         - {x: 14, y: 16}
         - {x: 15, y: 16}
-      physicsShape: []
+      physicsShape:
+      - - {x: 24, y: 11}
+        - {x: 24, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -20}
+        - {x: -6, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -4}
+        - {x: 18, y: -1}
+        - {x: 23, y: 8}
+      - - {x: 14, y: 20}
+        - {x: 14, y: 13}
+        - {x: 15, y: 13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_179
@@ -3989,7 +5138,38 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: 11}
         - {x: 20, y: 18}
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 2}
+        - {x: -4, y: -4}
+        - {x: -3, y: -7}
+        - {x: 12, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -8}
+        - {x: 3, y: 2}
+      - - {x: 16, y: -1}
+        - {x: 16, y: -4}
+        - {x: 22, y: -17}
+        - {x: 24, y: -17}
+        - {x: 24, y: -6}
+        - {x: 19, y: 0}
+      - - {x: -14, y: 5}
+        - {x: -17, y: -1}
+        - {x: -17, y: -7}
+        - {x: -13, y: -7}
+        - {x: -7, y: -4}
+        - {x: -7, y: 3}
+        - {x: -11, y: 5}
+      - - {x: 16, y: 16}
+        - {x: 16, y: 4}
+        - {x: 22, y: -3}
+        - {x: 24, y: -3}
+        - {x: 24, y: 9}
+        - {x: 20, y: 16}
+      - - {x: -16, y: 6}
+        - {x: -13, y: 7}
+        - {x: -13, y: 10}
+        - {x: -16, y: 11}
+        - {x: -18, y: 9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_180
@@ -4014,7 +5194,14 @@ TextureImporter:
         - {x: 18, y: -8}
         - {x: 18, y: 1}
         - {x: 15, y: 7}
-      physicsShape: []
+      physicsShape:
+      - - {x: 14, y: 7}
+        - {x: -24, y: 7}
+        - {x: -24, y: -24}
+        - {x: -2, y: -24}
+        - {x: 1, y: -17}
+        - {x: 17, y: -7}
+        - {x: 17, y: 0}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_181
@@ -4034,7 +5221,17 @@ TextureImporter:
         - {x: -4, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 24}
+        - {x: -8, y: 15}
+        - {x: -8, y: -5}
+        - {x: -4, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: 6, y: -8}
+        - {x: 6, y: -7}
+        - {x: 7, y: -9}
+        - {x: 7, y: -8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_182
@@ -4055,7 +5252,23 @@ TextureImporter:
       - - {x: -20, y: -6}
         - {x: -18, y: -8}
         - {x: -18, y: -7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: -19, y: -7}
+        - {x: -18, y: -7}
+        - {x: -17, y: -9}
+        - {x: -17, y: -8}
+      - - {x: -4, y: -7}
+        - {x: -4, y: -8}
+        - {x: -5, y: -9}
+        - {x: -4, y: -9}
+      - - {x: 6, y: -8}
+        - {x: 6, y: -7}
+        - {x: 7, y: -9}
+        - {x: 7, y: -8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_183
@@ -4077,7 +5290,21 @@ TextureImporter:
       - - {x: -20, y: -6}
         - {x: -18, y: -8}
         - {x: -18, y: -7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 5, y: -24}
+        - {x: 9, y: -1}
+        - {x: 9, y: 11}
+        - {x: 6, y: 24}
+      - - {x: -19, y: -7}
+        - {x: -18, y: -7}
+        - {x: -17, y: -9}
+        - {x: -17, y: -8}
+      - - {x: -4, y: -7}
+        - {x: -4, y: -8}
+        - {x: -5, y: -9}
+        - {x: -4, y: -9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_184
@@ -4095,7 +5322,11 @@ TextureImporter:
         - {x: 8, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 24}
+        - {x: 8, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_185
@@ -4113,7 +5344,11 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_186
@@ -4131,7 +5366,11 @@ TextureImporter:
         - {x: -8, y: 24}
         - {x: -24, y: 24}
         - {x: -24, y: -24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -24}
+        - {x: -8, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_187
@@ -4151,7 +5390,13 @@ TextureImporter:
         - {x: 13, y: 7}
         - {x: 24, y: 7}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 24}
+        - {x: 9, y: 19}
+        - {x: 9, y: 11}
+        - {x: 13, y: 7}
+        - {x: 24, y: 7}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_188
@@ -4170,7 +5415,13 @@ TextureImporter:
         - {x: -15, y: 0}
         - {x: 24, y: 14}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 1}
+        - {x: -19, y: 1}
+        - {x: 20, y: 15}
+        - {x: 24, y: 17}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_189
@@ -4190,7 +5441,13 @@ TextureImporter:
         - {x: -9, y: 18}
         - {x: -5, y: 22}
         - {x: -5, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 17}
+        - {x: -20, y: 17}
+        - {x: -9, y: 21}
+        - {x: -8, y: 23}
+        - {x: -8, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_190
@@ -4210,7 +5467,12 @@ TextureImporter:
         - {x: 12, y: 10}
         - {x: 24, y: 16}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 7}
+        - {x: -1, y: 7}
+        - {x: 24, y: 16}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_191
@@ -4231,7 +5493,16 @@ TextureImporter:
         - {x: 21, y: -22}
         - {x: 24, y: -14}
         - {x: 24, y: 16}
-      physicsShape: []
+      physicsShape:
+      - - {x: 24, y: -13}
+        - {x: 24, y: 16}
+        - {x: 22, y: 20}
+        - {x: -18, y: 20}
+        - {x: -18, y: -24}
+        - {x: 9, y: -24}
+        - {x: 8, y: -21}
+        - {x: 19, y: -15}
+        - {x: 21, y: -15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_192
@@ -4260,7 +5531,23 @@ TextureImporter:
         - {x: -6, y: -13}
         - {x: 7, y: -16}
         - {x: 24, y: -16}
-      physicsShape: []
+      physicsShape:
+      - - {x: 1, y: 22}
+        - {x: -2, y: 22}
+        - {x: -10, y: 15}
+        - {x: -17, y: 3}
+        - {x: -18, y: 0}
+        - {x: -16, y: 7}
+        - {x: -16, y: 12}
+        - {x: -19, y: 15}
+        - {x: -24, y: 15}
+        - {x: -24, y: -14}
+        - {x: -23, y: -15}
+        - {x: -16, y: -15}
+        - {x: -10, y: -14}
+        - {x: -4, y: -15}
+        - {x: 24, y: -15}
+        - {x: 24, y: 17}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_193
@@ -4279,7 +5566,20 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 19, y: -24}
         - {x: 19, y: 20}
-      physicsShape: []
+      physicsShape:
+      - - {x: 14, y: 20}
+        - {x: -10, y: 20}
+        - {x: -15, y: 19}
+        - {x: -24, y: 16}
+        - {x: -24, y: -13}
+        - {x: -21, y: -13}
+        - {x: -24, y: -17}
+        - {x: -24, y: -23}
+        - {x: -23, y: -24}
+        - {x: 17, y: -24}
+        - {x: 17, y: -21}
+        - {x: 18, y: -18}
+        - {x: 18, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_194
@@ -4306,7 +5606,28 @@ TextureImporter:
         - {x: 10, y: -17}
         - {x: 24, y: 2}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 5, y: -11}
+        - {x: 7, y: -13}
+        - {x: 10, y: -12}
+        - {x: 11, y: -8}
+        - {x: 9, y: -6}
+        - {x: 6, y: -7}
+      - - {x: -4, y: -6}
+        - {x: -1, y: -5}
+        - {x: -1, y: -2}
+        - {x: -4, y: -1}
+        - {x: -6, y: -3}
+      - - {x: 9, y: 24}
+        - {x: -3, y: 21}
+        - {x: -12, y: 6}
+        - {x: -12, y: -1}
+        - {x: -9, y: -4}
+        - {x: 4, y: -5}
+        - {x: 13, y: -5}
+        - {x: 23, y: 0}
+        - {x: 24, y: 6}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_195
@@ -4327,7 +5648,14 @@ TextureImporter:
         - {x: 18, y: -11}
         - {x: 18, y: 8}
         - {x: 4, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: 13}
+        - {x: -12, y: -9}
+        - {x: 0, y: -15}
+        - {x: 16, y: -15}
+        - {x: 16, y: 10}
+        - {x: -1, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_196
@@ -4347,7 +5675,15 @@ TextureImporter:
         - {x: 10, y: 24}
         - {x: -3, y: 24}
         - {x: -8, y: 17}
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 24}
+        - {x: -8, y: 14}
+        - {x: -8, y: -3}
+        - {x: -3, y: -24}
+        - {x: 5, y: -24}
+        - {x: 9, y: -3}
+        - {x: 9, y: 12}
+        - {x: 6, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_197
@@ -4367,7 +5703,15 @@ TextureImporter:
         - {x: 10, y: 24}
         - {x: -3, y: 24}
         - {x: -8, y: 17}
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 24}
+        - {x: -8, y: 14}
+        - {x: -8, y: -3}
+        - {x: -3, y: -24}
+        - {x: 5, y: -24}
+        - {x: 9, y: -3}
+        - {x: 9, y: 12}
+        - {x: 6, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_198
@@ -4400,7 +5744,26 @@ TextureImporter:
         - {x: 10, y: -7}
         - {x: 10, y: -12}
         - {x: 9, y: -12}
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 22}
+        - {x: -17, y: 22}
+        - {x: -24, y: 9}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 10}
+        - {x: 20, y: 9}
+      - - {x: -19, y: -12}
+        - {x: -17, y: -7}
+        - {x: -16, y: -15}
+        - {x: -16, y: -14}
+      - - {x: -7, y: -7}
+        - {x: -5, y: -12}
+        - {x: -8, y: -15}
+        - {x: -7, y: -15}
+      - - {x: 9, y: -7}
+        - {x: 10, y: -7}
+        - {x: 10, y: -11}
+        - {x: 9, y: -12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_199
@@ -4427,7 +5790,34 @@ TextureImporter:
         - {x: 9, y: 0}
         - {x: 7, y: -3}
         - {x: 8, y: -3}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -14}
+        - {x: -24, y: -24}
+        - {x: -14, y: -24}
+        - {x: -14, y: -19}
+        - {x: -18, y: -14}
+      - - {x: -23, y: 18}
+        - {x: -24, y: 16}
+        - {x: -24, y: -22}
+        - {x: -22, y: -24}
+        - {x: 16, y: -24}
+        - {x: 24, y: -12}
+        - {x: 24, y: 17}
+        - {x: 21, y: 18}
+      - - {x: 14, y: -23}
+        - {x: 14, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: -23}
+        - {x: 21, y: -20}
+        - {x: 17, y: -20}
+      - - {x: -13, y: 3}
+        - {x: -8, y: 8}
+        - {x: -7, y: -3}
+        - {x: -7, y: -2}
+      - - {x: 8, y: 8}
+        - {x: 13, y: 3}
+        - {x: 7, y: -3}
+        - {x: 8, y: -3}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_200
@@ -4458,7 +5848,22 @@ TextureImporter:
         - {x: 19, y: -11}
         - {x: 16, y: -14}
         - {x: 17, y: -14}
-      physicsShape: []
+      physicsShape:
+      - - {x: 7, y: 22}
+        - {x: -24, y: 16}
+        - {x: -24, y: -16}
+        - {x: -23, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 4}
+        - {x: 14, y: 22}
+      - - {x: 5, y: -12}
+        - {x: 7, y: -7}
+        - {x: 8, y: -15}
+        - {x: 8, y: -14}
+      - - {x: 17, y: -7}
+        - {x: 19, y: -12}
+        - {x: 16, y: -15}
+        - {x: 17, y: -15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_201
@@ -4489,7 +5894,19 @@ TextureImporter:
         - {x: -16, y: -8}
         - {x: -19, y: -7}
         - {x: -21, y: -9}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: -22}
+        - {x: -14, y: -24}
+        - {x: 13, y: -24}
+        - {x: 13, y: -22}
+        - {x: 3, y: -10}
+        - {x: -2, y: -10}
+      - - {x: 10, y: 2}
+        - {x: 10, y: -3}
+        - {x: 22, y: -15}
+        - {x: 24, y: -15}
+        - {x: 24, y: 14}
+        - {x: 22, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_202
@@ -4509,7 +5926,13 @@ TextureImporter:
         - {x: 22, y: -24}
         - {x: 24, y: -22}
         - {x: 24, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 14}
+        - {x: -24, y: -15}
+        - {x: -22, y: -15}
+        - {x: -22, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_203
@@ -4535,7 +5958,19 @@ TextureImporter:
         - {x: -10, y: -5}
         - {x: -10, y: 3}
         - {x: -20, y: 14}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: -22}
+        - {x: -14, y: -24}
+        - {x: 13, y: -24}
+        - {x: 13, y: -22}
+        - {x: 3, y: -10}
+        - {x: -2, y: -10}
+      - - {x: -24, y: 14}
+        - {x: -24, y: -15}
+        - {x: -21, y: -15}
+        - {x: -11, y: -8}
+        - {x: -11, y: 2}
+        - {x: -18, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_204
@@ -4565,7 +6000,23 @@ TextureImporter:
         - {x: 24, y: 0}
         - {x: 24, y: 17}
         - {x: 16, y: 21}
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 8}
+        - {x: -24, y: -2}
+        - {x: -24, y: -11}
+        - {x: -14, y: -21}
+        - {x: -11, y: -21}
+        - {x: 1, y: -9}
+        - {x: 1, y: -4}
+        - {x: -11, y: 8}
+      - - {x: 10, y: 21}
+        - {x: -1, y: 15}
+        - {x: -1, y: 2}
+        - {x: 5, y: -8}
+        - {x: 16, y: -8}
+        - {x: 24, y: -2}
+        - {x: 24, y: 12}
+        - {x: 18, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_205
@@ -4592,7 +6043,15 @@ TextureImporter:
         - {x: -21, y: 2}
         - {x: -21, y: 10}
         - {x: -23, y: 11}
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 15}
+        - {x: 0, y: 15}
+        - {x: -11, y: 9}
+        - {x: -11, y: -2}
+        - {x: -2, y: -14}
+        - {x: 6, y: -14}
+        - {x: 16, y: -3}
+        - {x: 16, y: 3}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_206
@@ -4622,7 +6081,26 @@ TextureImporter:
         - {x: 19, y: -6}
         - {x: 19, y: 3}
         - {x: 11, y: 9}
-      physicsShape: []
+      physicsShape:
+      - - {x: 18, y: 0}
+        - {x: 10, y: 8}
+        - {x: -1, y: 16}
+        - {x: -4, y: 17}
+        - {x: -8, y: 17}
+        - {x: -4, y: 17}
+        - {x: 2, y: 16}
+        - {x: 4, y: 14}
+        - {x: 8, y: 14}
+        - {x: 11, y: 17}
+        - {x: 11, y: 23}
+        - {x: 10, y: 24}
+        - {x: -17, y: 24}
+        - {x: -18, y: 23}
+        - {x: -18, y: -24}
+        - {x: 11, y: -24}
+        - {x: 11, y: -20}
+        - {x: 9, y: -16}
+        - {x: 18, y: -5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_207
@@ -4640,7 +6118,12 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -19, y: 24}
+        - {x: -24, y: 23}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_208
@@ -4669,7 +6152,22 @@ TextureImporter:
         - {x: -11, y: -24}
         - {x: 18, y: -24}
         - {x: 18, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 24}
+        - {x: -11, y: 23}
+        - {x: -18, y: 2}
+        - {x: -18, y: -6}
+        - {x: -11, y: -13}
+        - {x: 4, y: -20}
+        - {x: 8, y: -20}
+        - {x: 4, y: -20}
+        - {x: -2, y: -19}
+        - {x: -4, y: -17}
+        - {x: -8, y: -17}
+        - {x: -11, y: -20}
+        - {x: -11, y: -24}
+        - {x: 18, y: -24}
+        - {x: 18, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_209
@@ -4689,7 +6187,13 @@ TextureImporter:
         - {x: 24, y: -23}
         - {x: 24, y: 15}
         - {x: 16, y: 19}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 19}
+        - {x: -24, y: -24}
+        - {x: -8, y: -24}
+        - {x: 17, y: -3}
+        - {x: 24, y: 7}
+        - {x: 24, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_210
@@ -4709,7 +6213,15 @@ TextureImporter:
         - {x: 23, y: -24}
         - {x: 24, y: -23}
         - {x: 24, y: 19}
-      physicsShape: []
+      physicsShape:
+      - - {x: 17, y: 19}
+        - {x: 14, y: 17}
+        - {x: -24, y: 15}
+        - {x: -24, y: -5}
+        - {x: 5, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 18}
+        - {x: 22, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_211
@@ -4739,7 +6251,22 @@ TextureImporter:
         - {x: -4, y: 0}
         - {x: -5, y: 3}
         - {x: -11, y: 3}
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 24}
+        - {x: -8, y: 14}
+        - {x: -8, y: -3}
+        - {x: -3, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 4}
+        - {x: 7, y: 24}
+      - - {x: 6, y: -7}
+        - {x: 8, y: -12}
+        - {x: 5, y: -15}
+        - {x: 6, y: -15}
+      - - {x: 18, y: -12}
+        - {x: 19, y: -7}
+        - {x: 20, y: -14}
+        - {x: 20, y: -13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_212
@@ -4775,7 +6302,29 @@ TextureImporter:
         - {x: 19, y: -7}
         - {x: 20, y: -13}
         - {x: 20, y: -12}
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 22}
+        - {x: -24, y: 7}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 4}
+        - {x: 4, y: 22}
+      - - {x: -20, y: -7}
+        - {x: -17, y: -12}
+        - {x: -21, y: -16}
+        - {x: -20, y: -16}
+      - - {x: -7, y: -12}
+        - {x: -5, y: -7}
+        - {x: -4, y: -15}
+        - {x: -4, y: -14}
+      - - {x: 5, y: -7}
+        - {x: 7, y: -12}
+        - {x: 4, y: -15}
+        - {x: 5, y: -15}
+      - - {x: 17, y: -12}
+        - {x: 18, y: -7}
+        - {x: 19, y: -14}
+        - {x: 19, y: -13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_213
@@ -4803,7 +6352,22 @@ TextureImporter:
         - {x: -4, y: -7}
         - {x: -3, y: -14}
         - {x: -3, y: -13}
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 24}
+        - {x: -24, y: 12}
+        - {x: -24, y: -24}
+        - {x: 5, y: -24}
+        - {x: 9, y: -3}
+        - {x: 9, y: 12}
+        - {x: 6, y: 24}
+      - - {x: -19, y: -7}
+        - {x: -16, y: -12}
+        - {x: -20, y: -16}
+        - {x: -19, y: -16}
+      - - {x: -6, y: -12}
+        - {x: -4, y: -7}
+        - {x: -3, y: -15}
+        - {x: -3, y: -14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_214
@@ -4821,7 +6385,20 @@ TextureImporter:
         - {x: -24, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: -17, y: -7}
+        - {x: -19, y: -10}
+        - {x: -18, y: -11}
+        - {x: -17, y: -10}
+      - - {x: -7, y: -6}
+        - {x: -8, y: -6}
+        - {x: -7, y: -7}
+        - {x: -6, y: -11}
+        - {x: -5, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_215
@@ -4852,7 +6429,23 @@ TextureImporter:
         - {x: 9, y: -5}
         - {x: 9, y: -15}
         - {x: 8, y: -15}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: -9, y: -14}
+        - {x: -8, y: -15}
+        - {x: -11, y: -16}
+        - {x: -10, y: -16}
+      - - {x: 8, y: -5}
+        - {x: 9, y: -6}
+        - {x: 9, y: -14}
+        - {x: 8, y: -15}
+      - - {x: -8, y: -5}
+        - {x: -8, y: -4}
+        - {x: -10, y: -4}
+        - {x: -10, y: -5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_216
@@ -4873,7 +6466,23 @@ TextureImporter:
       - - {x: -8, y: -14}
         - {x: -10, y: -16}
         - {x: -9, y: -16}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: -8, y: -14}
+        - {x: -10, y: -16}
+        - {x: -9, y: -16}
+      - - {x: 7, y: -7}
+        - {x: 5, y: -10}
+        - {x: 6, y: -11}
+        - {x: 7, y: -10}
+      - - {x: 17, y: -6}
+        - {x: 16, y: -6}
+        - {x: 17, y: -7}
+        - {x: 18, y: -11}
+        - {x: 19, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_217
@@ -4891,7 +6500,13 @@ TextureImporter:
         - {x: -15, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 13, y: 24}
+        - {x: -14, y: 24}
+        - {x: -14, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 14}
+        - {x: 22, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_218
@@ -4913,7 +6528,14 @@ TextureImporter:
         - {x: 24, y: -22}
         - {x: 24, y: 23}
         - {x: 23, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -16}
+        - {x: -22, y: -15}
+        - {x: -22, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 15}
+        - {x: 19, y: 24}
+        - {x: -24, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_219
@@ -4932,7 +6554,15 @@ TextureImporter:
         - {x: -22, y: -24}
         - {x: 14, y: -24}
         - {x: 14, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 24}
+        - {x: -24, y: 21}
+        - {x: -24, y: -15}
+        - {x: -22, y: -15}
+        - {x: -20, y: -13}
+        - {x: -14, y: -24}
+        - {x: 13, y: -24}
+        - {x: 13, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_220
@@ -4960,7 +6590,21 @@ TextureImporter:
         - {x: 17, y: -2}
         - {x: 17, y: 16}
         - {x: 7, y: 21}
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: -22}
+        - {x: -5, y: -24}
+        - {x: 22, y: -24}
+        - {x: 22, y: -22}
+        - {x: 10, y: -10}
+        - {x: 7, y: -10}
+      - - {x: -5, y: -8}
+        - {x: 7, y: -8}
+        - {x: 16, y: -1}
+        - {x: 16, y: 9}
+        - {x: 9, y: 21}
+        - {x: -1, y: 21}
+        - {x: -11, y: 15}
+        - {x: -11, y: 2}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_221
@@ -4984,7 +6628,19 @@ TextureImporter:
         - {x: 4, y: 1}
         - {x: 3, y: -1}
         - {x: 0, y: -4}
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 24}
+        - {x: -24, y: 21}
+        - {x: -24, y: -15}
+        - {x: -16, y: -24}
+        - {x: 16, y: -24}
+        - {x: 24, y: -19}
+        - {x: 24, y: 21}
+        - {x: 21, y: 24}
+      - - {x: -6, y: 0}
+        - {x: 0, y: 6}
+        - {x: 6, y: 0}
+        - {x: 0, y: -6}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_222
@@ -5009,7 +6665,20 @@ TextureImporter:
         - {x: 24, y: -20}
         - {x: 24, y: 9}
         - {x: 23, y: 9}
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 7}
+        - {x: 15, y: 18}
+        - {x: 11, y: 24}
+        - {x: -18, y: 24}
+        - {x: -21, y: 14}
+        - {x: -19, y: 7}
+        - {x: -22, y: -4}
+        - {x: -22, y: -16}
+        - {x: -19, y: -20}
+        - {x: 22, y: -20}
+        - {x: 24, y: -19}
+        - {x: 24, y: 9}
+        - {x: 23, y: 9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_223
@@ -5033,7 +6702,19 @@ TextureImporter:
         - {x: 24, y: -20}
         - {x: 24, y: 10}
         - {x: 19, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 17}
+        - {x: -10, y: 10}
+        - {x: -17, y: -2}
+        - {x: -18, y: -5}
+        - {x: -16, y: 2}
+        - {x: -16, y: 7}
+        - {x: -19, y: 10}
+        - {x: -24, y: 10}
+        - {x: -24, y: -20}
+        - {x: 24, y: -20}
+        - {x: 24, y: 11}
+        - {x: 3, y: 17}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_224
@@ -5053,7 +6734,13 @@ TextureImporter:
         - {x: 22, y: -16}
         - {x: 22, y: 5}
         - {x: 18, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -20}
+        - {x: 22, y: -20}
+        - {x: 22, y: 2}
+        - {x: 19, y: 24}
+        - {x: -12, y: 24}
+        - {x: -24, y: 15}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_225
@@ -5074,7 +6761,17 @@ TextureImporter:
       - - {x: -10, y: 4}
         - {x: -11, y: 8}
         - {x: -14, y: -1}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 19}
+        - {x: -24, y: -23}
+        - {x: -21, y: -24}
+        - {x: -5, y: -24}
+        - {x: 24, y: -16}
+        - {x: 24, y: 19}
+      - - {x: -11, y: 4}
+        - {x: -11, y: 7}
+        - {x: -12, y: 7}
+        - {x: -12, y: 1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_226
@@ -5093,7 +6790,21 @@ TextureImporter:
         - {x: 24, y: 19}
         - {x: -5, y: 19}
         - {x: -24, y: 17}
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 19}
+        - {x: -22, y: 17}
+        - {x: -24, y: 16}
+        - {x: -24, y: -14}
+        - {x: -22, y: -17}
+        - {x: -14, y: -17}
+        - {x: 5, y: -24}
+        - {x: 22, y: -24}
+        - {x: 24, y: -19}
+        - {x: 24, y: 18}
+        - {x: 22, y: 19}
+      - - {x: 13, y: 7}
+        - {x: 12, y: 5}
+        - {x: 13, y: 5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_227
@@ -5112,7 +6823,17 @@ TextureImporter:
         - {x: -2, y: -24}
         - {x: 24, y: -24}
         - {x: 24, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 24}
+        - {x: -3, y: -23}
+        - {x: -2, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: 6, y: -6}
+        - {x: 5, y: -6}
+        - {x: 6, y: -7}
+        - {x: 7, y: -11}
+        - {x: 8, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_228
@@ -5133,7 +6854,25 @@ TextureImporter:
       - - {x: -20, y: -6}
         - {x: -18, y: -8}
         - {x: -18, y: -7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      - - {x: -19, y: -7}
+        - {x: -19, y: -5}
+        - {x: -18, y: -7}
+        - {x: -17, y: -11}
+        - {x: -16, y: -10}
+      - - {x: -4, y: -7}
+        - {x: -6, y: -10}
+        - {x: -5, y: -11}
+        - {x: -4, y: -10}
+      - - {x: 6, y: -6}
+        - {x: 5, y: -6}
+        - {x: 6, y: -7}
+        - {x: 7, y: -11}
+        - {x: 8, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_229
@@ -5155,7 +6894,21 @@ TextureImporter:
       - - {x: -20, y: -6}
         - {x: -18, y: -8}
         - {x: -18, y: -7}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 4, y: -24}
+        - {x: 5, y: -23}
+        - {x: 5, y: 24}
+      - - {x: -19, y: -7}
+        - {x: -19, y: -5}
+        - {x: -18, y: -7}
+        - {x: -17, y: -11}
+        - {x: -16, y: -10}
+      - - {x: -4, y: -7}
+        - {x: -6, y: -10}
+        - {x: -5, y: -11}
+        - {x: -4, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_230
@@ -5189,7 +6942,103 @@ TextureImporter:
         - {x: 0, y: 10}
       - - {x: 10, y: 11}
         - {x: 8, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: -18}
+        - {x: -11, y: -23}
+        - {x: -8, y: -22}
+        - {x: -7, y: -18}
+        - {x: -9, y: -16}
+        - {x: -13, y: -15}
+      - - {x: 2, y: -12}
+        - {x: -1, y: -12}
+        - {x: -7, y: -17}
+        - {x: -7, y: -19}
+        - {x: -6, y: -21}
+        - {x: -1, y: -21}
+        - {x: 4, y: -16}
+        - {x: 4, y: -13}
+      - - {x: -20, y: -4}
+        - {x: -24, y: -16}
+        - {x: -22, y: -18}
+        - {x: -19, y: -18}
+        - {x: -15, y: -16}
+        - {x: -15, y: -4}
+        - {x: -17, y: -3}
+      - - {x: -7, y: -16}
+        - {x: -4, y: -15}
+        - {x: -4, y: -12}
+        - {x: -7, y: -11}
+        - {x: -9, y: -13}
+      - - {x: 3, y: -7}
+        - {x: 2, y: -9}
+        - {x: 3, y: -13}
+        - {x: 8, y: -14}
+        - {x: 11, y: -14}
+        - {x: 12, y: -12}
+        - {x: 11, y: -9}
+        - {x: 6, y: -7}
+      - - {x: -9, y: 3}
+        - {x: -10, y: 1}
+        - {x: -10, y: -6}
+        - {x: -4, y: -11}
+        - {x: 1, y: -11}
+        - {x: 2, y: -8}
+        - {x: 2, y: 0}
+        - {x: -2, y: 3}
+      - - {x: 4, y: 0}
+        - {x: 4, y: -5}
+        - {x: 9, y: -9}
+        - {x: 19, y: -9}
+        - {x: 22, y: -8}
+        - {x: 22, y: 17}
+        - {x: 21, y: 19}
+        - {x: 16, y: 19}
+        - {x: 9, y: 9}
+      - - {x: 8, y: 8}
+        - {x: 6, y: 3}
+        - {x: 8, y: 1}
+        - {x: 9, y: 1}
+        - {x: 13, y: 5}
+        - {x: 13, y: 7}
+        - {x: 11, y: 9}
+      - - {x: 1, y: 12}
+        - {x: 0, y: 8}
+        - {x: 0, y: 4}
+        - {x: 2, y: 2}
+        - {x: 5, y: 3}
+        - {x: 6, y: 7}
+        - {x: 6, y: 11}
+        - {x: 4, y: 13}
+      - - {x: -23, y: 10}
+        - {x: -24, y: 9}
+        - {x: -24, y: 5}
+        - {x: -22, y: 3}
+        - {x: -20, y: 3}
+        - {x: -16, y: 7}
+        - {x: -16, y: 10}
+      - - {x: -5, y: 15}
+        - {x: -8, y: 15}
+        - {x: -8, y: 6}
+        - {x: -6, y: 4}
+        - {x: -3, y: 4}
+        - {x: -1, y: 5}
+        - {x: -1, y: 8}
+        - {x: -3, y: 14}
+      - - {x: -11, y: 24}
+        - {x: -12, y: 21}
+        - {x: -17, y: 11}
+        - {x: -17, y: 9}
+        - {x: -15, y: 8}
+        - {x: -11, y: 8}
+        - {x: -6, y: 12}
+        - {x: -6, y: 20}
+        - {x: -7, y: 24}
+      - - {x: 2, y: 15}
+        - {x: 4, y: 13}
+        - {x: 7, y: 14}
+        - {x: 7, y: 20}
+        - {x: 5, y: 22}
+        - {x: 2, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_231
@@ -5224,7 +7073,95 @@ TextureImporter:
       - - {x: 0, y: 11}
         - {x: 0, y: 10}
         - {x: 1, y: 10}
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: -23}
+        - {x: 13, y: -22}
+        - {x: 15, y: -17}
+        - {x: 12, y: -15}
+        - {x: 7, y: -18}
+      - - {x: -2, y: -12}
+        - {x: -4, y: -14}
+        - {x: -4, y: -19}
+        - {x: 2, y: -21}
+        - {x: 7, y: -21}
+        - {x: 7, y: -16}
+        - {x: 1, y: -12}
+      - - {x: 15, y: -17}
+        - {x: 17, y: -18}
+        - {x: 24, y: -18}
+        - {x: 24, y: -11}
+        - {x: 21, y: -4}
+        - {x: 18, y: -3}
+        - {x: 15, y: -3}
+      - - {x: 6, y: -16}
+        - {x: 9, y: -15}
+        - {x: 9, y: -12}
+        - {x: 6, y: -11}
+        - {x: 4, y: -13}
+      - - {x: -6, y: -7}
+        - {x: -12, y: -11}
+        - {x: -11, y: -14}
+        - {x: -6, y: -14}
+        - {x: -2, y: -11}
+        - {x: -2, y: -9}
+        - {x: -3, y: -7}
+      - - {x: 5, y: 1}
+        - {x: -2, y: -1}
+        - {x: -2, y: -9}
+        - {x: 1, y: -11}
+        - {x: 4, y: -11}
+        - {x: 10, y: -6}
+        - {x: 10, y: 2}
+        - {x: 8, y: 3}
+      - - {x: -20, y: 19}
+        - {x: -22, y: 17}
+        - {x: -22, y: -6}
+        - {x: -16, y: -9}
+        - {x: -13, y: -9}
+        - {x: -5, y: -7}
+        - {x: -4, y: -4}
+        - {x: -4, y: 5}
+        - {x: -15, y: 19}
+      - - {x: -13, y: 5}
+        - {x: -9, y: 1}
+        - {x: -6, y: 2}
+        - {x: -6, y: 4}
+        - {x: -10, y: 9}
+        - {x: -13, y: 8}
+      - - {x: -6, y: 7}
+        - {x: -3, y: 2}
+        - {x: 0, y: 3}
+        - {x: 0, y: 8}
+        - {x: -3, y: 13}
+        - {x: -6, y: 12}
+      - - {x: 17, y: 10}
+        - {x: 16, y: 7}
+        - {x: 20, y: 3}
+        - {x: 22, y: 3}
+        - {x: 24, y: 5}
+        - {x: 24, y: 8}
+        - {x: 22, y: 10}
+      - - {x: 4, y: 15}
+        - {x: 3, y: 14}
+        - {x: 1, y: 6}
+        - {x: 1, y: 5}
+        - {x: 3, y: 4}
+        - {x: 5, y: 4}
+        - {x: 8, y: 5}
+        - {x: 8, y: 15}
+      - - {x: 7, y: 23}
+        - {x: 6, y: 18}
+        - {x: 8, y: 13}
+        - {x: 14, y: 8}
+        - {x: 17, y: 9}
+        - {x: 17, y: 12}
+        - {x: 10, y: 24}
+      - - {x: -7, y: 15}
+        - {x: -5, y: 13}
+        - {x: -2, y: 14}
+        - {x: -2, y: 20}
+        - {x: -4, y: 22}
+        - {x: -7, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_232
@@ -5255,7 +7192,19 @@ TextureImporter:
         - {x: 4, y: 10}
         - {x: 14, y: 20}
         - {x: 13, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 2}
+        - {x: 10, y: -3}
+        - {x: 22, y: -15}
+        - {x: 24, y: -15}
+        - {x: 24, y: 14}
+        - {x: 22, y: 14}
+      - - {x: -14, y: 24}
+        - {x: -14, y: 21}
+        - {x: -3, y: 10}
+        - {x: 2, y: 10}
+        - {x: 13, y: 21}
+        - {x: 13, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_233
@@ -5276,7 +7225,15 @@ TextureImporter:
         - {x: 24, y: -14}
         - {x: 24, y: 23}
         - {x: 23, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: 24, y: 15}
+        - {x: 18, y: 24}
+        - {x: -24, y: 24}
+        - {x: -24, y: -15}
+        - {x: -22, y: -15}
+        - {x: -20, y: -13}
+        - {x: 2, y: -14}
+        - {x: 24, y: -14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_234
@@ -5303,7 +7260,19 @@ TextureImporter:
         - {x: 3, y: 9}
         - {x: 14, y: 20}
         - {x: 13, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 14}
+        - {x: -24, y: -14}
+        - {x: -22, y: -14}
+        - {x: -11, y: -3}
+        - {x: -11, y: 2}
+        - {x: -23, y: 14}
+      - - {x: -14, y: 24}
+        - {x: -14, y: 21}
+        - {x: -2, y: 9}
+        - {x: 3, y: 9}
+        - {x: 13, y: 20}
+        - {x: 13, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_235
@@ -5332,7 +7301,21 @@ TextureImporter:
         - {x: 11, y: 8}
         - {x: 23, y: 20}
         - {x: 22, y: 24}
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 8}
+        - {x: -23, y: -4}
+        - {x: -23, y: -14}
+        - {x: -11, y: -21}
+        - {x: -8, y: -21}
+        - {x: 4, y: -9}
+        - {x: 4, y: -4}
+        - {x: -8, y: 8}
+      - - {x: -5, y: 24}
+        - {x: -5, y: 21}
+        - {x: 7, y: 9}
+        - {x: 12, y: 9}
+        - {x: 22, y: 20}
+        - {x: 22, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_236
@@ -5360,7 +7343,21 @@ TextureImporter:
         - {x: 7, y: 2}
         - {x: 7, y: 11}
         - {x: -3, y: 22}
-      physicsShape: []
+      physicsShape:
+      - - {x: 13, y: -4}
+        - {x: 13, y: -9}
+        - {x: 23, y: -19}
+        - {x: 24, y: -19}
+        - {x: 24, y: 6}
+        - {x: 23, y: 6}
+      - - {x: -2, y: 22}
+        - {x: -9, y: 22}
+        - {x: -21, y: 14}
+        - {x: -21, y: 0}
+        - {x: -10, y: -7}
+        - {x: 0, y: -7}
+        - {x: 6, y: 4}
+        - {x: 6, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: B_Freem10_237
@@ -5388,7 +7385,21 @@ TextureImporter:
         - {x: 24, y: -4}
         - {x: 24, y: 5}
         - {x: 14, y: 16}
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 8}
+        - {x: -24, y: -21}
+        - {x: -19, y: -21}
+        - {x: -8, y: -9}
+        - {x: -8, y: -4}
+        - {x: -20, y: 8}
+      - - {x: 15, y: 16}
+        - {x: 8, y: 16}
+        - {x: -4, y: 8}
+        - {x: -4, y: -6}
+        - {x: 7, y: -13}
+        - {x: 17, y: -13}
+        - {x: 23, y: -2}
+        - {x: 23, y: 4}
       tessellationDetail: 0
     outline: []
     physicsShape: []

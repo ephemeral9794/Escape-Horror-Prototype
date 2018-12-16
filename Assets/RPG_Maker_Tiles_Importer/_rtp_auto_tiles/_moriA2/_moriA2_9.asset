@@ -32,7 +32,7 @@ MonoBehaviour:
     e33: 1
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
-  m_ColliderType: 1
+  m_ColliderType: 0
   id_tile_type: 636801504207902450
   preview: {fileID: 21300000, guid: 3f37d9366d4a66b45909b2bdb79d6c24, type: 3}
   tile_Variants:
