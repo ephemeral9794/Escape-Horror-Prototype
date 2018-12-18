@@ -61,6 +61,7 @@ public class MapEventDataEditor : Editor
 	private void Save()
 	{
 		EditorUtility.SetDirty(target);
+		AssetDatabase.SaveAssets();
 	}
 
 	public override void OnInspectorGUI()

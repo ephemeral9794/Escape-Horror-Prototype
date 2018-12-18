@@ -15,16 +15,18 @@ public class PlayerController : MonoBehaviour {
 	private Grid grid;
 	
 	private Vector3 grid_size;	// 1グリッドあたりの大きさ（ワールド座標基準）
-	private Vector3Int direction;	// プレイヤーの向き
+	private Vector2Int direction;	// プレイヤーの向き
 	private Vector3Int prev;
 	private Vector3Int next;
 	private int frames;
 	private Animator animator;
 	private new Rigidbody2D rigidbody;
 	private Tilemap[] tilemaps;
+	private float timeElasped;
+	private bool flag;
 
 	private void Start() {
-		direction = Vector3Int.zero;
+		direction = Vector2Int.zero;
 		grid_size = grid.cellSize;
 		prev = grid.WorldToCell(transform.position);
 		next = prev;
@@ -33,9 +35,17 @@ public class PlayerController : MonoBehaviour {
 		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody2D>();
 		tilemaps = grid.GetComponentsInChildren<Tilemap>();
-		foreach (var t in tilemaps) {
+		timeElasped = 0.0f;
+		/*foreach (var t in tilemaps) {
 			Debug.Log(t.name);
-		}
+		}*/
+		//this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => Debug.Log(direction));
+		this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
+			var pos = grid.WorldToCell(transform.position);
+			var eventpos = new Vector2Int(pos.x + direction.x, pos.y + direction.y);
+			var events = GameManager.GetMapEvent(eventpos);
+			Debug.Log($"{eventpos}, {events}");
+		}).AddTo(this);
 	}
 
 	// Update is called once per frame
@@ -45,18 +55,29 @@ public class PlayerController : MonoBehaviour {
 			var dir = GetInputDirection();
 			if(dir.x == 0.0f && dir.y == 0.0f) {
 				animator.SetBool("Walking", false);
+				float x = animator.GetFloat("DirectionX");
+				float y = animator.GetFloat("DirectionY");
+				//Debug.LogFormat("{0},{1}", x, y);
+				direction = ToDirection(x, y);
+				flag = false;
+				//Debug.Log(direction);
 			} else {
-				animator.SetBool("Walking", true);
+				if ((dir.x >= 1.0f || dir.x <= -1.0f) || (dir.y >= 1.0f || dir.y <= -1.0f)) {
+					animator.SetBool("Walking", true);
+					flag = true;
+				}
 				animator.SetFloat("DirectionX", dir.x);
 				animator.SetFloat("DirectionY", dir.y);
 			}
-			MovePoint(dir, ref next);
+			if (flag)
+				MovePoint(dir, ref next);
 			//Debug.Log($"{next} {pos}");
 		}
 		//transform.position = pos + new Vector3(0.5f, 0.5f, 0.0f);
 		pos += new Vector3(0.5f, 0.5f, 0.0f);
 		rigidbody.MovePosition(new Vector2(pos.x, pos.y));
 		frames++;
+		timeElasped += Time.deltaTime;
 	}
 
 	bool Move(ref Vector3 pos) {
@@ -82,14 +103,18 @@ public class PlayerController : MonoBehaviour {
 		var save = point;
 		// 左右
 		if (direct.x > 0.0f) {
+			//direction.x = 1;
 			point.x += 1;
 		} else if (direct.x < 0.0f) {
+			//direction.x = -1;
 			point.x -= 1;
 		}
 		// 上下
 		if (direct.y > 0.0f) {
+			//direction.y = 1;
 			point.y += 1;
 		} else if (direct.y < 0.0f) {
+			//direction.y = -1;
 			point.y -= 1;
 		}
 
@@ -106,5 +131,33 @@ public class PlayerController : MonoBehaviour {
 		float x = Input.GetAxis("Horizontal");
 		float y = Input.GetAxis("Vertical");
 		return new Vector2(x, y);
+	}
+
+	private Vector2Int ToDirection(float x, float y)
+	{
+		var direct = Vector2Int.zero;
+		if (x > 0.0f)
+		{
+			direct.x = 1;
+		}
+		else if (x < 0.0f)
+		{
+			direct.x = -1;
+		}/* else
+		{
+			direct.x = 0;
+		}*/
+		else if (y > 0.0f)
+		{
+			direct.y = 1;
+		}
+		else if (y < 0.0f)
+		{
+			direct.y = -1;
+		}/* else
+		{
+			direct.y = 0;
+		}*/
+		return direct;
 	}
 }
