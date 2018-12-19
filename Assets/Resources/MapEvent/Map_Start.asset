@@ -9,8 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10262b5b322f9f940b41a5ff468810e8, type: 3}
-  m_Name: Map Event
+  m_Name: Map_Start
   m_EditorClassIdentifier: 
+  SceneNumber: 0
   m_MapEvents:
-  - Position: {x: -1, y: 4}
-    Event: 2
+  - Position: {x: -1, y: 13}
+    Event: 3

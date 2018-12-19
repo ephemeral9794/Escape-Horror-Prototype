@@ -2,23 +2,28 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager Instance { get; private set; }
 
     public bool IsNovelMode { get; set; }
-	public MapEventData MapEvent { get; private set; }
+	public MapEventData[] MapEvent { get; private set; }
 
 	private float timeElasped;
 
     private void Awake()
 	{
-
 		if (Instance == null)
 		{
 			IsNovelMode = false;
-			MapEvent = Resources.Load<MapEventData>("Map Event");
+			var guid = AssetDatabase.FindAssets("t:MapEventData");
+			MapEvent = new MapEventData[guid.Length];
+			for (int i = 0; i < guid.Length; i++) { 
+				var path = AssetDatabase.GUIDToAssetPath(guid[i]);
+				MapEvent[i] = AssetDatabase.LoadAssetAtPath<MapEventData>(path);
+			}
+			//MapEvent = Resources.Load<MapEventData>("Map Event");
 			Instance = this;
 		}
 		else if (Instance != this) {
@@ -39,6 +44,12 @@ public class GameManager : MonoBehaviour {
 
 	public static MapEventData.MapEvent GetMapEvent(Vector2Int pos) {
 		var mapevent = Instance.MapEvent;
-		return mapevent[pos];
+		int index = SceneManager.GetActiveScene().buildIndex;
+		return mapevent[index][pos];
+	}
+
+	public static void ChangeScene()
+	{
+
 	}
 }

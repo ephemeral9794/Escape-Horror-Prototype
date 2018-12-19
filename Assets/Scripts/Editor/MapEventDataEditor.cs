@@ -66,9 +66,16 @@ public class MapEventDataEditor : Editor
 
 	public override void OnInspectorGUI()
 	{
+		EditorGUI.BeginChangeCheck();
+		Data.SceneNumber = EditorGUILayout.IntField("Scene Number", Data.SceneNumber);
+		EditorGUILayout.Space();
 		if (m_ReorderableList != null && Data.m_MapEvents != null)
 		{
 			m_ReorderableList.DoLayoutList();
+		}
+		if (EditorGUI.EndChangeCheck())
+		{
+			Save();
 		}
 	}
 }

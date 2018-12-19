@@ -10,6 +10,7 @@ public class MapEventData : ScriptableObject {
 		None,
 		Talk,
 		Trick,
+		Transition,
 	}
 	[Serializable]
 	public struct MapEvent{
@@ -22,9 +23,11 @@ public class MapEventData : ScriptableObject {
 	}
 
 	[SerializeField]
+	public int SceneNumber;
+	[SerializeField]
 	public List<MapEvent> m_MapEvents;
 
 	public MapEvent this[Vector2Int pos] {
-		get { return m_MapEvents.SingleOrDefault(value => value.Position == pos);}
+		get { return m_MapEvents.SingleOrDefault(value => (value.Position == pos));}
 	}
 }

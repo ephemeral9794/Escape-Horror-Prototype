@@ -666,7 +666,7 @@ TextureImporter:
       name: B_Freem10_11
       rect:
         serializedVersion: 2
-        x: 575
+        x: 576
         y: 720
         width: 48
         height: 48
@@ -964,8 +964,8 @@ TextureImporter:
       name: B_Freem10_23
       rect:
         serializedVersion: 2
-        x: 574
-        y: 671
+        x: 576
+        y: 672
         width: 48
         height: 48
       alignment: 0
