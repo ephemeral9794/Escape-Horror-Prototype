@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-	public static GameManager Instance { get; private set; }
+
+	[SerializeField]
+	private SceneFadeManager fadeManager;
 
     public bool IsNovelMode { get; set; }
 	public MapEventData[] MapEvent { get; private set; }
@@ -14,22 +17,14 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
 	{
-		if (Instance == null)
-		{
-			IsNovelMode = false;
-			var guid = AssetDatabase.FindAssets("t:MapEventData");
-			MapEvent = new MapEventData[guid.Length];
-			for (int i = 0; i < guid.Length; i++) { 
-				var path = AssetDatabase.GUIDToAssetPath(guid[i]);
-				MapEvent[i] = AssetDatabase.LoadAssetAtPath<MapEventData>(path);
-			}
-			//MapEvent = Resources.Load<MapEventData>("Map Event");
-			Instance = this;
+		IsNovelMode = false;
+		var guid = AssetDatabase.FindAssets("t:MapEventData");
+		MapEvent = new MapEventData[guid.Length];
+		for (int i = 0; i < guid.Length; i++) { 
+			var path = AssetDatabase.GUIDToAssetPath(guid[i]);
+			MapEvent[i] = AssetDatabase.LoadAssetAtPath<MapEventData>(path);
 		}
-		else if (Instance != this) {
-			Destroy(gameObject);
-		}
-		DontDestroyOnLoad(gameObject);
+		//MapEvent = Resources.Load<MapEventData>("Map Event");
     }
 
     // Use this for initialization
@@ -42,14 +37,10 @@ public class GameManager : MonoBehaviour {
 		timeElasped += Time.deltaTime;
 	}
 
-	public static MapEventData.MapEvent GetMapEvent(Vector2Int pos) {
-		var mapevent = Instance.MapEvent;
+	public MapEventData.MapEvent GetMapEvent(Vector2Int pos) {
 		int index = SceneManager.GetActiveScene().buildIndex;
-		return mapevent[index][pos];
+		return MapEvent.SingleOrDefault(val => val.SceneNumber == index)[pos];
 	}
 
-	public static void ChangeScene()
-	{
-
-	}
+	public void ChangeScene() => fadeManager.ChangeScene();
 }

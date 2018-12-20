@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 	private Tilemap[] tilemaps;
 	private float timeElasped;
 	private bool flag;
+	private GameManager manager;
 
 	private void Start() {
 		direction = Vector2Int.zero;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour {
 		rigidbody = GetComponent<Rigidbody2D>();
 		tilemaps = grid.GetComponentsInChildren<Tilemap>();
 		timeElasped = 0.0f;
+		manager = FindObjectOfType<GameManager>();
 		/*foreach (var t in tilemaps) {
 			Debug.Log(t.name);
 		}*/
@@ -43,8 +45,12 @@ public class PlayerController : MonoBehaviour {
 		this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
 			var pos = grid.WorldToCell(transform.position);
 			var eventpos = new Vector2Int(pos.x + direction.x, pos.y + direction.y);
-			var events = GameManager.GetMapEvent(eventpos);
+			var events = manager.GetMapEvent(eventpos);
 			Debug.Log($"{eventpos}, {events}");
+			if (events.Event == MapEventData.Event.Transition)
+			{
+				manager.ChangeScene();
+			}
 		}).AddTo(this);
 	}
 
