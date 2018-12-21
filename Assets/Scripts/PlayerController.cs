@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour {
 	private new Rigidbody2D rigidbody;
 	private Tilemap[] tilemaps;
 	private float timeElasped;
-	private bool flag;
 	private GameManager manager;
 
 	private void Start() {
@@ -68,15 +67,11 @@ public class PlayerController : MonoBehaviour {
 				flag = false;
 				//Debug.Log(direction);
 			} else {
-				if ((dir.x >= 1.0f || dir.x <= -1.0f) || (dir.y >= 1.0f || dir.y <= -1.0f)) {
-					animator.SetBool("Walking", true);
-					flag = true;
-				}
+				animator.SetBool("Walking", true);
 				animator.SetFloat("DirectionX", dir.x);
 				animator.SetFloat("DirectionY", dir.y);
 			}
-			if (flag)
-				MovePoint(dir, ref next);
+			MovePoint(dir, ref next);
 			//Debug.Log($"{next} {pos}");
 		}
 		//transform.position = pos + new Vector3(0.5f, 0.5f, 0.0f);

@@ -9,8 +9,12 @@ public class GameManager : MonoBehaviour {
 
 	[SerializeField]
 	private SceneFadeManager fadeManager;
+	[SerializeField]
+	private bool fadeIn = true;
+	[SerializeField]
+	private bool fadeOut = true;
 
-    public bool IsNovelMode { get; set; }
+	public bool IsNovelMode { get; set; }
 	public MapEventData[] MapEvent { get; private set; }
 
 	private float timeElasped;
@@ -24,6 +28,7 @@ public class GameManager : MonoBehaviour {
 			var path = AssetDatabase.GUIDToAssetPath(guid[i]);
 			MapEvent[i] = AssetDatabase.LoadAssetAtPath<MapEventData>(path);
 		}
+		fadeManager.fadeState = fadeIn ? 0 : 1;
 		//MapEvent = Resources.Load<MapEventData>("Map Event");
     }
 
@@ -32,15 +37,10 @@ public class GameManager : MonoBehaviour {
 		timeElasped = 0.0f;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		timeElasped += Time.deltaTime;
-	}
-
 	public MapEventData.MapEvent GetMapEvent(Vector2Int pos) {
 		int index = SceneManager.GetActiveScene().buildIndex;
 		return MapEvent.SingleOrDefault(val => val.SceneNumber == index)[pos];
 	}
 
-	public void ChangeScene() => fadeManager.ChangeScene();
+	public void ChangeScene() => fadeManager.ChangeScene(fadeOut);
 }

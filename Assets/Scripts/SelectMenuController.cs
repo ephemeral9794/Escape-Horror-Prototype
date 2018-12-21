@@ -6,36 +6,100 @@ using UniRx;
 using UniRx.Triggers;
 
 public class SelectMenuController : MonoBehaviour {
-	[SerializeField]
-	Image cursor;
+	enum Menu
+	{
+		Start, Desc, Exit
+	}
 
-	private int select = 0;
+	[SerializeField]
+	private GameObject descBoard;
+	
+	private Image cursor;
+	private GameManager manager;
+	private Menu select = 0;
+	private GameObject instance;
+	private bool flag;
 
 	// Use this for initialization
 	void Start () {
-		this.OnKeyAsObservable(KeyCode.UpArrow).Subscribe(_ => {
-			SelectMenu(1);
+		flag = true;
+		cursor = GetComponentInChildren<Image>();
+		manager = FindObjectOfType<GameManager>();
+		this.OnKeyDownAsObservable(KeyCode.UpArrow).Subscribe(_ => {
+			UpMenu();
 		});
-		this.OnKeyAsObservable(KeyCode.DownArrow).Subscribe(_ => {
-			SelectMenu(0);
+		this.OnKeyDownAsObservable(KeyCode.DownArrow).Subscribe(_ => {
+			DownMenu();
 		});
 		this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
-			
+			switch (select)
+			{
+				case Menu.Start:
+					manager.ChangeScene();
+					break;
+				case Menu.Desc:
+					if (flag) { 
+						instance = Instantiate(descBoard, transform.parent);
+						instance.OnDestroyAsObservable().Subscribe(__ => flag = true);
+						flag = false;
+					}
+					break;
+				case Menu.Exit:
+					Application.Quit();
+					break;
+			}
 		});
 	}
-	
-	void SelectMenu(int s)
+
+	void DownMenu()
 	{
-		select = s;
-		switch (s) {
-			case 0: { 
+		switch(select)
+		{
+			case Menu.Start:
+				select = Menu.Desc;
+				break;
+			case Menu.Desc:
+				select = Menu.Exit;
+				break;
+			case Menu.Exit:
+				select = Menu.Start;
+				break;
+		}
+		ChangePosition();
+	}
+	void UpMenu()
+	{
+		switch (select)
+		{
+			case Menu.Start:
+				select = Menu.Exit;
+				break;
+			case Menu.Desc:
+				select = Menu.Start;
+				break;
+			case Menu.Exit:
+				select = Menu.Desc;
+				break;
+		}
+		ChangePosition();
+	}
+
+	void ChangePosition()
+	{
+		switch (select) {
+			case Menu.Start: { 
 					var pos = cursor.GetComponent<RectTransform>().localPosition;
-					pos.y = -210.0f;
+					pos.y = 0;
 					cursor.GetComponent<RectTransform>().localPosition = pos; 
 				} break;
-			case 1: {
+			case Menu.Desc: {
 					var pos = cursor.GetComponent<RectTransform>().localPosition;
-					pos.y = -150.0f;
+					pos.y = -60.0f;
+					cursor.GetComponent<RectTransform>().localPosition = pos;
+				} break;
+			case Menu.Exit: {
+					var pos = cursor.GetComponent<RectTransform>().localPosition;
+					pos.y = -120.0f;
 					cursor.GetComponent<RectTransform>().localPosition = pos;
 				} break;
 		}

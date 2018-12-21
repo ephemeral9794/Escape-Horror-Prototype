@@ -9,7 +9,8 @@ public class SceneFadeManager : MonoBehaviour {
 	[SerializeField]
 	private float fadeTime = 3.0f;
 
-	private int fadeState;
+	[HideInInspector]
+	public int fadeState;
 	private float alpha;
 	private Image image;
 
@@ -41,6 +42,7 @@ public class SceneFadeManager : MonoBehaviour {
 			case 1:
 				{ 
 					image.enabled = false;
+					alpha = 0.0f;
 				} break;
 
 			case 2:
@@ -66,8 +68,8 @@ public class SceneFadeManager : MonoBehaviour {
 		}
 	}
 
-	public void ChangeScene()
+	public void ChangeScene(bool fadeOut)
 	{
-		fadeState = 2;
+		fadeState = fadeOut ? 2 : 3;
 	}
 }
