@@ -40,12 +40,11 @@ public class PlayerController : MonoBehaviour {
 		/*foreach (var t in tilemaps) {
 			Debug.Log(t.name);
 		}*/
-		//this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => Debug.Log(direction));
 		this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
 			var pos = grid.WorldToCell(transform.position);
 			var eventpos = new Vector2Int(pos.x + direction.x, pos.y + direction.y);
 			var events = manager.GetMapEvent(eventpos);
-			Debug.Log($"{eventpos}, {events}");
+			//Debug.Log($"{eventpos}, {events}");
 			if (events.Event == MapEventData.Event.Transition)
 			{
 				manager.ChangeScene();
@@ -64,7 +63,6 @@ public class PlayerController : MonoBehaviour {
 				float y = animator.GetFloat("DirectionY");
 				//Debug.LogFormat("{0},{1}", x, y);
 				direction = ToDirection(x, y);
-				flag = false;
 				//Debug.Log(direction);
 			} else {
 				animator.SetBool("Walking", true);

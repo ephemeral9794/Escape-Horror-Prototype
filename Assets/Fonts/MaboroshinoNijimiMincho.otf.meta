@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8c188adf9313eaa4487d13d89e3e907c
+timeCreated: 1545650660
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MaboroshinoNijimiMincho
+  fontNames:
+  - MaboroshinoNijimiMincho
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

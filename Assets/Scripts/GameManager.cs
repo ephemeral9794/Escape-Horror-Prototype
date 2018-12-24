@@ -28,13 +28,13 @@ public class GameManager : MonoBehaviour {
 			var path = AssetDatabase.GUIDToAssetPath(guid[i]);
 			MapEvent[i] = AssetDatabase.LoadAssetAtPath<MapEventData>(path);
 		}
-		fadeManager.fadeState = fadeIn ? 0 : 1;
 		//MapEvent = Resources.Load<MapEventData>("Map Event");
     }
 
     // Use this for initialization
     void Start () {
 		timeElasped = 0.0f;
+		fadeManager.fadeState = fadeIn ? 0 : 1;
 	}
 	
 	public MapEventData.MapEvent GetMapEvent(Vector2Int pos) {
