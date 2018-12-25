@@ -5,10 +5,16 @@ using UnityEngine.UI;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine.Tilemaps;
+using System;
+using UnityEngine.EventSystems;
+
+public interface IRecieveMessage : IEventSystemHandler {
+	void OnRecieve();
+}
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour, IRecieveMessage {
 	[SerializeField]
 	private int speed = 12;
 	[SerializeField]
@@ -47,7 +53,9 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log($"{eventpos}, {events}");
 			if (events.Event == MapEventData.Event.Transition)
 			{
-				manager.ChangeScene();
+				//manager.ChangeScene();
+				var ctrl = FindObjectOfType<DoorController>();
+				ctrl.OnAnimationTrigger();
 			}
 		}).AddTo(this);
 	}
@@ -158,5 +166,10 @@ public class PlayerController : MonoBehaviour {
 			direct.y = 0;
 		}*/
 		return direct;
+	}
+	
+	public void OnRecieve()
+	{
+		manager.ChangeScene();
 	}
 }
