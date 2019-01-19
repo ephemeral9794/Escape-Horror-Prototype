@@ -1,0 +1,8 @@
+{
+    "name": "EscapeHorror.Prototype",
+    "references": [
+        "UniRx"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
