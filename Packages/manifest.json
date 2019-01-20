@@ -1,4 +1,6 @@
 {
 	"dependencies": {
+		"com.unity.postprocessing": "2.1.2",
+		"com.unity.package-manager-ui": "2.0.3",
 	}
 }
