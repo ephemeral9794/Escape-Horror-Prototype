@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,12 +22,17 @@ public class GameManager : MonoBehaviour {
     private void Awake()
 	{
 		IsNovelMode = false;
-		var guid = AssetDatabase.FindAssets("t:MapEventData");
+        MapEvent = Resources.LoadAll<MapEventData>("MapEvent");
+        /*foreach (var events in MapEvent)
+        {
+            Debug.Log(events);
+        }*/
+		/*var guid = AssetDatabase.FindAssets("t:MapEventData");
 		MapEvent = new MapEventData[guid.Length];
 		for (int i = 0; i < guid.Length; i++) { 
 			var path = AssetDatabase.GUIDToAssetPath(guid[i]);
 			MapEvent[i] = AssetDatabase.LoadAssetAtPath<MapEventData>(path);
-		}
+		}*/
 		//MapEvent = Resources.Load<MapEventData>("Map Event");
     }
 
