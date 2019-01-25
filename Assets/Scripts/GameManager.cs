@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 namespace EscapeHorror.Prototype { 
 	public class GameManager : MonoBehaviour {
 
+		public static Vector2Int init_pos = new Vector2Int(0,0);
+
 		[SerializeField]
 		private SceneFadeManager fadeManager;
 		[SerializeField]
@@ -41,6 +43,15 @@ namespace EscapeHorror.Prototype {
 		void Start () {
 			timeElasped = 0.0f;
 			fadeManager.fadeState = fadeIn ? 0 : 1;
+			var player = FindObjectOfType<PlayerController>();
+			if (init_pos.x != 0 && init_pos.y != 0)
+			{
+				var grid = FindObjectOfType<Grid>();
+				var player_pos = grid.CellToWorld(new Vector3Int(init_pos.x, init_pos.y, 0));
+				player.gameObject.transform.position = player_pos;
+				player.Direction = (init_pos.x < 0) ? new Vector2Int(1, 0) : new Vector2Int(-1, 0);
+				init_pos = new Vector2Int(0, 0);
+			}
 		}
 	
 		public MapEventData.MapEvent GetMapEvent(Vector2Int pos) {
@@ -48,7 +59,7 @@ namespace EscapeHorror.Prototype {
 			return MapEvent.SingleOrDefault(val => val.SceneNumber == index)[pos];
 		}
 
-		public void ChangeScene() => fadeManager.ChangeScene(fadeOut);
+		public void ChangeScene(bool floorShift) => fadeManager.ChangeScene(floorShift, fadeOut);
 	}
 
 }

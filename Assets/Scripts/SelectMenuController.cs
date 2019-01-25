@@ -36,7 +36,7 @@ namespace EscapeHorror.Prototype {
 				switch (select)
 				{
 					case Menu.Start:
-						manager.ChangeScene();
+						manager.ChangeScene(false);
 						break;
 					case Menu.Desc:
 						if (flag) { 

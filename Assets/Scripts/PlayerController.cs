@@ -8,6 +8,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
 
 namespace EscapeHorror.Prototype { 
+	using Event = MapEventData.Event;
 	public interface IRecieveMessage : IEventSystemHandler {
 		void OnRecieve();
 	}
@@ -19,6 +20,17 @@ namespace EscapeHorror.Prototype {
 		private int speed = 12;
 		[SerializeField]
 		private Grid grid;
+
+		public Vector2Int Direction { 
+			get { 
+				return direction; 
+			}
+			set {
+				direction = value;
+				/*animator.SetFloat("DirectionX", direction.x);
+				animator.SetFloat("DirectionY", direction.y);*/
+			} 
+		}
 	
 		private Vector3 grid_size;	// 1グリッドあたりの大きさ（ワールド座標基準）
 		private Vector2Int direction;	// プレイヤーの向き
@@ -31,33 +43,34 @@ namespace EscapeHorror.Prototype {
 		private float timeElasped;
 		private GameManager manager;
 
-		private void Start() {
+		private void Start()
+		{
+			animator = GetComponent<Animator>();
+			rigidbody = GetComponent<Rigidbody2D>();
+			tilemaps = grid.GetComponentsInChildren<Tilemap>();
+			animator.SetFloat("DirectionX", direction.x);
+			animator.SetFloat("DirectionY", direction.y);
 			direction = Vector2Int.zero;
 			grid_size = grid.cellSize;
 			prev = grid.WorldToCell(transform.position);
 			next = prev;
 			transform.position = grid.CellToWorld(prev) + new Vector3(0.5f, 0.5f, 0.0f);
 			frames = 0;
-			animator = GetComponent<Animator>();
-			rigidbody = GetComponent<Rigidbody2D>();
-			tilemaps = grid.GetComponentsInChildren<Tilemap>();
 			timeElasped = 0.0f;
 			manager = FindObjectOfType<GameManager>();
-			/*foreach (var t in tilemaps) {
-				Debug.Log(t.name);
-			}*/
 			this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
 				var pos = grid.WorldToCell(transform.position);
 				var eventpos = new Vector2Int(pos.x + direction.x, pos.y + direction.y);
 				var events = manager.GetMapEvent(eventpos);
 				//Debug.Log($"{eventpos}, {events}");
-				if (events.Event == MapEventData.Event.Transition)
+				if (events.Event == Event.Transition_Action)
 				{
 					//manager.ChangeScene();
 					var ctrl = FindObjectOfType<DoorController>();
 					ctrl.OnAnimationTrigger();
 				}
 			}).AddTo(this);
+			
 		}
 
 		// Update is called once per frame
@@ -125,6 +138,14 @@ namespace EscapeHorror.Prototype {
 				point.y -= 1;
 			}
 
+			// 階移動
+			var events = manager.GetMapEvent(new Vector2Int(next.x, next.y));
+			if (events.Event == Event.Transition)
+			{
+				point = save;
+				GameManager.init_pos = new Vector2Int(prev.x, prev.y);
+				manager.ChangeScene(true);
+			}
 			// 次の目標地点のタイルに当たり判定があるなら進まない（変更を戻す）
 			foreach (var tilemap in tilemaps) {
 				if (tilemap.GetColliderType(next) != Tile.ColliderType.None) {
@@ -170,7 +191,8 @@ namespace EscapeHorror.Prototype {
 	
 		public void OnRecieve()
 		{
-			manager.ChangeScene();
+			// 部屋移動
+			manager.ChangeScene(false);
 		}
 	}
 }

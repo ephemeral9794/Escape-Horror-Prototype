@@ -14,4 +14,4 @@ MonoBehaviour:
   SceneNumber: 1
   m_MapEvents:
   - Position: {x: -1, y: 13}
-    Event: 3
+    Event: 4

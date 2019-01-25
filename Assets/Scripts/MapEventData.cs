@@ -11,6 +11,7 @@ public class MapEventData : ScriptableObject {
 		Talk,
 		Trick,
 		Transition,
+		Transition_Action,
 	}
 	[Serializable]
 	public struct MapEvent{
