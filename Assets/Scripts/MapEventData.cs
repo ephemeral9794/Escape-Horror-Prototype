@@ -3,32 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[Serializable]
-[CreateAssetMenu(fileName = "New Map Event Data", menuName = "Map Edit/Map Event Data")]
-public class MapEventData : ScriptableObject {
-	public enum Event {
-		None,
-		Talk,
-		Trick,
-		Transition,
-		Transition_Action,
-	}
+namespace EscapeHorror.Prototype { 
 	[Serializable]
-	public struct MapEvent{
-		public Vector2Int Position;
-		public Event Event;
-		public override string ToString()
-		{
-			return $"[{Position}, {Event}]";
+	[CreateAssetMenu(fileName = "New Map Event Data", menuName = "Map Edit/Map Event Data")]
+	public class MapEventData : ScriptableObject {
+		public enum Event {
+			None,
+			Talk,
+			Trick,
+			Transition,
+			Transition_Action,
 		}
-	}
+		/*[Serializable]
+		public class IParameter { 
+		
+		}
+		[Serializable]
+		public class NoneParameter : IParameter { }
+		[Serializable]
+		public class TransitionParameter : IParameter
+		{
+			public int NextSceneNumber;
+			public Vector2Int NextPosition;
+			public Vector2Int NextDirection;
+		}*/
 
-	[SerializeField]
-	public int SceneNumber;
-	[SerializeField]
-	public List<MapEvent> m_MapEvents;
+		[Serializable]
+		public struct MapEvent {
+			public Vector2Int Position;
+			public Event Event;
+			public int NextScene;
+		}
 
-	public MapEvent this[Vector2Int pos] {
-		get { return m_MapEvents.SingleOrDefault(value => (value.Position == pos));}
+		[SerializeField]
+		public int SceneNumber;
+		[SerializeField]
+		public List<MapEvent> m_MapEvents;
+
+		public MapEvent this[Vector2Int pos] {
+			get { return m_MapEvents.SingleOrDefault(value => (value.Position == pos));}
+		}
 	}
 }

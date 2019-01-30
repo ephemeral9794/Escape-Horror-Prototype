@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
+using EscapeHorror.Prototype;
 
 [CustomEditor(typeof(MapEventData))]
 public class MapEventDataEditor : Editor
@@ -33,7 +34,7 @@ public class MapEventDataEditor : Editor
 	}
 	private float GetElementHeight(int index)
 	{
-		return 34.0f;
+		return 50.0f;
 	}
 	private void OnDrawElement(Rect rect, int index, bool isactive, bool isfocused)
 	{
@@ -42,6 +43,40 @@ public class MapEventDataEditor : Editor
 		float y = rect.yMin;
 		mapEvent.Position = EditorGUI.Vector2IntField(new Rect(rect.xMin, rect.yMin, rect.width, 16.0f), "Position", Data.m_MapEvents[index].Position);
 		mapEvent.Event = (MapEventData.Event)EditorGUI.EnumPopup(new Rect(rect.xMin, rect.yMin + 16.0f, rect.width, 16.0f), "Event", mapEvent.Event);
+		mapEvent.NextScene = EditorGUI.IntField(new Rect(rect.xMin, rect.yMin + 32.0f, rect.width, 16.0f), "Next Scene", mapEvent.NextScene);
+		/*if (mapEvent.Event == MapEventData.Event.None)
+		{
+			EditorGUI.LabelField(new Rect(rect.xMin, rect.yMin + 32.0f, rect.width, 16.0f), "None Parameter");
+			if (!(mapEvent.Parameter is MapEventData.NoneParameter)) { 
+				mapEvent.Parameter = new MapEventData.NoneParameter();
+			}
+		} else if (mapEvent.Event == MapEventData.Event.Transition || mapEvent.Event == MapEventData.Event.Transition_Action) {
+			if (mapEvent.Parameter is MapEventData.TransitionParameter) { 
+				var param = (MapEventData.TransitionParameter)mapEvent.Parameter;
+				param.NextSceneNumber = EditorGUI.IntField(new Rect(rect.xMin, rect.yMin + 32.0f, rect.width, 16.0f), "Next Scene Number", param.NextSceneNumber);
+				param.NextPosition = EditorGUI.Vector2IntField(new Rect(rect.xMin, rect.yMin + 48.0f, rect.width, 16.0f), "Next Postion", param.NextPosition);
+				param.NextDirection = EditorGUI.Vector2IntField(new Rect(rect.xMin, rect.yMin + 64.0f, rect.width, 16.0f), "Next Direction", param.NextDirection);
+				mapEvent.Parameter = param;
+				Debug.Log(mapEvent.Parameter.GetType());
+			} else {
+				if (mapEvent.Parameter == null) { 
+					var param = new MapEventData.TransitionParameter();
+					param.NextSceneNumber = EditorGUI.IntField(new Rect(rect.xMin, rect.yMin + 32.0f, rect.width, 16.0f), "Next Scene Number", param.NextSceneNumber);
+					param.NextPosition = EditorGUI.Vector2IntField(new Rect(rect.xMin, rect.yMin + 48.0f, rect.width, 16.0f), "Next Postion", param.NextPosition);
+					param.NextDirection = EditorGUI.Vector2IntField(new Rect(rect.xMin, rect.yMin + 64.0f, rect.width, 16.0f), "Next Direction", param.NextDirection);
+					mapEvent.Parameter = param;
+				}
+				Debug.Log(mapEvent.Parameter.GetType());
+				//Debug.Log(param);
+			}
+		} else
+		{
+			EditorGUI.LabelField(new Rect(rect.xMin, rect.yMin + 32.0f, rect.width, 16.0f), "None Parameter");
+			if (!(mapEvent.Parameter is MapEventData.NoneParameter))
+			{
+				mapEvent.Parameter = new MapEventData.NoneParameter();
+			}
+		}*/
 		Data.m_MapEvents[index] = mapEvent;
 		if (EditorGUI.EndChangeCheck()) {
 			Save();
@@ -54,8 +89,10 @@ public class MapEventDataEditor : Editor
 	private void OnAddElement(ReorderableList list)
 	{
 		Data.m_MapEvents.Add(new MapEventData.MapEvent {
-			Position = new Vector2Int(0, 0), 
-			Event = MapEventData.Event.None
+			Position = Vector2Int.zero,
+			Event = MapEventData.Event.None,
+			//Parameter = new MapEventData.NoneParameter()
+			NextScene = -1
 		});
 	}
 	private void Save()

@@ -15,5 +15,5 @@ MonoBehaviour:
   m_MapEvents:
   - Position: {x: -1, y: 13}
     Event: 4
-  - Position: {x: -1, y: 21}
+  - Position: {x: -1, y: 20}
     Event: 3

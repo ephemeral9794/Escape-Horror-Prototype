@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 namespace EscapeHorror.Prototype { 
 	public class GameManager : MonoBehaviour {
 
-		public static Vector2Int init_pos = new Vector2Int(0,0);
+		//public static Vector2Int init_pos = new Vector2Int(0, 0);
+		private static Vector2Int next_pos = Vector2Int.zero;
+		private static Vector2Int next_dir = Vector2Int.zero;
 
 		[SerializeField]
 		private SceneFadeManager fadeManager;
@@ -44,14 +46,23 @@ namespace EscapeHorror.Prototype {
 			timeElasped = 0.0f;
 			fadeManager.fadeState = fadeIn ? 0 : 1;
 			var player = FindObjectOfType<PlayerController>();
-			if (init_pos.x != 0 && init_pos.y != 0)
+			if (next_pos != Vector2Int.zero && next_dir != Vector2Int.zero)
+			{
+				var grid = FindObjectOfType<Grid>();
+				var player_pos = grid.CellToWorld(new Vector3Int(next_pos.x, next_pos.y, 0));
+				player.gameObject.transform.position = player_pos;
+				player.Direction = next_dir;
+				next_pos = Vector2Int.zero;
+				next_dir = Vector2Int.zero;
+			}
+			/*if (init_pos.x != 0 && init_pos.y != 0)
 			{
 				var grid = FindObjectOfType<Grid>();
 				var player_pos = grid.CellToWorld(new Vector3Int(init_pos.x, init_pos.y, 0));
 				player.gameObject.transform.position = player_pos;
 				player.Direction = (init_pos.x < 0) ? new Vector2Int(1, 0) : new Vector2Int(-1, 0);
 				init_pos = new Vector2Int(0, 0);
-			}
+			}*/
 		}
 	
 		public MapEventData.MapEvent GetMapEvent(Vector2Int pos) {
@@ -59,7 +70,18 @@ namespace EscapeHorror.Prototype {
 			return MapEvent.SingleOrDefault(val => val.SceneNumber == index)[pos];
 		}
 
-		public void ChangeScene(bool floorShift) => fadeManager.ChangeScene(floorShift, fadeOut);
+		//public void ChangeScene(bool floorShift) => fadeManager.ChangeScene(floorShift, fadeOut);
+		public void ChangeScene(int nextScene)
+		{
+			next_pos = Vector2Int.zero;
+			next_dir = Vector2Int.zero;
+			fadeManager.ChangeScene(nextScene, fadeOut);
+		}
+		public void ChangeScene(int nextScene, Vector2Int nextPos, Vector2Int nextDirect){
+			next_pos = nextPos;
+			next_dir = nextDirect;
+			fadeManager.ChangeScene(nextScene, fadeOut);
+		}
 	}
 
 }

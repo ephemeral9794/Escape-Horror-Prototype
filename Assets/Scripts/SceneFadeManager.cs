@@ -13,6 +13,7 @@ namespace EscapeHorror.Prototype {
 		[HideInInspector]
 		public int fadeState;
 		private bool floorShift;
+		private int nextScene;
 		private float alpha;
 		private Image image;
 
@@ -60,7 +61,8 @@ namespace EscapeHorror.Prototype {
 
 				case 3:
 					{
-						if (SceneManager.GetActiveScene().name == "Title") {
+						SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+						/*if (SceneManager.GetActiveScene().name == "Title") {
 							SceneManager.LoadScene("Map_Start", LoadSceneMode.Single);
 						} else if (SceneManager.GetActiveScene().name == "Map_Start") {
 							SceneManager.LoadScene("Map_Entrance", LoadSceneMode.Single);
@@ -70,16 +72,17 @@ namespace EscapeHorror.Prototype {
 							} else { 
 								SceneManager.LoadScene("Map_Hall", LoadSceneMode.Single);
 							}
-						}
+						}*/
 
 					} break;
 			}
 		}
 
-		public void ChangeScene(bool floorShift, bool fadeOut)
+		public void ChangeScene(int sceneNumber, bool fadeOut)
 		{
 			fadeState = fadeOut ? 2 : 3;
-			this.floorShift = floorShift;
+			//this.floorShift = floorShift;
+			nextScene = sceneNumber;
 		}
 	}
 }
