@@ -13,5 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneNumber: 4
   m_MapEvents:
-  - Position: {x: 0, y: 0}
+  - Position: {x: -1, y: 31}
     Event: 3
+    NextScene: 2

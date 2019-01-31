@@ -53,7 +53,9 @@ namespace EscapeHorror.Prototype {
 			this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
 				var pos = grid.WorldToCell(transform.position);
 				var eventpos = new Vector2Int(pos.x + Direction.x, pos.y + Direction.y);
-				var mapEvent = manager.GetMapEvent(eventpos);
+                var pair = manager.GetEventAndParam(eventpos);
+				//var mapEvent = manager.GetMapEvent(eventpos);
+                var mapEvent = pair.Key;
 				if (mapEvent.Event == Event.Transition_Action) {	// 移動アクション
 					nextScene = mapEvent.NextScene;
 					var ctrl = FindObjectOfType<DoorController>();
@@ -128,13 +130,17 @@ namespace EscapeHorror.Prototype {
 				point.y -= 1;
 			}
 
-			// 階移動
-			var mapEvent = manager.GetMapEvent(new Vector2Int(next.x, next.y));
-			if (mapEvent.Event == Event.Transition)
+            // 階移動
+            //var mapEvent = manager.GetMapEvent(new Vector2Int(next.x, next.y));
+            var pair = manager.GetEventAndParam(new Vector2Int(next.x, next.y));
+            var mapEvent = pair.Key;
+            var param = pair.Value;
+            if (mapEvent.Event == Event.Transition)
 			{
 				point = save;
 				//GameManager.init_pos = new Vector2Int(prev.x, prev.y);
 				//manager.ChangeScene(mapEvent.NextScene, param.NextPosition, param.NextDirection);
+                manager.ChangeScene(mapEvent.NextScene, param.Position, param.Direction);
 			}
 			// 次の目標地点のタイルに当たり判定があるなら進まない（変更を戻す）
 			foreach (var tilemap in tilemaps) {

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6833afdf856f948b7c619215441518, type: 3}
   m_Name: Map_Hall_Param
   m_EditorClassIdentifier: 
-  CurrentScene: 0
+  CurrentScene: 3
   Parameters:
   - MapSceneNumber: 2
     Position: {x: -1, y: 12}
