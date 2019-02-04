@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -17,11 +18,13 @@ public class TextController : MonoBehaviour {
 	void Start()
 	{
 		TextUpdate();
-		this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
-			if (currentLine < scenario.Length) {
-				TextUpdate();
-			}
-		}).AddTo(this);
+        Action<Unit> action =(_) => {
+            if (currentLine < scenario.Length) {
+                TextUpdate();
+            }
+        };
+		this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action).AddTo(this);
+        this.OnKeyDownAsObservable(KeyCode.Return).Subscribe(action).AddTo(this);
 	}
 
 	void Update()

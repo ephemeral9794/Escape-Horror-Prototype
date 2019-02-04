@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: e2d4bbbfce4270045bff253a8df18c12
-timeCreated: 1549017574
+guid: d784c43e0b6389945a87f7a0f71862af
+timeCreated: 1549253759
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: "1_\u901A\u5E38_0"
-    21300002: "1_\u901A\u5E38_1"
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -68,57 +66,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: "1_\u901A\u5E38_0"
-      rect:
-        serializedVersion: 2
-        x: 94
-        y: 56
-        width: 1134
-        height: 2872
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "1_\u901A\u5E38_1"
-      rect:
-        serializedVersion: 2
-        x: 1299
-        y: 2193
-        width: 4
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 

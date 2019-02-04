@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,7 +51,7 @@ namespace EscapeHorror.Prototype {
 			frames = 0;
 			timeElasped = 0.0f;
 			manager = FindObjectOfType<GameManager>();
-			this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
+			Action<Unit> action = (_) => {
 				var pos = grid.WorldToCell(transform.position);
 				var eventpos = new Vector2Int(pos.x + Direction.x, pos.y + Direction.y);
                 var pair = manager.GetEventAndParam(eventpos);
@@ -63,7 +64,9 @@ namespace EscapeHorror.Prototype {
 				} else if (mapEvent.Event == Event.Trick) {	// 仕掛け
 
 				}
-			}).AddTo(this);
+			};
+            this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action).AddTo(this);
+            this.OnKeyDownAsObservable(KeyCode.Return).Subscribe(action).AddTo(this);
 		}
 
 		void Update () {

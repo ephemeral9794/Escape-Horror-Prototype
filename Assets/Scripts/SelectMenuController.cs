@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,24 +33,26 @@ namespace EscapeHorror.Prototype {
 			this.OnKeyDownAsObservable(KeyCode.DownArrow).Subscribe(_ => {
 				DownMenu();
 			});
-			this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(_ => {
-				switch (select)
-				{
-					case Menu.Start:
-						manager.ChangeScene(1);
-						break;
-					case Menu.Desc:
-						if (flag) { 
-							instance = Instantiate(descBoard, transform.parent);
-							instance.OnDestroyAsObservable().Subscribe(__ => flag = true);
-							flag = false;
-						}
-						break;
-					case Menu.Exit:
-						Application.Quit();
-						break;
-				}
-			});
+            Action<Unit> action = (_) => {
+                switch (select)
+                {
+                    case Menu.Start:
+                        manager.ChangeScene(1);
+                        break;
+                    case Menu.Desc:
+                        if (flag) {
+                            instance = Instantiate(descBoard, transform.parent);
+                            instance.OnDestroyAsObservable().Subscribe(__ => flag = true);
+                            flag = false;
+                        }
+                        break;
+                    case Menu.Exit:
+                        Application.Quit();
+                        break;
+                }
+            };
+            this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action);
+            this.OnKeyDownAsObservable(KeyCode.Return).Subscribe(action);
 		}
 
 		void DownMenu()
