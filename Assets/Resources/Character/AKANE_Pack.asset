@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c51661662e7cc0b4fb269e4274be908f, type: 3}
+  m_Name: AKANE_Pack
+  m_EditorClassIdentifier: 
+  Character: 0
+  Size:
+    serializedVersion: 2
+    x: 0
+    y: -90
+    width: 275
+    height: 672
+  Sprites:
+  - {fileID: 21300000, guid: 78422912162e41449b8a3d3135e6991d, type: 3}
+  - {fileID: 21300000, guid: a4fd199690fff204e9e8baeb6ed21ff6, type: 3}
+  - {fileID: 21300000, guid: 00c96ea2d79b5cf4e91b451bfa2fde4f, type: 3}
+  - {fileID: 21300000, guid: 9253aa9f0b9609e44854688120e59194, type: 3}
+  - {fileID: 21300000, guid: da671a69d5e24284b84bff74574cca06, type: 3}
+  - {fileID: 21300000, guid: 001b34dfa22d0a0439d1ecd5abc6a488, type: 3}
+  - {fileID: 21300000, guid: d876dd71d087eae49971b28c76917d12, type: 3}

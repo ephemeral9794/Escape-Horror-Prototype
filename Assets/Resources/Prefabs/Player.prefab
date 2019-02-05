@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cd734036cf280458303432dc98029e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_image: {fileID: 2800000, guid: 2d345876aff79634d87ee63ca410521d, type: 3}
-  m_cropWidth: 24
+  m_image: {fileID: 2800000, guid: 0b0b633a8925435429c9955a2af64441, type: 3}
+  m_cropWidth: 32
   m_cropHeight: 32
 --- !u!212 &212027299820939886
 SpriteRenderer:
