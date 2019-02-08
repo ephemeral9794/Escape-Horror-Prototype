@@ -93,5 +93,8 @@ namespace EscapeHorror.Prototype {
 
 		public void ClearText() => text.ClearText();
 		public void ChangeName(string name) => text.ChangeName(name);
+		public void Visible(CharacterVisualizer.Position pos, string typeStr, int diffNum) => visualizer.Visible(pos, typeStr, diffNum);
+		public void Invisible(CharacterVisualizer.Position pos) => visualizer.Invisible(pos);
+		public void InvisibleAll() => visualizer.InvisibleAll();
 	}
 }

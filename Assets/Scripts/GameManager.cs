@@ -25,6 +25,7 @@ namespace EscapeHorror.Prototype {
 		public bool IsNovelMode { get; set; }
 		public MapEventData[] MapEvent { get; private set; }
         public TransitionParameterTable[] ParamTable { get; private set; }
+		public ConfigPrefs Config { get; private set; }
 
 		private float timeElasped;
 
@@ -33,6 +34,7 @@ namespace EscapeHorror.Prototype {
 			IsNovelMode = false;
 			MapEvent = Resources.LoadAll<MapEventData>("MapEvent");
             ParamTable = Resources.LoadAll<TransitionParameterTable>("MapEvent");
+			Config = Resources.Load<ConfigPrefs>("ConfigPrefs");
             /*foreach (var events in MapEvent)
 			{
 				Debug.Log(events);
@@ -47,7 +49,9 @@ namespace EscapeHorror.Prototype {
         }
 
 		// Use this for initialization
-		void Start () {
+		void Start ()
+		{
+			Config.Apply();
 			timeElasped = 0.0f;
 			fadeManager.fadeState = fadeIn ? 0 : 1;
 			var player = FindObjectOfType<PlayerController>();

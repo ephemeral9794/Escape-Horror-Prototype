@@ -9,6 +9,13 @@ namespace EscapeHorror.Prototype {
 		public enum Position {
 			LEFT, CENTER, RIGHT
 		}
+
+		private Dictionary<string, CharacterPack.CharacterType> CharacterMatchList = new Dictionary<string, CharacterPack.CharacterType>{
+			{"アカネ", CharacterPack.CharacterType.AKANE},
+			{"ミキ", CharacterPack.CharacterType.MIKI},
+			{"リョータ", CharacterPack.CharacterType.RYOTA},
+			{"タケル", CharacterPack.CharacterType.TAKERU}
+		}; 
 		private CharacterPack[] characters;
 		private GameObject[] positions; 
 
@@ -38,8 +45,11 @@ namespace EscapeHorror.Prototype {
 				positions[i].SetActive(false);
 			}
 		}
-		public void Visible(Position pos, CharacterPack.CharacterType type, int diffNum)
+		public void Visible(Position pos, string typeStr, int diffNum)
 		{
+			Debug.Log("Visible");
+			var type = CharacterMatchList[typeStr];
+			positions[(int)pos].SetActive(true);
 			var image = positions[(int)pos].GetComponent<Image>();
 			var trans = positions[(int)pos].GetComponent<RectTransform>();
 			var character = characters.SingleOrDefault(c => c.Character == type);
@@ -48,7 +58,6 @@ namespace EscapeHorror.Prototype {
 			var local = trans.localPosition;
 			local.y = character.Size.y;
 			trans.localPosition = local;
-			positions[(int)pos].SetActive(true);
 		}
 	}
 }

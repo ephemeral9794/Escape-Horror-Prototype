@@ -20,6 +20,7 @@ namespace EscapeHorror.Prototype {
 		private GameManager manager;
 		private Menu select = 0;
 		private GameObject instance;
+		private AudioSource se;
 		private bool flag;
 
 		// Use this for initialization
@@ -27,14 +28,22 @@ namespace EscapeHorror.Prototype {
 			flag = true;
 			cursor = GetComponentInChildren<Image>();
 			manager = FindObjectOfType<GameManager>();
+			se = GetComponent<AudioSource>();
 			this.OnKeyDownAsObservable(KeyCode.UpArrow).Subscribe(_ => {
-				UpMenu();
+				if (flag) { 
+					se.Play();
+					UpMenu();
+				}
 			});
 			this.OnKeyDownAsObservable(KeyCode.DownArrow).Subscribe(_ => {
-				DownMenu();
+				if (flag) {
+					se.Play();
+					DownMenu();
+				}
 			});
             Action<Unit> action = (_) => {
-                switch (select)
+				se.Play();
+				switch (select)
                 {
                     case Menu.Start:
                         manager.ChangeScene(1);

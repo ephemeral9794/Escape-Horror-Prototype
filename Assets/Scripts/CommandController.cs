@@ -94,13 +94,26 @@ namespace EscapeHorror.Prototype {
 			//Debug.Log(command.tag);
 			switch (command.tag)
 			{
-				case "cm":
-					scenario.ClearText();
-					break;
-				case "name":
-					string name = command.param["name"];
-					scenario.ChangeName(name);
-					break;
+				case "cm": { 
+						scenario.ClearText();
+					} break;
+				case "name": { 
+						string name = command.param["name"];
+						scenario.ChangeName(name);
+					} break;
+				case "char": { 
+						int pos = int.Parse(command.param["pos"]);
+						string type = command.param["name"];
+						int diff = int.Parse(command.param["diff"]);
+						scenario.Visible((CharacterVisualizer.Position)pos, type, diff);
+					} break;
+				case "unchar": {
+						int pos = int.Parse(command.param["pos"]);
+						scenario.Invisible((CharacterVisualizer.Position)pos);
+					} break;
+				case "reset" : {
+						scenario.InvisibleAll();
+					} break;
 			}
 		}
 	}
