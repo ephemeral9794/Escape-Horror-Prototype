@@ -7,7 +7,6 @@ namespace EscapeHorror.Prototype {
 	[CreateAssetMenu(menuName = "Map Edit/Transition Paramter Table")]
 	public class TransitionParameterTable : ScriptableObject
 	{
-
 		[Serializable]
 		public struct Parameter
 		{
@@ -23,7 +22,7 @@ namespace EscapeHorror.Prototype {
 
 		public Parameter[] GetParameters(int SceneNumber)
 		{
-			return (Parameter[])Parameters.Where(p => p.MapSceneNumber == SceneNumber);
+			return Parameters.Where(p => p.MapSceneNumber == SceneNumber).ToArray();
 		}
 	}
 }

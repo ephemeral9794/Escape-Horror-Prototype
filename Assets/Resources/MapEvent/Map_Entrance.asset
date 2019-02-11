@@ -19,3 +19,6 @@ MonoBehaviour:
   - Position: {x: -1, y: 20}
     Event: 3
     NextScene: 4
+  - Position: {x: -22, y: 15}
+    Event: 2
+    NextScene: -1

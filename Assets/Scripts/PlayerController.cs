@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
@@ -19,8 +20,6 @@ namespace EscapeHorror.Prototype {
 	public class PlayerController : MonoBehaviour, IRecieveMessage {
 		[SerializeField]
 		private int speed = 12;
-		[SerializeField]
-		private Grid grid;
 
 		// プレイヤーの向き
 		public Vector2Int Direction { get; set; }
@@ -31,15 +30,19 @@ namespace EscapeHorror.Prototype {
 		private int frames;
 		private Animator animator;
 		private new Rigidbody2D rigidbody;
+		private Grid grid;
 		private Tilemap[] tilemaps;
 		private float timeElasped;
 		private GameManager manager;
 		private int nextScene = -1;
+		private TargetHint hint;
 
 		private void Start()
 		{
 			animator = GetComponent<Animator>();
 			rigidbody = GetComponent<Rigidbody2D>();
+			hint = FindObjectOfType<TargetHint>();
+			grid = FindObjectOfType<Grid>();
 			tilemaps = grid.GetComponentsInChildren<Tilemap>();
 			animator.SetFloat("DirectionX", Direction.x);
 			animator.SetFloat("DirectionY", Direction.y);
@@ -54,15 +57,28 @@ namespace EscapeHorror.Prototype {
 			Action<Unit> action = (_) => {
 				var pos = grid.WorldToCell(transform.position);
 				var eventpos = new Vector2Int(pos.x + Direction.x, pos.y + Direction.y);
-                var pair = manager.GetEventAndParam(eventpos);
+				var mapEventData = manager.GetMapEventData();
+				var mapEvent = mapEventData[eventpos];
+                //var pair = manager.GetEventAndParam(eventpos);
 				//var mapEvent = manager.GetMapEvent(eventpos);
-                var mapEvent = pair.Key;
+                //var mapEvent = pair.Key;
 				if (mapEvent.Event == Event.Transition_Action) {	// 移動アクション
 					nextScene = mapEvent.NextScene;
 					var ctrl = FindObjectOfType<DoorController>();
 					ctrl.OnAnimationTrigger();
 				} else if (mapEvent.Event == Event.Trick) {	// 仕掛け
-
+					var parameters = manager.GetTrickParams(mapEventData, eventpos);
+					foreach (var param in parameters) {
+						switch (param.Type) {
+						case TrickParameterTable.TrickType.Doll:
+							break;
+						case TrickParameterTable.TrickType.Remove: {
+								var overlay = tilemaps.SingleOrDefault(t => t.name == "Overlay");
+								Debug.Log(overlay);
+								overlay.SetTile(new Vector3Int(param.Position.x, param.Position.y, 0), null);
+							} break;
+						}
+					}
 				}
 			};
             this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action).AddTo(this);
@@ -77,16 +93,13 @@ namespace EscapeHorror.Prototype {
 					animator.SetBool("Walking", false);
 					float x = animator.GetFloat("DirectionX");
 					float y = animator.GetFloat("DirectionY");
-					//Debug.LogFormat("{0},{1}", x, y);
 					Direction = ToDirection(x, y);
-					//Debug.Log(direction);
 				} else {
 					animator.SetBool("Walking", true);
 					animator.SetFloat("DirectionX", dir.x);
 					animator.SetFloat("DirectionY", dir.y);
 				}
 				MovePoint(dir, ref next);
-				//Debug.Log($"{next} {pos}");
 			}
 			//transform.position = pos + new Vector3(0.5f, 0.5f, 0.0f);
 			pos += new Vector3(0.5f, 0.5f, 0.0f);
@@ -133,14 +146,17 @@ namespace EscapeHorror.Prototype {
 				point.y -= 1;
 			}
 
-            // 階移動
-            //var mapEvent = manager.GetMapEvent(new Vector2Int(next.x, next.y));
-            var pair = manager.GetEventAndParam(new Vector2Int(next.x, next.y));
-            var mapEvent = pair.Key;
-            var param = pair.Value;
-            if (mapEvent.Event == Event.Transition)
+			// 階移動
+			//var mapEvent = manager.GetMapEvent(new Vector2Int(next.x, next.y));
+			var mapEventData = manager.GetMapEventData();
+			//var pair = manager.GetEventAndParam(new Vector2Int(next.x, next.y));
+			var pos = new Vector2Int(next.x, next.y);
+			var mapEvent = mapEventData[pos];
+            var parameters = manager.GetTransitionParams(mapEventData, pos);
+            if (mapEvent.Event == Event.Transition )
 			{
 				point = save;
+				var param = parameters[0];
 				//GameManager.init_pos = new Vector2Int(prev.x, prev.y);
 				//manager.ChangeScene(mapEvent.NextScene, param.NextPosition, param.NextDirection);
                 manager.ChangeScene(mapEvent.NextScene, param.Position, param.Direction);

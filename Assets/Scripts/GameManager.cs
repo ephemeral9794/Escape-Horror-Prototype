@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 namespace EscapeHorror.Prototype {
 
     using MapEvent = MapEventData.MapEvent;
-    using Parameter = TransitionParameterTable.Parameter;
+    using TransParam = TransitionParameterTable.Parameter;
+	using TrickParam = TrickParameterTable.Parameter;
     public class GameManager : MonoBehaviour {
 
 		//public static Vector2Int init_pos = new Vector2Int(0, 0);
@@ -23,8 +24,9 @@ namespace EscapeHorror.Prototype {
 		private bool fadeOut = true;
 
 		public bool IsNovelMode { get; set; }
-		public MapEventData[] MapEvent { get; private set; }
-        public TransitionParameterTable[] ParamTable { get; private set; }
+		public MapEventData[] MapEvents { get; private set; }
+        public TransitionParameterTable[] TransParams { get; private set; }
+		public TrickParameterTable[] TrickParams { get; private set; }
 		public ConfigPrefs Config { get; private set; }
 
 		private float timeElasped;
@@ -32,8 +34,9 @@ namespace EscapeHorror.Prototype {
 		private void Awake()
 		{
 			IsNovelMode = false;
-			MapEvent = Resources.LoadAll<MapEventData>("MapEvent");
-            ParamTable = Resources.LoadAll<TransitionParameterTable>("MapEvent");
+			MapEvents = Resources.LoadAll<MapEventData>("MapEvent");
+			TransParams = Resources.LoadAll<TransitionParameterTable>("MapEvent");
+			TrickParams = Resources.LoadAll<TrickParameterTable>("MapEvent");
 			Config = Resources.Load<ConfigPrefs>("ConfigPrefs");
             /*foreach (var events in MapEvent)
 			{
@@ -76,18 +79,34 @@ namespace EscapeHorror.Prototype {
 			}*/
 		}
 	
-		public MapEvent GetMapEvent(Vector2Int pos) {
+		/*public MapEvent GetMapEvent(Vector2Int pos) {
 			int index = SceneManager.GetActiveScene().buildIndex;
-			return MapEvent.SingleOrDefault(val => val.SceneNumber == index)[pos];
+			return MapEvents.SingleOrDefault(val => val.SceneNumber == index)[pos];
+		}*/
+		public MapEventData GetMapEventData()
+		{
+			int index = SceneManager.GetActiveScene().buildIndex;
+			return MapEvents.SingleOrDefault(val => val.SceneNumber == index);
 		}
-        public KeyValuePair<MapEvent, Parameter> GetEventAndParam(Vector2Int pos)
+		public TransParam[] GetTransitionParams(MapEventData mapEvent, Vector2Int pos)
+		{
+			var param = TransParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
+			return param.GetParameters(mapEvent[pos].NextScene);
+		}
+        public KeyValuePair<MapEvent, TransParam> GetEventAndParam(Vector2Int pos)
         {
             int index = SceneManager.GetActiveScene().buildIndex;
-            var mapEvent = MapEvent.SingleOrDefault(val => val.SceneNumber == index);
-            var table = ParamTable.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
+            var mapEvent = MapEvents.SingleOrDefault(val => val.SceneNumber == index);
+            var table = TransParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
             var param = table.Parameters.SingleOrDefault(pp => pp.MapSceneNumber == mapEvent[pos].NextScene);
-            return new KeyValuePair<MapEvent, Parameter>(mapEvent[pos], param);
+            return new KeyValuePair<MapEvent, TransParam>(mapEvent[pos], param);
         }
+		public TrickParam[] GetTrickParams(MapEventData mapEvent, Vector2Int pos)
+		{
+			Debug.LogFormat("{0}, {1}", TrickParams[0].CurrentScene, mapEvent.SceneNumber);
+			var param = TrickParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
+			return param.GetParameters(mapEvent[pos].NextScene);
+		}
 
 		//public void ChangeScene(bool floorShift) => fadeManager.ChangeScene(floorShift, fadeOut);
 		public void ChangeScene(int nextScene)
