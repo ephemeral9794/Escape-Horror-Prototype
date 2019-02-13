@@ -6,6 +6,7 @@ using UniRx;
 using UniRx.Triggers;
 using System;
 using System.Text.RegularExpressions;
+using DG.Tweening;
 
 namespace EscapeHorror.Prototype { 
 	public class ScenarioManager : MonoBehaviour {
@@ -21,10 +22,13 @@ namespace EscapeHorror.Prototype {
 
 		[SerializeField]
 		private TextAsset scenarioText;
+		[SerializeField]
+		int nextScene;
 
 		private TextController text;
 		private CommandController command;
 		private CharacterVisualizer visualizer;
+		private GameManager manager;
 		private string[] TextLines;
 		private List<Line> Lines;
 
@@ -36,6 +40,7 @@ namespace EscapeHorror.Prototype {
 		
 		private void Start()
 		{
+			manager = FindObjectOfType<GameManager>();
 			text = GetComponent<TextController>();
 			command = GetComponent<CommandController>();
 			visualizer = GetComponentInChildren<CharacterVisualizer>();
@@ -52,6 +57,14 @@ namespace EscapeHorror.Prototype {
 				text.CurrentLine = current;
 				if (current < Lines.Count && !command.IsCommand(current)) {
 					text.TextUpdate(Lines[current]);
+				}
+				if (current >= Lines.Count)
+				{
+					var group = GetComponent<CanvasGroup>();
+					DOTween.To(() => group.alpha,
+							  (a) => group.alpha = a,
+							  0.0f, 1.0f)
+						   .OnComplete(() => manager.ChangeScene(nextScene));
 				}
 			};
 			this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action).AddTo(this);

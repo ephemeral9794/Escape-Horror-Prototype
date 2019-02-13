@@ -31,7 +31,9 @@ namespace EscapeHorror.Prototype {
 			{
 				case ScenarioManager.LineType.NormalText:
 				case ScenarioManager.LineType.WaitText:
-					text.text += line.Text;
+					string t = text.text;
+					t += line.Text;
+					text.text = t;
 					break;
 			}
 			CurrentLine++;

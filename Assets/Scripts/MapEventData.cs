@@ -11,6 +11,7 @@ namespace EscapeHorror.Prototype {
 			None,
 			Talk,
 			Trick,
+			Trick_Trap,
 			Transition,
 			Transition_Action,
 		}

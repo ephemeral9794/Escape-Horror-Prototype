@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cdef2a703fa164290a63c894ee3e2f, type: 3}
+  m_Name: FranceDoll
+  m_EditorClassIdentifier: 
+  front: {fileID: 21300000, guid: 8ebfe5c4d566619428a85df948d60250, type: 3}
+  back: {fileID: 21300000, guid: 8752b4a326ea9eb4aa44ad3c5f91dd6e, type: 3}
+  right: {fileID: 21300000, guid: 46748c139ed46564a9b416300744f849, type: 3}
+  left: {fileID: 21300000, guid: 1671fb2c2b3fcd541a4d9773c0334817, type: 3}

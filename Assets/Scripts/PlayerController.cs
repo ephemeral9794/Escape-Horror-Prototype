@@ -20,6 +20,8 @@ namespace EscapeHorror.Prototype {
 	public class PlayerController : MonoBehaviour, IRecieveMessage {
 		[SerializeField]
 		private int speed = 12;
+		[SerializeField]
+		private GameObject Doll_Prefab;
 
 		// プレイヤーの向き
 		public Vector2Int Direction { get; set; }
@@ -36,6 +38,7 @@ namespace EscapeHorror.Prototype {
 		private GameManager manager;
 		private int nextScene = -1;
 		private TargetHint hint;
+		private bool DollFlag = false;
 
 		private void Start()
 		{
@@ -70,11 +73,12 @@ namespace EscapeHorror.Prototype {
 					var parameters = manager.GetTrickParams(mapEventData, eventpos);
 					foreach (var param in parameters) {
 						switch (param.Type) {
-						case TrickParameterTable.TrickType.Doll:
-							break;
-						case TrickParameterTable.TrickType.Remove: {
+							case TrickParameterTable.TrickType.Doll:
+								DollFlag = true;
+								break;
+							case TrickParameterTable.TrickType.Remove: {
 								var overlay = tilemaps.SingleOrDefault(t => t.name == "Overlay");
-								Debug.Log(overlay);
+								//Debug.Log(overlay);
 								overlay.SetTile(new Vector3Int(param.Position.x, param.Position.y, 0), null);
 							} break;
 						}
@@ -160,6 +164,16 @@ namespace EscapeHorror.Prototype {
 				//GameManager.init_pos = new Vector2Int(prev.x, prev.y);
 				//manager.ChangeScene(mapEvent.NextScene, param.NextPosition, param.NextDirection);
                 manager.ChangeScene(mapEvent.NextScene, param.Position, param.Direction);
+			}
+			else if (mapEvent.Event == Event.Trick_Trap)
+			{
+				var param = manager.GetTrickParams(mapEventData, pos);
+				if (DollFlag)
+				{
+					var p = grid.CellToWorld(new Vector3Int(param[0].Position.x, param[0].Position.y, 0)) + new Vector3(0.5f, 0.5f, 0.0f);
+					Instantiate(Doll_Prefab, p, Quaternion.identity);
+					DollFlag = false;
+				}
 			}
 			// 次の目標地点のタイルに当たり判定があるなら進まない（変更を戻す）
 			foreach (var tilemap in tilemaps) {

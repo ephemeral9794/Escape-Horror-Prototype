@@ -20,3 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map_2ndFloor.unity
     guid: 253fc53d07af45243b1e2795cec89a06
+  - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 9e691b5aa54928845a8eea76a8fa5cb4
+  - enabled: 1
+    path: Assets/Scenes/Chapter1_Intro.unity
+    guid: 0ce78a4ce91cee54ab2dbe23949a203e

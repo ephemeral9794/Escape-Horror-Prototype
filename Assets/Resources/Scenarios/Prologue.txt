@@ -1,5 +1,4 @@
 ﻿[name name=ミキ]
-[char pos=1 name=ミキ diff=0]
 20XX年　4月[br]
 私たちは、ただの好奇心で[br]
 山奥にある廃れた屋敷を訪れた[br]

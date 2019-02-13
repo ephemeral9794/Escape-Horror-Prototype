@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cdef2a703fa164290a63c894ee3e2f, type: 3}
+  m_Name: JapanDoll
+  m_EditorClassIdentifier: 
+  front: {fileID: 21300000, guid: e3e8b6901984e3b4d85ca9d6285bc8d0, type: 3}
+  back: {fileID: 21300000, guid: 8923da939a495364eb45f52bd77ef9e1, type: 3}
+  right: {fileID: 21300000, guid: 4c0c6c8e74920a44890729049a197cee, type: 3}
+  left: {fileID: 21300000, guid: ffec643c8e4de014f83346fddb836888, type: 3}

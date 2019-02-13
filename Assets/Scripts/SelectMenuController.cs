@@ -15,6 +15,8 @@ namespace EscapeHorror.Prototype {
 
 		[SerializeField]
 		private GameObject descBoard;
+		[SerializeField]
+		private int nextScene;
 	
 		private Image cursor;
 		private GameManager manager;
@@ -46,7 +48,7 @@ namespace EscapeHorror.Prototype {
 				switch (select)
                 {
                     case Menu.Start:
-                        manager.ChangeScene(1);
+                        manager.ChangeScene(nextScene);
                         break;
                     case Menu.Desc:
                         if (flag) {
