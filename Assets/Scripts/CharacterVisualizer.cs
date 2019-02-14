@@ -13,7 +13,7 @@ namespace EscapeHorror.Prototype {
 		private Dictionary<string, CharacterPack.CharacterType> CharacterMatchList = new Dictionary<string, CharacterPack.CharacterType>{
 			{"アカネ", CharacterPack.CharacterType.AKANE},
 			{"ミキ", CharacterPack.CharacterType.MIKI},
-			{"リョータ", CharacterPack.CharacterType.RYOTA},
+			{"リョウタ", CharacterPack.CharacterType.RYOTA},
 			{"タケル", CharacterPack.CharacterType.TAKERU}
 		}; 
 		private CharacterPack[] characters;

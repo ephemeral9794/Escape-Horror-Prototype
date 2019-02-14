@@ -74,6 +74,7 @@ namespace EscapeHorror.Prototype {
 					foreach (var param in parameters) {
 						switch (param.Type) {
 							case TrickParameterTable.TrickType.Doll:
+                                hint.ChangeText("人形から逃げる");
 								DollFlag = true;
 								break;
 							case TrickParameterTable.TrickType.Remove: {
@@ -150,31 +151,27 @@ namespace EscapeHorror.Prototype {
 				point.y -= 1;
 			}
 
-			// 階移動
-			//var mapEvent = manager.GetMapEvent(new Vector2Int(next.x, next.y));
-			var mapEventData = manager.GetMapEventData();
-			//var pair = manager.GetEventAndParam(new Vector2Int(next.x, next.y));
-			var pos = new Vector2Int(next.x, next.y);
-			var mapEvent = mapEventData[pos];
-            var parameters = manager.GetTransitionParams(mapEventData, pos);
-            if (mapEvent.Event == Event.Transition )
-			{
-				point = save;
-				var param = parameters[0];
-				//GameManager.init_pos = new Vector2Int(prev.x, prev.y);
-				//manager.ChangeScene(mapEvent.NextScene, param.NextPosition, param.NextDirection);
-                manager.ChangeScene(mapEvent.NextScene, param.Position, param.Direction);
-			}
-			else if (mapEvent.Event == Event.Trick_Trap)
-			{
-				var param = manager.GetTrickParams(mapEventData, pos);
-				if (DollFlag)
-				{
-					var p = grid.CellToWorld(new Vector3Int(param[0].Position.x, param[0].Position.y, 0)) + new Vector3(0.5f, 0.5f, 0.0f);
-					Instantiate(Doll_Prefab, p, Quaternion.identity);
-					DollFlag = false;
-				}
-			}
+            // 階移動
+            //var mapEvent = manager.GetMapEvent(new Vector2Int(next.x, next.y));
+            //var pair = manager.GetEventAndParam(new Vector2Int(next.x, next.y));
+            var mapEventData = manager.GetMapEventData();
+            var pos = new Vector2Int(next.x, next.y);
+            if (mapEventData != null) { 
+			    var mapEvent = mapEventData[pos];
+                var parameters = manager.GetTransitionParams(mapEventData, pos);
+                if (mapEvent.Event == Event.Transition ) {
+				    point = save;
+				    var param = parameters[0];
+                    manager.ChangeScene(mapEvent.NextScene, param.Position, param.Direction);
+			    } else if (mapEvent.Event == Event.Trick_Trap) {
+				    var param = manager.GetTrickParams(mapEventData, pos);
+				    if (DollFlag) {
+					    var p = grid.CellToWorld(new Vector3Int(param[0].Position.x, param[0].Position.y, 0)) + new Vector3(0.5f, 0.5f, 0.0f);
+					    Instantiate(Doll_Prefab, p, Quaternion.identity);
+					    DollFlag = false;
+				    }
+			    }
+            }
 			// 次の目標地点のタイルに当たり判定があるなら進まない（変更を戻す）
 			foreach (var tilemap in tilemaps) {
 				if (tilemap.GetColliderType(next) != Tile.ColliderType.None) {
