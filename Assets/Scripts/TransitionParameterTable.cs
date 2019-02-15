@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace EscapeHorror.Prototype { 
-	[CreateAssetMenu(menuName = "Map Edit/Transition Paramter Table")]
+	[CreateAssetMenu(menuName = "Map Edit/Transition Parameter Table")]
 	public class TransitionParameterTable : ScriptableObject
 	{
 		[Serializable]

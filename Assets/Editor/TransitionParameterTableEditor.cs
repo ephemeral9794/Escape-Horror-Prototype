@@ -32,7 +32,7 @@ public class TransitionParameterTableEditor : Editor
 	// ReorderableList Callbacks
 	private void OnDrawHeader(Rect rect)
 	{
-		GUI.Label(rect, "Map Events");
+		GUI.Label(rect, "Transition Parameter");
 	}
 	private float GetElementHeight(int index)
 	{

@@ -22,10 +22,6 @@ namespace EscapeHorror.Prototype {
 		private void Awake()
 		{
 			characters = Resources.LoadAll<CharacterPack>("Character");
-			/*foreach (var c in characters)
-			{
-				Debug.Log(c.name);
-			}*/
 		}
 		private void Start()
 		{
@@ -47,7 +43,7 @@ namespace EscapeHorror.Prototype {
 		}
 		public void Visible(Position pos, string typeStr, int diffNum)
 		{
-			Debug.Log("Visible");
+			//Debug.Log("Visible");
 			var type = CharacterMatchList[typeStr];
 			positions[(int)pos].SetActive(true);
 			var image = positions[(int)pos].GetComponent<Image>();

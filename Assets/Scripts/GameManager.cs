@@ -10,7 +10,8 @@ namespace EscapeHorror.Prototype {
     using MapEvent = MapEventData.MapEvent;
     using TransParam = TransitionParameterTable.Parameter;
 	using TrickParam = TrickParameterTable.Parameter;
-    public class GameManager : MonoBehaviour {
+	using TalkParam = TalkParameterTable.Parameter;
+	public class GameManager : MonoBehaviour {
 
 		//public static Vector2Int init_pos = new Vector2Int(0, 0);
 		public static Vector2Int next_pos = Vector2Int.zero;
@@ -23,13 +24,30 @@ namespace EscapeHorror.Prototype {
 		[SerializeField]
 		private bool fadeOut = true;
 
-		public bool IsNovelMode { get; set; }
+		public bool IsNovelMode { 
+			get{
+				return scenario.IsEnabled;
+			} 
+			set{
+				novelMode = value;
+				if (value)
+				{
+					scenario.Enable();
+				} else
+				{
+					scenario.Disable();
+				}
+			}
+		}
 		public MapEventData[] MapEvents { get; private set; }
         public TransitionParameterTable[] TransParams { get; private set; }
 		public TrickParameterTable[] TrickParams { get; private set; }
+		public TalkParameterTable[] TalkParams { get; private set; }
 		public ConfigPrefs Config { get; private set; }
 
 		private float timeElasped;
+		private ScenarioManager scenario;
+		private bool novelMode = false;
 
 		private void Awake()
 		{
@@ -37,23 +55,14 @@ namespace EscapeHorror.Prototype {
 			MapEvents = Resources.LoadAll<MapEventData>("MapEvent");
 			TransParams = Resources.LoadAll<TransitionParameterTable>("MapEvent");
 			TrickParams = Resources.LoadAll<TrickParameterTable>("MapEvent");
+			TalkParams = Resources.LoadAll<TalkParameterTable>("MapEvent");
 			Config = Resources.Load<ConfigPrefs>("ConfigPrefs");
-            /*foreach (var events in MapEvent)
-			{
-				Debug.Log(events);
-			}*/
-            /*var guid = AssetDatabase.FindAssets("t:MapEventData");
-			MapEvent = new MapEventData[guid.Length];
-			for (int i = 0; i < guid.Length; i++) { 
-				var path = AssetDatabase.GUIDToAssetPath(guid[i]);
-				MapEvent[i] = AssetDatabase.LoadAssetAtPath<MapEventData>(path);
-			}*/
-            //MapEvent = Resources.Load<MapEventData>("Map Event");
         }
 
 		// Use this for initialization
 		void Start ()
 		{
+			scenario = FindObjectOfType<ScenarioManager>();
 			Config.Apply();
 			timeElasped = 0.0f;
 			fadeManager.fadeState = fadeIn ? 0 : 1;
@@ -93,19 +102,31 @@ namespace EscapeHorror.Prototype {
 			var param = TransParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
 			return param.GetParameters(mapEvent[pos].NextScene);
 		}
-        public KeyValuePair<MapEvent, TransParam> GetEventAndParam(Vector2Int pos)
+        /*public KeyValuePair<MapEvent, TransParam> GetEventAndParam(Vector2Int pos)
         {
             int index = SceneManager.GetActiveScene().buildIndex;
             var mapEvent = MapEvents.SingleOrDefault(val => val.SceneNumber == index);
             var table = TransParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
             var param = table.Parameters.SingleOrDefault(pp => pp.MapSceneNumber == mapEvent[pos].NextScene);
             return new KeyValuePair<MapEvent, TransParam>(mapEvent[pos], param);
-        }
+        }*/
 		public TrickParam[] GetTrickParams(MapEventData mapEvent, Vector2Int pos)
 		{
-			Debug.LogFormat("{0}, {1}", TrickParams[0].CurrentScene, mapEvent.SceneNumber);
+			//Debug.LogFormat("{0}, {1}", TrickParams[0].CurrentScene, mapEvent.SceneNumber);
 			var param = TrickParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
 			return param.GetParameters(mapEvent[pos].NextScene);
+		}
+		public TalkParam[] GetTalkParams(MapEventData mapEvent, Vector2Int pos)
+		{
+			//Debug.LogFormat("{0}, {1}", TalkParams[0].CurrentScene, mapEvent.SceneNumber);
+			var param = TalkParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
+			return param.GetParameters(mapEvent[pos].NextScene);
+		}
+
+		public void SetScenario(TextAsset text)
+		{
+			scenario.scenarioText = text;
+			scenario.AnalysisScenario();
 		}
 
 		//public void ChangeScene(bool floorShift) => fadeManager.ChangeScene(floorShift, fadeOut);

@@ -158,11 +158,10 @@ namespace EscapeHorror.Prototype {
             var pos = new Vector2Int(next.x, next.y);
             if (mapEventData != null) { 
 			    var mapEvent = mapEventData[pos];
-                var parameters = manager.GetTransitionParams(mapEventData, pos);
                 if (mapEvent.Event == Event.Transition ) {
-				    point = save;
-				    var param = parameters[0];
-                    manager.ChangeScene(mapEvent.NextScene, param.Position, param.Direction);
+					var param = manager.GetTransitionParams(mapEventData, pos);
+					point = save;
+                    manager.ChangeScene(mapEvent.NextScene, param[0].Position, param[0].Direction);
 			    } else if (mapEvent.Event == Event.Trick_Trap) {
 				    var param = manager.GetTrickParams(mapEventData, pos);
 				    if (DollFlag) {
@@ -170,13 +169,24 @@ namespace EscapeHorror.Prototype {
 					    Instantiate(Doll_Prefab, p, Quaternion.identity);
 					    DollFlag = false;
 				    }
-			    }
+			    } else if (mapEvent.Event == Event.Talk)
+				{
+					var param = manager.GetTalkParams(mapEventData, pos);
+					manager.IsNovelMode = true;
+					manager.SetScenario(param[0].Scenario);
+				}
             }
 			// 次の目標地点のタイルに当たり判定があるなら進まない（変更を戻す）
 			foreach (var tilemap in tilemaps) {
 				if (tilemap.GetColliderType(next) != Tile.ColliderType.None) {
 					point = save;
 				}
+			}
+
+			// ノベルモード中は操作不可
+			if (manager.IsNovelMode)
+			{
+				point = save;
 			}
 		}
 

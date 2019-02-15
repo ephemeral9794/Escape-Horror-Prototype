@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System.Collections.Generic;
 using EscapeHorror.Prototype;
 using UnityEditorInternal;
+using System;
+using System.Collections.Generic;
 
-using Parameter = EscapeHorror.Prototype.TrickParameterTable.Parameter;
-[CustomEditor(typeof(TrickParameterTable))]
-public class TrickParamterTableEditor : Editor
+using Parameter = EscapeHorror.Prototype.TalkParameterTable.Parameter;
+[CustomEditor(typeof(TalkParameterTable))]
+public class TalkParameterTableEditor : Editor
 {
-	public TrickParameterTable Table => target as TrickParameterTable;
-
+	public TalkParameterTable Table => target as TalkParameterTable;
+	
 	private ReorderableList m_ReorderableList;
 
 	private void OnEnable()
@@ -31,23 +32,21 @@ public class TrickParamterTableEditor : Editor
 	// ReorderableList Callbacks
 	private void OnDrawHeader(Rect rect)
 	{
-		GUI.Label(rect, "Trick Parameters");
+		GUI.Label(rect, "Transition Parameter");
 	}
 	private float GetElementHeight(int index)
 	{
-		return 50.0f;
+		return 34.0f;
 	}
 	private void OnDrawElement(Rect rect, int index, bool isactive, bool isfocused)
 	{
 		var param = Table.Parameters[index];
 		float y = rect.yMin;
 		EditorGUI.BeginChangeCheck();
-		param.ID = EditorGUI.IntField(new Rect(rect.xMin, rect.yMin, rect.width, 16.0f), "Parameter ID", param.ID);
-		param.Type = (TrickParameterTable.TrickType)EditorGUI.EnumPopup(new Rect(rect.xMin, rect.yMin + 16.0f, rect.width, 16.0f), "Trick Type", param.Type);
-		param.Position = EditorGUI.Vector2IntField(new Rect(rect.xMin, rect.yMin + 32.0f, rect.width, 16.0f), "Position", param.Position);
+		param.ID = EditorGUI.IntField(new Rect(rect.xMin, rect.yMin, rect.width, 16.0f), "ID", param.ID);
+		param.Scenario = (TextAsset)EditorGUI.ObjectField(new Rect(rect.xMin, rect.yMin + 16.0f, rect.width, 16.0f), "Scenario", param.Scenario, typeof(TextAsset), false);
 		Table.Parameters[index] = param;
-		if (EditorGUI.EndChangeCheck())
-		{
+		if (EditorGUI.EndChangeCheck()) {
 			Save();
 		}
 	}
@@ -57,10 +56,9 @@ public class TrickParamterTableEditor : Editor
 	}
 	private void OnAddElement(ReorderableList list)
 	{
-		Table.Parameters.Add(new Parameter
-		{
+		Table.Parameters.Add(new Parameter {
 			ID = -1,
-			Position = Vector2Int.zero,
+			Scenario = null
 		});
 	}
 	private void Save()
@@ -73,13 +71,11 @@ public class TrickParamterTableEditor : Editor
 	{
 		EditorGUI.BeginChangeCheck();
 		Table.CurrentScene = EditorGUILayout.IntField("Current Scene", Table.CurrentScene);
-		if (EditorGUI.EndChangeCheck())
-		{
+		if (EditorGUI.EndChangeCheck()) {
 			Save();
 		}
 		EditorGUILayout.Space();
-		if (m_ReorderableList != null && Table.Parameters != null)
-		{
+		if (m_ReorderableList != null && Table.Parameters != null) {
 			m_ReorderableList.DoLayoutList();
 		}
 	}

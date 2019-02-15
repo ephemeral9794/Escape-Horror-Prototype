@@ -114,6 +114,10 @@ namespace EscapeHorror.Prototype {
 				case "reset" : {
 						scenario.InvisibleAll();
 					} break;
+				case "back" : {
+						int id = int.Parse(command.param["id"]);
+						scenario.ChangeBackground(id);
+					} break;
 			}
 		}
 	}

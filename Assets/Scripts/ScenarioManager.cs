@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 using UniRx;
 using UniRx.Triggers;
 using System;
@@ -21,14 +22,20 @@ namespace EscapeHorror.Prototype {
 		}
 
 		[SerializeField]
-		private TextAsset scenarioText;
+		public TextAsset scenarioText;
 		[SerializeField]
 		int nextScene;
+		[SerializeField]
+		private bool overlay = false;
 
 		private TextController text;
 		private CommandController command;
 		private CharacterVisualizer visualizer;
 		private GameManager manager;
+		private BackgroundPack backgroundPack;
+		private Image background;
+		private CanvasGroup group;
+		public bool IsEnabled{get; set;}
 		private string[] TextLines;
 		private List<Line> Lines;
 
@@ -37,34 +44,48 @@ namespace EscapeHorror.Prototype {
 		{
 			get { return TextLines[line]; }
 		}
-		
+
+		private void Awake()
+		{
+			backgroundPack = Resources.Load<BackgroundPack>("BackgroundPack");
+			IsEnabled = true;
+		}
+
 		private void Start()
 		{
 			manager = FindObjectOfType<GameManager>();
 			text = GetComponent<TextController>();
 			command = GetComponent<CommandController>();
 			visualizer = GetComponentInChildren<CharacterVisualizer>();
+			background = transform.Find("Background").gameObject.GetComponent<Image>();
 
-			var texts = scenarioText.ToString();
-			AnalysisScenario(texts);
+			//var texts = scenarioText.ToString();
+			AnalysisScenario();
 
 			Action<Unit> action = (_) => {
-				int current = text.CurrentLine;
-				while (current < Lines.Count && command.IsCommand(current)) { 
-					command.Execute(this, command[current]);
-					current++;
-				}
-				text.CurrentLine = current;
-				if (current < Lines.Count && !command.IsCommand(current)) {
-					text.TextUpdate(Lines[current]);
-				}
-				if (current >= Lines.Count)
-				{
-					var group = GetComponent<CanvasGroup>();
-					DOTween.To(() => group.alpha,
-							  (a) => group.alpha = a,
-							  0.0f, 1.0f)
-						   .OnComplete(() => manager.ChangeScene(nextScene));
+				if (IsEnabled) { 
+					int current = text.CurrentLine;
+					while (current < Lines.Count && command.IsCommand(current)) { 
+						command.Execute(this, command[current]);
+						current++;
+					}
+					text.CurrentLine = current;
+					if (current < Lines.Count && !command.IsCommand(current)) {
+						text.TextUpdate(Lines[current]);
+					}
+					if (current >= Lines.Count)
+					{
+						group = GetComponent<CanvasGroup>();
+						var tween = DOTween.To(() => group.alpha,
+								  (a) => group.alpha = a,
+								  0.0f, 1.0f);
+						if (!overlay) {
+							tween.OnComplete(() => manager.ChangeScene(nextScene));
+						} else
+						{
+							tween.OnComplete(() => Disable());
+						}
+					}
 				}
 			};
 			this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action).AddTo(this);
@@ -72,7 +93,22 @@ namespace EscapeHorror.Prototype {
 			action.Invoke(new Unit());
 		}
 
-		void AnalysisScenario(string rawText)
+		public bool Enable() {
+			group.alpha = 1;
+			IsEnabled = true;
+			return IsEnabled;
+		}
+		public bool Disable() {
+			group.alpha = 0;
+			IsEnabled = false;
+			return IsEnabled;
+		}
+
+		public void AnalysisScenario()
+		{
+			AnalysisScenario(scenarioText.ToString());
+		}
+		public void AnalysisScenario(string rawText)
 		{
 			TextLines = rawText.Split('\n');
 			Lines = new List<Line>();
@@ -109,5 +145,11 @@ namespace EscapeHorror.Prototype {
 		public void Visible(CharacterVisualizer.Position pos, string typeStr, int diffNum) => visualizer.Visible(pos, typeStr, diffNum);
 		public void Invisible(CharacterVisualizer.Position pos) => visualizer.Invisible(pos);
 		public void InvisibleAll() => visualizer.InvisibleAll();
+		public void ChangeBackground(int num)
+		{
+			var pack = backgroundPack.PackSets[num];
+			background.sprite = pack.sprite;
+			background.color = pack.color;
+		}
 	}
 }
