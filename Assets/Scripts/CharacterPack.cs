@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace EscapeHorror.Prototype { 
-    [CreateAssetMenu(menuName = "Character Pack")]
+    [CreateAssetMenu(menuName = "Data Pack/Character Pack")]
     public class CharacterPack : ScriptableObject
     {
         public enum CharacterType {

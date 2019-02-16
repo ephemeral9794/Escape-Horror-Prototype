@@ -22,3 +22,6 @@ MonoBehaviour:
   - ID: -2
     Type: 0
     Position: {x: -22, y: 15}
+  - ID: -3
+    Type: 1
+    Position: {x: -15, y: 10}

@@ -24,9 +24,9 @@ namespace EscapeHorror.Prototype {
 		[SerializeField]
 		private bool fadeOut = true;
 
-		public bool IsNovelMode { 
+		public bool IsNovelMode {
 			get{
-				return scenario.IsEnabled;
+				return (scenario != null) ? scenario.IsEnabled : false;
 			} 
 			set{
 				novelMode = value;
@@ -51,7 +51,6 @@ namespace EscapeHorror.Prototype {
 
 		private void Awake()
 		{
-			IsNovelMode = false;
 			MapEvents = Resources.LoadAll<MapEventData>("MapEvent");
 			TransParams = Resources.LoadAll<TransitionParameterTable>("MapEvent");
 			TrickParams = Resources.LoadAll<TrickParameterTable>("MapEvent");
@@ -63,7 +62,12 @@ namespace EscapeHorror.Prototype {
 		void Start ()
 		{
 			scenario = FindObjectOfType<ScenarioManager>();
-			Config.Apply();
+            //IsNovelMode = false;
+            if (scenario != null)
+            if (scenario.overlay) { 
+                scenario.IsEnabled = false;
+            }
+            Config.Apply();
 			timeElasped = 0.0f;
 			fadeManager.fadeState = fadeIn ? 0 : 1;
 			var player = FindObjectOfType<PlayerController>();
@@ -97,10 +101,20 @@ namespace EscapeHorror.Prototype {
 			int index = SceneManager.GetActiveScene().buildIndex;
 			return MapEvents.SingleOrDefault(val => val.SceneNumber == index);
 		}
+        /*public MapEventData[] GetMapEventData()
+        {
+            int index = SceneManager.GetActiveScene().buildIndex;
+            return MapEvents.Where(val => val.SceneNumber == index).ToArray();
+        }*/
 		public TransParam[] GetTransitionParams(MapEventData mapEvent, Vector2Int pos)
 		{
 			var param = TransParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
-			return param.GetParameters(mapEvent[pos].NextScene);
+            var list = new List<TransParam>();
+            foreach (var e in mapEvent[pos])
+            {
+                list.AddRange(param.GetParameters(e.NextScene));
+            }
+			return list.ToArray();
 		}
         /*public KeyValuePair<MapEvent, TransParam> GetEventAndParam(Vector2Int pos)
         {
@@ -114,17 +128,31 @@ namespace EscapeHorror.Prototype {
 		{
 			//Debug.LogFormat("{0}, {1}", TrickParams[0].CurrentScene, mapEvent.SceneNumber);
 			var param = TrickParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
-			return param.GetParameters(mapEvent[pos].NextScene);
+            var list = new List<TrickParam>();
+            foreach (var e in mapEvent[pos])
+            {
+                list.AddRange(param.GetParameters(e.NextScene));
+            }
+            return list.ToArray();
+            //return param.GetParameters(mapEvent[pos].NextScene);
 		}
 		public TalkParam[] GetTalkParams(MapEventData mapEvent, Vector2Int pos)
 		{
 			//Debug.LogFormat("{0}, {1}", TalkParams[0].CurrentScene, mapEvent.SceneNumber);
 			var param = TalkParams.SingleOrDefault(p => p.CurrentScene == mapEvent.SceneNumber);
-			return param.GetParameters(mapEvent[pos].NextScene);
-		}
+            var list = new List<TalkParam>();
+            foreach (var e in mapEvent[pos])
+            {
+                list.AddRange(param.GetParameters(e.NextScene));
+            }
+            return list.ToArray();
+            //return param.GetParameters(mapEvent[pos].NextScene);
+        }
 
 		public void SetScenario(TextAsset text)
 		{
+            //Debug.Log(text.name);
+            //Debug.Log(text.ToString());
 			scenario.scenarioText = text;
 			scenario.AnalysisScenario();
 		}

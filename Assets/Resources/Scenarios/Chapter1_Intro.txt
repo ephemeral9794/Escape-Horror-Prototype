@@ -106,6 +106,7 @@
 [cm]
 [name name=]
 [reset]
+[sound id=4]
 「きゃはははは……！」[br]
 [cm]
 [name name=ミキ]

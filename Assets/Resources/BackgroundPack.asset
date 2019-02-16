@@ -14,3 +14,5 @@ MonoBehaviour:
   PackSets:
   - color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
     sprite: {fileID: 21300000, guid: f856a51adaffd2240a8430fff06f77d7, type: 3}
+  - color: {r: 1, g: 1, b: 1, a: 1}
+    sprite: {fileID: 21300000, guid: 1332322d9d504ec4f93f4cdb81b0ef07, type: 3}

@@ -41,8 +41,8 @@ namespace EscapeHorror.Prototype {
 		[SerializeField]
 		public List<MapEvent> m_MapEvents;
 
-		public MapEvent this[Vector2Int pos] {
-			get { return m_MapEvents.SingleOrDefault(value => (value.Position == pos));}
+		public MapEvent[] this[Vector2Int pos] {
+			get { return m_MapEvents.Where(value => (value.Position == pos)).ToArray();}
 		}
 	}
 }

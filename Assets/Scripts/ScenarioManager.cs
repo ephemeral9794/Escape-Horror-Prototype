@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using DG.Tweening;
 
 namespace EscapeHorror.Prototype { 
+    [RequireComponent(typeof(AudioSource))]
 	public class ScenarioManager : MonoBehaviour {
 		public enum LineType{
 			NormalText, WaitText, Command,
@@ -26,18 +27,22 @@ namespace EscapeHorror.Prototype {
 		[SerializeField]
 		int nextScene;
 		[SerializeField]
-		private bool overlay = false;
+		public bool overlay = false;
 
 		private TextController text;
 		private CommandController command;
 		private CharacterVisualizer visualizer;
 		private GameManager manager;
+        private new AudioSource audio;
 		private BackgroundPack backgroundPack;
-		private Image background;
+        private SoundPack soundPack;
+        private Image background;
+        private Image overLayer;
 		private CanvasGroup group;
 		public bool IsEnabled{get; set;}
 		private string[] TextLines;
 		private List<Line> Lines;
+        private Action<Unit> action;
 
 		public int Length => TextLines.Length;
 		public string this[int line]
@@ -48,6 +53,7 @@ namespace EscapeHorror.Prototype {
 		private void Awake()
 		{
 			backgroundPack = Resources.Load<BackgroundPack>("BackgroundPack");
+            soundPack = Resources.Load<SoundPack>("SoundPack");
 			IsEnabled = true;
 		}
 
@@ -57,12 +63,17 @@ namespace EscapeHorror.Prototype {
 			text = GetComponent<TextController>();
 			command = GetComponent<CommandController>();
 			visualizer = GetComponentInChildren<CharacterVisualizer>();
-			background = transform.Find("Background").gameObject.GetComponent<Image>();
+            audio = GetComponent<AudioSource>();
+            group = GetComponent<CanvasGroup>();
+            background = transform.Find("Background").gameObject.GetComponent<Image>();
+            overLayer = transform.Find("Overlay").gameObject.GetComponent<Image>();
 
-			//var texts = scenarioText.ToString();
-			AnalysisScenario();
+            //var texts = scenarioText.ToString();
+            if (scenarioText != null) { 
+			    AnalysisScenario();
+            }
 
-			Action<Unit> action = (_) => {
+			action = (_) => {
 				if (IsEnabled) { 
 					int current = text.CurrentLine;
 					while (current < Lines.Count && command.IsCommand(current)) { 
@@ -75,14 +86,12 @@ namespace EscapeHorror.Prototype {
 					}
 					if (current >= Lines.Count)
 					{
-						group = GetComponent<CanvasGroup>();
 						var tween = DOTween.To(() => group.alpha,
 								  (a) => group.alpha = a,
 								  0.0f, 1.0f);
 						if (!overlay) {
 							tween.OnComplete(() => manager.ChangeScene(nextScene));
-						} else
-						{
+						} else {
 							tween.OnComplete(() => Disable());
 						}
 					}
@@ -93,15 +102,21 @@ namespace EscapeHorror.Prototype {
 			action.Invoke(new Unit());
 		}
 
-		public bool Enable() {
-			group.alpha = 1;
-			IsEnabled = true;
-			return IsEnabled;
+		public void Enable() {
+			//group.alpha = 1;
+            DOTween.To(() => group.alpha,
+                       (a) => group.alpha = a,
+                       1.0f, 1.0f)
+                   .OnComplete(() => { IsEnabled = true; action.Invoke(new Unit()); });
+            //IsEnabled = true;
 		}
-		public bool Disable() {
-			group.alpha = 0;
-			IsEnabled = false;
-			return IsEnabled;
+		public void Disable() {
+			//group.alpha = 0;
+			//IsEnabled = false;
+            DOTween.To(() => group.alpha,
+                       (a) => group.alpha = a,
+                       0.0f, 1.0f)
+                   .OnComplete(() => IsEnabled = false);
 		}
 
 		public void AnalysisScenario()
@@ -110,8 +125,16 @@ namespace EscapeHorror.Prototype {
 		}
 		public void AnalysisScenario(string rawText)
 		{
+            //Debug.Log(rawText);
+            command.ResetCommand();
+            text.ResetText();
+            visualizer.InvisibleAll();
 			TextLines = rawText.Split('\n');
-			Lines = new List<Line>();
+            if (Lines == null) { 
+			    Lines = new List<Line>();
+            } else {
+                Lines.Clear();
+            }
 
 			var regex = new Regex(@"\[.*]", RegexOptions.Compiled);
 			//Debug.Log(regex);
@@ -138,7 +161,8 @@ namespace EscapeHorror.Prototype {
 				}
 				Lines.Add(line);
 			}
-		}
+            //action.Invoke(new Unit());
+        }
 
 		public void ClearText() => text.ClearText();
 		public void ChangeName(string name) => text.ChangeName(name);
@@ -151,5 +175,19 @@ namespace EscapeHorror.Prototype {
 			background.sprite = pack.sprite;
 			background.color = pack.color;
 		}
-	}
+        public void Dawn()
+        {
+            overLayer.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+        }
+        public void Darkness()
+        {
+            overLayer.color = new Color(0.0f, 0.0f, 0.0f, 0.5f);
+        }
+        public void Sound(int id)
+        {
+            var clip = soundPack.Sounds[id];
+            audio.clip = clip;
+            audio.Play();
+        }
+    }
 }

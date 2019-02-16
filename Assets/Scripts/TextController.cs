@@ -38,6 +38,11 @@ namespace EscapeHorror.Prototype {
 			}
 			CurrentLine++;
 		}
+        public void ResetText()
+        {
+            ClearText();
+            CurrentLine = 0;
+        }
 
 		public void ClearText()
 		{

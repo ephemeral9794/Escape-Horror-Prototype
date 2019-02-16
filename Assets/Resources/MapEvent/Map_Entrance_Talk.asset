@@ -14,4 +14,6 @@ MonoBehaviour:
   CurrentScene: 2
   Parameters:
   - ID: -1
-    Scenario: {fileID: 0}
+    Scenario: {fileID: 4900000, guid: ce076e5c4be81a44c9c8ded40950c795, type: 3}
+  - ID: -2
+    Scenario: {fileID: 4900000, guid: 70ee9b0921d3098408662e109ad57120, type: 3}

@@ -131,5 +131,13 @@ namespace EscapeHorror.Prototype
 				renderer.sprite = visual.front;
 			}
 		}
-	}
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.name == "Player")
+            {
+                Debug.Log("Game Over");
+            }
+        }
+    }
 }

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4765408354953714}
   - component: {fileID: 212016307275587584}
   - component: {fileID: 50190345056381722}
+  - component: {fileID: 61139901309652778}
   - component: {fileID: 114093348355528378}
   m_Layer: 0
   m_Name: Doll
@@ -62,6 +63,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &61139901309652778
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619631239203188}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114093348355528378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: {fileID: 11400000, guid: 516f7ac975dd3b444b7a39aab455521b, type: 2}
-  speed: 25
+  speed: 20
 --- !u!212 &212016307275587584
 SpriteRenderer:
   m_ObjectHideFlags: 1

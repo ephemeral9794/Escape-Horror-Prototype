@@ -13,18 +13,22 @@ namespace EscapeHorror.Prototype {
 		public Dictionary<string, string> param;
 	}
 	public class CommandController : MonoBehaviour {
-		private static readonly string[] CommandTags =
+		/*private static readonly string[] CommandTags =
 		{
 			"[cm]", "[name]", "[char]"
-		};
+		};*/
 
 		private List<Command> commands = new List<Command>();
 
 		public void Add(Command command) {
 			commands.Add(command);
 		}
+        public void ResetCommand()
+        {
+            commands.Clear();
+        }
 
-		public static Command Analysis(ScenarioManager.Line line)
+        public static Command Analysis(ScenarioManager.Line line)
 		{
 			var command = new Command();
 			
@@ -118,7 +122,17 @@ namespace EscapeHorror.Prototype {
 						int id = int.Parse(command.param["id"]);
 						scenario.ChangeBackground(id);
 					} break;
-			}
+                case "dawn" : { 
+                        scenario.Dawn();
+                    } break;
+                case "dark": {
+                        scenario.Darkness();
+                    } break;
+                case "sound": {
+                        int id = int.Parse(command.param["id"]);
+                        scenario.Sound(id);
+                    } break;
+            }
 		}
 	}
 }

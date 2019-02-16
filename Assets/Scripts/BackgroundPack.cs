@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 
 namespace EscapeHorror.Prototype { 
-	[CreateAssetMenu(menuName = "Background Pack")]
+	[CreateAssetMenu(menuName = "Data Pack/Background Pack")]
 	public class BackgroundPack : ScriptableObject
 	{
 		[Serializable]
