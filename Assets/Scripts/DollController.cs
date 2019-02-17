@@ -137,6 +137,8 @@ namespace EscapeHorror.Prototype
             if (collision.gameObject.name == "Player")
             {
                 Debug.Log("Game Over");
+				var manager = FindObjectOfType<GameManager>();
+				manager.ChangeScene(9);
             }
         }
     }

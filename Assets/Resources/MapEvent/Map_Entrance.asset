@@ -34,3 +34,12 @@ MonoBehaviour:
   - Position: {x: -24, y: 4}
     Event: 3
     NextScene: -3
+  - Position: {x: -22, y: 15}
+    Event: 6
+    NextScene: -3
+  - Position: {x: 10, y: 17}
+    Event: 1
+    NextScene: -4
+  - Position: {x: 10, y: 17}
+    Event: 7
+    NextScene: 8

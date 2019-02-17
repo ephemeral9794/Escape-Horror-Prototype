@@ -112,7 +112,8 @@ namespace EscapeHorror.Prototype {
             var list = new List<TransParam>();
             foreach (var e in mapEvent[pos])
             {
-                list.AddRange(param.GetParameters(e.NextScene));
+				if (e.Event == MapEventData.Event.Transition || e.Event == MapEventData.Event.Transition_Action)
+					list.AddRange(param.GetParameters(e.NextScene));
             }
 			return list.ToArray();
 		}
@@ -131,7 +132,8 @@ namespace EscapeHorror.Prototype {
             var list = new List<TrickParam>();
             foreach (var e in mapEvent[pos])
             {
-                list.AddRange(param.GetParameters(e.NextScene));
+				if (e.Event == MapEventData.Event.Trick || e.Event == MapEventData.Event.Trick_Trap)
+					list.AddRange(param.GetParameters(e.NextScene));
             }
             return list.ToArray();
             //return param.GetParameters(mapEvent[pos].NextScene);
@@ -143,7 +145,8 @@ namespace EscapeHorror.Prototype {
             var list = new List<TalkParam>();
             foreach (var e in mapEvent[pos])
             {
-                list.AddRange(param.GetParameters(e.NextScene));
+				if (e.Event == MapEventData.Event.Talk || e.Event == MapEventData.Event.Talk_Action)
+					list.AddRange(param.GetParameters(e.NextScene));
             }
             return list.ToArray();
             //return param.GetParameters(mapEvent[pos].NextScene);
@@ -156,6 +159,7 @@ namespace EscapeHorror.Prototype {
 			scenario.scenarioText = text;
 			scenario.AnalysisScenario();
 		}
+		public ScenarioManager ScenarioManager => scenario;
 
 		//public void ChangeScene(bool floorShift) => fadeManager.ChangeScene(floorShift, fadeOut);
 		public void ChangeScene(int nextScene)

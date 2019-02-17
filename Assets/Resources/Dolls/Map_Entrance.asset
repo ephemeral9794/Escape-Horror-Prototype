@@ -23,5 +23,5 @@ MonoBehaviour:
     Direct: {x: 1, y: 0}
   - Position: {x: -13, y: 16}
     Direct: {x: 0, y: 1}
-  - Position: {x: -1, y: 16}
+  - Position: {x: 8, y: 16}
     Direct: {x: 1, y: 0}

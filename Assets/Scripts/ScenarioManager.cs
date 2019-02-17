@@ -25,7 +25,7 @@ namespace EscapeHorror.Prototype {
 		[SerializeField]
 		public TextAsset scenarioText;
 		[SerializeField]
-		int nextScene;
+		public int nextScene;
 		[SerializeField]
 		public bool overlay = false;
 

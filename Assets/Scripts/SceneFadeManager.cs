@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 namespace EscapeHorror.Prototype { 
 	[RequireComponent(typeof(Image))]
@@ -34,29 +35,34 @@ namespace EscapeHorror.Prototype {
 			switch (fadeState) {
 				case 0:
 					{ 
-						image.color = new Color(0, 0, 0, alpha);
+						DOTween.ToAlpha(() => image.color, (c) => image.color = c, 0.0f, fadeTime)
+							   .OnComplete(() => { image.enabled = false; fadeState = 1; });
+						/*image.color = new Color(0, 0, 0, alpha);
 						alpha -= fadeTime * Time.deltaTime;
 						if (alpha <= 0.0f) {
 							alpha = 0.0f;
 							fadeState = 1;
-						}
+						}*/
 					} break;
 
 				case 1:
 					{ 
-						image.enabled = false;
-						alpha = 0.0f;
+						/*image.enabled = false;
+						alpha = 0.0f;*/
 					} break;
 
 				case 2:
 					{ 
-						image.enabled = true;
-						image.color = new Color(0, 0, 0, alpha);
-						alpha += fadeTime * Time.deltaTime;
+						//image.enabled = true;
+						DOTween.ToAlpha(() => image.color, (c) => image.color = c, 1.0f, fadeTime)
+							   .OnStart(() => image.enabled = true)
+							   .OnComplete(() => fadeState = 3);
+						//image.color = new Color(0, 0, 0, alpha);
+						/*alpha += fadeTime * Time.deltaTime;
 						if (alpha >= 1.0f) {
 							alpha = 1.0f;
 							fadeState = 3;
-						}
+						}*/
 					} break;
 
 				case 3:

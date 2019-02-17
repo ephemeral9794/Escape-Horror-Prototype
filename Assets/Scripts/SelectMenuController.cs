@@ -31,39 +31,42 @@ namespace EscapeHorror.Prototype {
 			cursor = GetComponentInChildren<Image>();
 			manager = FindObjectOfType<GameManager>();
 			se = GetComponent<AudioSource>();
-			this.OnKeyDownAsObservable(KeyCode.UpArrow).Subscribe(_ => {
-				if (flag) { 
+			var fadeManager = FindObjectOfType<SceneFadeManager>();
+			fadeManager.ObserveEveryValueChanged((m) => m.fadeState).Where((s) => s == 1).Subscribe((_) => {
+				this.OnKeyDownAsObservable(KeyCode.UpArrow).Subscribe(__ => {
+					if (flag) { 
+						se.Play();
+						UpMenu();
+					}
+				});
+				this.OnKeyDownAsObservable(KeyCode.DownArrow).Subscribe(__ => {
+					if (flag) {
+						se.Play();
+						DownMenu();
+					}
+				});
+				Action<Unit> action = (__) => {
 					se.Play();
-					UpMenu();
-				}
-			});
-			this.OnKeyDownAsObservable(KeyCode.DownArrow).Subscribe(_ => {
-				if (flag) {
-					se.Play();
-					DownMenu();
-				}
-			});
-            Action<Unit> action = (_) => {
-				se.Play();
-				switch (select)
-                {
-                    case Menu.Start:
-                        manager.ChangeScene(nextScene);
-                        break;
-                    case Menu.Desc:
-                        if (flag) {
-                            instance = Instantiate(descBoard, transform.parent);
-                            instance.OnDestroyAsObservable().Subscribe(__ => flag = true);
-                            flag = false;
-                        }
-                        break;
-                    case Menu.Exit:
-                        Application.Quit();
-                        break;
-                }
-            };
-            this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action);
-            this.OnKeyDownAsObservable(KeyCode.Return).Subscribe(action);
+					switch (select)
+					{
+						case Menu.Start:
+							manager.ChangeScene(nextScene);
+							break;
+						case Menu.Desc:
+							if (flag) {
+								instance = Instantiate(descBoard, transform.parent);
+								instance.OnDestroyAsObservable().Subscribe(___ => flag = true);
+								flag = false;
+							}
+							break;
+						case Menu.Exit:
+							Application.Quit();
+							break;
+					}
+				};
+				this.OnKeyDownAsObservable(KeyCode.Space).Subscribe(action);
+				this.OnKeyDownAsObservable(KeyCode.Return).Subscribe(action);
+			}).AddTo(this);
 		}
 
 		void DownMenu()

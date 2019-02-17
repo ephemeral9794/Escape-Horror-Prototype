@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map_Basement.unity
     guid: b8c752050d6e1724396e88785856ed24
+  - enabled: 1
+    path: Assets/Scenes/Continue.unity
+    guid: a820027378f8fa94f98071b3e486b3d0

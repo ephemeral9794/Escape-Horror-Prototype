@@ -14,6 +14,8 @@ namespace EscapeHorror.Prototype {
 			Trick_Trap,
 			Transition,
 			Transition_Action,
+			Talk_Action,
+			End_Game,
 		}
 		/*[Serializable]
 		public class IParameter { 

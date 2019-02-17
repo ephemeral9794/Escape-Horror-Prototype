@@ -94,7 +94,20 @@ namespace EscapeHorror.Prototype {
                                         break;
                                 }
                             }
-                        }
+                        }else if (e.Event == Event.Talk_Action)
+						{
+							if (!endNovelPos.Contains(eventpos))
+							{
+								var param = manager.GetTalkParams(mapEventData, eventpos);
+								//Debug.Log(param[0].Scenario);
+								if (!manager.IsNovelMode)
+								{
+									manager.IsNovelMode = true;
+									manager.SetScenario(param[0].Scenario);
+									endNovelPos.Add(eventpos);
+								}
+							}
+						} 
                     }
                 }
 			};
@@ -201,14 +214,19 @@ namespace EscapeHorror.Prototype {
 			        } else if (e.Event == Event.Talk) {
                         if (!endNovelPos.Contains(pos)) { 
 					        var param = manager.GetTalkParams(mapEventData, pos);
+							//Debug.Log(param[0].Scenario);
                             if (!manager.IsNovelMode) {
                                 manager.IsNovelMode = true;
                                 manager.SetScenario(param[0].Scenario);
                                 endNovelPos.Add(pos);
                             }
                         }
-				    }
-            }
+				    } else if (e.Event == Event.End_Game)
+					{
+						manager.ScenarioManager.overlay = false;
+						manager.ScenarioManager.nextScene = e.NextScene;
+					}
+			}
 			// 次の目標地点のタイルに当たり判定があるなら進まない（変更を戻す）
 			foreach (var tilemap in tilemaps) {
 				if (tilemap.GetColliderType(next) != Tile.ColliderType.None) {
