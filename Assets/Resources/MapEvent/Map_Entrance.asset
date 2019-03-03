@@ -22,7 +22,7 @@ MonoBehaviour:
   - Position: {x: -22, y: 15}
     Event: 2
     NextScene: -1
-  - Position: {x: -24, y: 10}
+  - Position: {x: -24, y: 11}
     Event: 3
     NextScene: -2
   - Position: {x: -1, y: 3}
